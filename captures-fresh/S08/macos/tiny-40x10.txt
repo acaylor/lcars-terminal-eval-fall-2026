@@ -1,0 +1,10 @@
+ LCARS
+ 08:45:14
+ DATE 02 NOV 2026
+ HOST mac-host.local
+ UP   6d18h41m
+ CPU  3%  L 1.69
+ MEM  4.25G / 24.0G
+ DSK  61%
+ NET  277.9 KB/s / 118.4 KB/s
+ Q QUIT  ?  P  TAB

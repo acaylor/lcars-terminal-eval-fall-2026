@@ -1,0 +1,538 @@
+{
+  "sid": "S06",
+  "platform": "linux",
+  "binary": "target/release/lcars-monitor",
+  "started": "2026-11-02 08:39:15",
+  "primary_session": {
+    "alive_after_2_5s": true,
+    "primary_blank_fraction": 0.0,
+    "primary_distinct_colors": 10,
+    "primary_non_ascii_glyphs": 18,
+    "primary_has_PID_word": false,
+    "primary_ref_top_names_seen": [],
+    "primary_metric_checks": {
+      "hostname_present": true,
+      "time_hh_mm_ss_present": false,
+      "time_matches_wall_hh_mm": false,
+      "date_present": true,
+      "loadavg_matches": [
+        true,
+        true,
+        true
+      ],
+      "mem_total_present": true,
+      "mem_used_plausible": true,
+      "disk_pct_plausible": false,
+      "uptime_days_present": true
+    },
+    "primary_key_hints": {
+      "help_?": true,
+      "quit_q": true,
+      "pause_space": true,
+      "proc_p": true,
+      "tab": true
+    },
+    "primary_sgr": {
+      "truecolor": 516,
+      "c256": 0,
+      "basic16": 0,
+      "other_attrs": 0
+    },
+    "terminal_queries_answered": {},
+    "diag_changed_cells_vs_primary": 1527,
+    "diag_metric_checks": {
+      "os_present": true,
+      "arch_present": true,
+      "pid_header_present": true,
+      "swap_label_present": true,
+      "process_count_plausible": false,
+      "ref_top5_names_seen": 2,
+      "ref_top5_pids_seen": 2
+    },
+    "diag_key_hints": {
+      "help_?": true,
+      "quit_q": true,
+      "pause_space": true,
+      "proc_p": true,
+      "tab": true
+    },
+    "p_toggle_back_structure_similarity_to_primary": 1.0,
+    "p_toggle_back_has_PID": false,
+    "help_changed_cells": 731,
+    "help_text_mentions": {
+      "quit": true,
+      "help": true,
+      "pause": true,
+      "space": true,
+      "tab": true,
+      "proc|diag": true
+    },
+    "help_closed_structure_similarity_to_primary": 1.0,
+    "help_closed_still_has_help_words": false,
+    "pause": {
+      "digits_equal_over_2_6s": true,
+      "text_equal_over_2_6s": true,
+      "changed_cells_over_2_6s": 0,
+      "changed_digit_tokens": [],
+      "pause_indicator_visible": true
+    },
+    "resume": {
+      "digits_changed_after_resume": true,
+      "changed_cells": 122
+    },
+    "tab_cycle": [
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 1544
+      },
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 1547
+      },
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 1547
+      },
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 1552
+      }
+    ],
+    "quit": {
+      "how": "q",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.007,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": false
+      },
+      "tail_bytes": 14,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[?25h\u001b[?1049l"
+    },
+    "output_seq_counts": {
+      "clear_2J": 1,
+      "clear_3J": 0,
+      "RIS_esc_c": 0,
+      "erase_below_J": 0,
+      "erase_line_K": 0,
+      "cup_moves": 1691,
+      "alt_enter": 1,
+      "alt_exit": 1,
+      "cursor_hide": 1,
+      "cursor_show": 1,
+      "sync_update": 20,
+      "mouse_enable": 0
+    }
+  },
+  "lifecycle": {
+    "q": {
+      "how": "q",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.007,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": false
+      },
+      "tail_bytes": 14,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "esc": {
+      "how": "esc",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.007,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": false
+      },
+      "tail_bytes": 14,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "ctrl-c-byte": {
+      "how": "ctrl-c-byte",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.007,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": false
+      },
+      "tail_bytes": 14,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "sigint": {
+      "how": "sigint",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.114,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": false
+      },
+      "tail_bytes": 14,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "sigterm": {
+      "how": "sigterm",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.114,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": false
+      },
+      "tail_bytes": 14,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    }
+  },
+  "non_tty": {
+    "exit_code": 1,
+    "timed_out_3s": false,
+    "seconds": 0.114,
+    "stdout_bytes": 0,
+    "stdout_has_escape": false,
+    "stderr_has_escape": false,
+    "panic_text": false,
+    "stdout_head": "",
+    "stderr_head": "lcars-monitor: an interactive terminal is required; use --snapshot primary for redirected output\n"
+  },
+  "sizes": {
+    "primary-80x24": {
+      "alive": true,
+      "exit_code": null,
+      "panic_text": false,
+      "non_blank_cells": 1920,
+      "blank_fraction": 0.0,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": false
+        },
+        "termios_restored": true
+      }
+    },
+    "tiny-40x10": {
+      "alive": true,
+      "exit_code": null,
+      "panic_text": false,
+      "non_blank_cells": 400,
+      "blank_fraction": 0.0,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": false
+        },
+        "termios_restored": true
+      }
+    },
+    "tiny-20x5": {
+      "alive": true,
+      "exit_code": null,
+      "panic_text": false,
+      "non_blank_cells": 100,
+      "blank_fraction": 0.0,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": false
+        },
+        "termios_restored": true
+      }
+    },
+    "live_resize": {
+      "steps": [
+        {
+          "size": "80x24",
+          "alive": true,
+          "non_blank_cells": 1920
+        },
+        {
+          "size": "30x8",
+          "alive": true,
+          "non_blank_cells": 240
+        },
+        {
+          "size": "120x36",
+          "alive": true,
+          "non_blank_cells": 4320
+        }
+      ],
+      "panic_text": false,
+      "structure_similarity_back_vs_initial": 1.0,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": false
+        },
+        "termios_restored": true
+      }
+    }
+  },
+  "color_modes": {
+    "color256": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 544,
+        "basic16": 0,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 374,
+      "non_ascii_glyph_kinds_on_screen": 18,
+      "non_ascii_examples": "\u259e\u2590\u259f\u2570\u2584\u2588\u2580\u25c9\u2501\u2578\u2014\u25bc\u25b2\u28c0\u2192\u259b\u258c\u2599",
+      "distinct_colors_on_screen": 8,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "color16": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 580,
+        "basic16": 0,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 394,
+      "non_ascii_glyph_kinds_on_screen": 18,
+      "non_ascii_examples": "\u259e\u2590\u259f\u2570\u2584\u2588\u2580\u25c9\u2501\u2578\u2014\u25bc\u25b2\u28c0\u2192\u259b\u258c\u2599",
+      "distinct_colors_on_screen": 8,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "no_color_env": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 386,
+      "non_ascii_glyph_kinds_on_screen": 18,
+      "non_ascii_examples": "\u259e\u2590\u259f\u2570\u2584\u2588\u2580\u25c9\u2501\u2578\u2014\u25bc\u25b2\u28c0\u2192\u259b\u258c\u2599",
+      "distinct_colors_on_screen": 2,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "mono_documented": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 578,
+        "basic16": 0,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 395,
+      "non_ascii_glyph_kinds_on_screen": 18,
+      "non_ascii_examples": "\u259e\u2590\u259f\u2570\u2584\u2588\u2580\u25c9\u2501\u2578\u2014\u25bc\u25b2\u28c0\u2192\u259b\u258c\u2599",
+      "distinct_colors_on_screen": 3,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "ascii_documented": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 562,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 0,
+      "non_ascii_glyph_kinds_on_screen": 0,
+      "non_ascii_examples": "",
+      "distinct_colors_on_screen": 10,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "locale_C": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 558,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 366,
+      "non_ascii_glyph_kinds_on_screen": 18,
+      "non_ascii_examples": "\u259e\u2590\u259f\u2570\u2584\u2588\u2580\u25c9\u2501\u2578\u2014\u25bc\u25b2\u28c0\u2192\u259b\u258c\u2599",
+      "distinct_colors_on_screen": 10,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "term_dumb": {
+      "alive": false,
+      "exit_code": 1,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 0,
+      "non_ascii_glyph_kinds_on_screen": 0,
+      "non_ascii_examples": "",
+      "distinct_colors_on_screen": 2,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": "lcars-monitor: TERM=dumb cannot display the interface; use a capable terminal or --snapshot primary\r\n"
+    }
+  },
+  "finished": "2026-11-02 08:40:17"
+}

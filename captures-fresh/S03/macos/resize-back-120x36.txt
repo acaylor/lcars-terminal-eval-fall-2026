@@ -1,0 +1,36 @@
+
+     ▄▄▄               LCARS / ENGINEERING                                                  SYSTEM MONITOR  //  01
+   ▄               ▀▀▀▀
+                 ▀     COMMAND / LOCAL CHRONOMETRY
+   01
+                       ▄▄▄▄▄▄  ▄▄▄▄▄▄      ▄▄  ▄▄  ▄▄▄▄▄▄                                    ▗ ONLINE              ▖
+                       ██  ██  ██  ██  ██  ██  ██  ██  ██                                    ▝                     ▘
+                       ██  ██  ██████      ██████  ██  ██   08
+   02                  ██  ██  ██  ██  ██      ██  ██  ██                                      CPU    3.6%
+                       ▀▀▀▀▀▀  ▀▀▀▀▀▀          ▀▀  ▀▀▀▀▀▀   SEC
+                                                                                               UP   6d 18h 35m
+   03                  MON 02 NOV 2026  /  mac-host.local
+
+                       02 / COMPUTE TELEMETRY                                                               ▌
+
+
+   ENG                 LOAD / 1 MIN                       MEMORY / 07                          ROOT / 09
+
+   SYSTEMS              ▄    ▄▄▄ ▄▄▄                      13.8 GiB  IN USE                          ▄▄██████▄▄
+                       ██    █ █ █                                                                 ██▀      ▀██
+                        █    ███ ███                      10.2 GiB  AVAILABLE                     ██  61%     ██
+   07-ALPHA             █      █ █ █                                                              ██  USED    ██
+                       ▀▀▀ ▀ ▀▀▀ ▀▀▀                      24.0 GiB  INSTALLED                      ██▄      ▄██
+                                                                                                    ▀▀██████▀▀
+                       05m 2.13  /  15m 1.94
+                                                                                               282.9 GiB / 460.4 GiB
+
+                       CPU TRACE   ───────────────────────────────────⠉⠉⠉
+
+                       RX  0 B/s                   TX  1024 B/s                                LINK / ALL EXCL. LO
+
+                       NETWORK / 03     ● ─ ─ ─ ─ ─ ─
+ ▐
+ ▝                     q / ESC EXIT    ? HELP    SPACE HOLD    p DIAG    TAB VIEW
+
+

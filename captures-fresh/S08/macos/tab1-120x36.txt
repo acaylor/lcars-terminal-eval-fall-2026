@@ -1,0 +1,36 @@
+▗                      ▖  ▗                             ▖  ▗                             ▖  ▗                      ▖
+▐       LCARS 47       ▌  ▐         DIAGNOSTICS         ▌  ▐       PROCESS MATRIX        ▌  ▐       DECK 07        ▌
+▘                      ▝  ▘                             ▝  ▘                             ▝  ▘                      ▝
+▗   ▖     DIAGNOSTIC SUBSYSTEM  // PROCESS MATRIX                                            TAB // RETURN TO COMMAND
+▐   ▌                                                       PROCESS MANIFEST
+▐   ▌                                                       TOP CPU // SAMPLE 1.09s
+▐SYS▌     ▐OS▌ Darwin 27.2
+▐   ▌     KRN 27.2.0                        ARCH aarch64          PID    COMMAND                    CPU%           MEM
+▘   ▝     ▐HOST▌ mac-host.local
+▗   ▖                                                       ▐01▌   1246  mediaanalysisd              30.8%        395M
+▐   ▌     CORE MATRIX // %                      10 CORES                 ━━━━━━━━━━━╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+▐   ▌
+▐CPU▌     00 ━━━━━╌╌╌╌╌╌╌╌╌╌  35 05 ━╌╌╌╌╌╌╌╌╌╌╌╌╌╌   7     ▐02▌   1277  svc39                       16.0%       1.09G
+▐   ▌     01 ━━━━╌╌╌╌╌╌╌╌╌╌╌  25 06 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌   0                  ━━━━━━╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+▘   ▝     02 ━━━━╌╌╌╌╌╌╌╌╌╌╌  25 07 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌   0
+▗   ▖     03 ━━╌╌╌╌╌╌╌╌╌╌╌╌╌  14 08 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌   0     ▐03▌   2013  svc03                        6.0%        123M
+▐   ▌     04 ━╌╌╌╌╌╌╌╌╌╌╌╌╌╌   8 09 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌   0                  ━━╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+▐   ▌
+▐MEM▌                                                       ▐04▌   1917  svc02                        4.2%        493M
+▐   ▌                                                                    ━╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+▘   ▝
+▗   ▖                                                       ▐05▌  60850  python                       1.8%       43.7M
+▐   ▌                                                                    ━╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+▐   ▌
+▐SWP▌                                                       PROCESSES ONLINE
+▐   ▌                                                         ██████       ██         ██
+▘   ▝                                                       ██      ██   ████       ████
+▗   ▖     ▐SWAP▌ NO SWAP                                    ██      ██     ██         ██
+▐   ▌                                                       ██      ██     ██         ██
+▐   ▌     PROCESSES 911          LOAD 1.62 / 1.97 / 1.94      ████████     ██         ██
+▐PS ▌                                                               ██     ██         ██
+▐   ▌                                                               ██     ██         ██
+▐   ▌                                                             ██       ██         ██
+▘   ▝                                                         ████       ██████     ██████
+
+    ▐TAB▌ COMMAND  ▐P▌ CLOSE  ▐?▌ HELP  ▐SPACE▌ HOLD  ▐Q▌ QUIT                             LCARS 47 // DIAGNOSTIC NET

@@ -1,0 +1,158 @@
+{
+  "platform": "Linux",
+  "t_wall": "2026-11-02 08:40:22",
+  "hostname": "linux",
+  "loadavg": [
+    0.17,
+    0.17,
+    0.17
+  ],
+  "uptime_s": 913588.36,
+  "mem_kib": {
+    "MemTotal": 97979612,
+    "MemAvailable": 73010052,
+    "MemFree": 1316208,
+    "Buffers": 3715320,
+    "Cached": 70707272,
+    "SwapTotal": 0,
+    "SwapFree": 0
+  },
+  "mem_used_kib_total_minus_avail": 24969560,
+  "mem_total_gib": 93.44,
+  "mem_avail_gib": 69.63,
+  "mem_used_gib": 23.81,
+  "swap_total_gib": 0.0,
+  "swap_used_gib": 0.0,
+  "root_disk": {
+    "total_gib": 915.5,
+    "used_gib": 599.0,
+    "avail_gib": 269.9,
+    "used_pct_df": 68.9,
+    "used_pct_of_total": 65.4
+  },
+  "ncpu": 24,
+  "proc_stat_cpu": "cpu  6231751 13284 1974585 1998710285 180633960 0 109183 0 0 0",
+  "net_dev": {
+    "lo": {
+      "rx": 1640591371,
+      "tx": 1640591371
+    },
+    "eth0": {
+      "rx": 33957843788,
+      "tx": 17443739574
+    },
+    "wlan0": {
+      "rx": 0,
+      "tx": 0
+    },
+    "br0": {
+      "rx": 0,
+      "tx": 0
+    },
+    "cni_net": {
+      "rx": 71666,
+      "tx": 450
+    },
+    "cni_host": {
+      "rx": 450,
+      "tx": 71666
+    },
+    "cni_vxlan": {
+      "rx": 125423367,
+      "tx": 309650570
+    },
+    "veth00": {
+      "rx": 181779534,
+      "tx": 2405152869
+    },
+    "veth01": {
+      "rx": 583291337,
+      "tx": 38985528
+    },
+    "veth02": {
+      "rx": 9931374,
+      "tx": 56979017
+    },
+    "veth03": {
+      "rx": 378090808,
+      "tx": 160500432
+    },
+    "veth04": {
+      "rx": 18366,
+      "tx": 90
+    },
+    "veth05": {
+      "rx": 30295,
+      "tx": 98906
+    },
+    "veth06": {
+      "rx": 248598819,
+      "tx": 303725900
+    },
+    "veth_health": {
+      "rx": 36999200,
+      "tx": 44183144
+    },
+    "veth07": {
+      "rx": 74016060,
+      "tx": 79289273
+    }
+  },
+  "process_count": 505,
+  "os": "Linux 7.0.0-38-generic x86_64",
+  "cpu_pct_overall": 0.2,
+  "net_rate_non_lo_Bps": {
+    "rx": 5051,
+    "tx": 3061
+  },
+  "top_cpu_processes": [
+    {
+      "cpu_pct": 2.0,
+      "pid": 1968822,
+      "name": "lcars",
+      "rss_kib": 7744
+    },
+    {
+      "cpu_pct": 1.0,
+      "pid": 828117,
+      "name": "svc13",
+      "rss_kib": 15744
+    },
+    {
+      "cpu_pct": 1.0,
+      "pid": 302349,
+      "name": "svc08",
+      "rss_kib": 64032
+    },
+    {
+      "cpu_pct": 1.0,
+      "pid": 301341,
+      "name": "svc07",
+      "rss_kib": 228780
+    },
+    {
+      "cpu_pct": 1.0,
+      "pid": 5912,
+      "name": "svc16",
+      "rss_kib": 480612
+    },
+    {
+      "cpu_pct": 1.0,
+      "pid": 2318,
+      "name": "svc12",
+      "rss_kib": 192700
+    },
+    {
+      "cpu_pct": 0.0,
+      "pid": 1968736,
+      "name": "kworker/22:2",
+      "rss_kib": 0
+    },
+    {
+      "cpu_pct": 0.0,
+      "pid": 1967977,
+      "name": "kworker/21:0-events",
+      "rss_kib": 0
+    }
+  ]
+}

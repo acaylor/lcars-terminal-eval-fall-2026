@@ -1,0 +1,36 @@
+
+
+
+
+
+
+                ▗                                                                                      ▖
+                ▐                                                                                      ▌
+                ▐                                                                                      ▌
+                ▐   COMMAND REFERENCE                                                 LCARS // 47      ▌
+                ▐                                                                                      ▌
+                ▐                                                                                      ▌
+                ▐    Q / ESC   QUIT THE DISPLAY                         TELEMETRY                      ▌
+                ▐    ?   TOGGLE THIS HELP                                                              ▌
+                ▐    SPACE   HOLD / RESUME SAMPLING                     ▐SYS▌ TIME / UPTIME            ▌
+                ▐    P   PROCESS DIAGNOSTICS                                                           ▌
+                ▐    TAB   CYCLE COMMAND VIEWS                          ▐CPU▌ LOAD / CORES             ▌
+                ▐    CTRL-C   RESTORE AND EXIT                                                         ▌
+                ▐                                                       ▐MEM▌ RAM / ROOT               ▌
+                ▐                                                                                      ▌
+                ▐                                                       ▐NET▌ RX / TX                  ▌
+                ▐                                                                                      ▌
+                ▐                                                                                      ▌
+                ▐                                                       TRUE COLOR IS AUTOMATIC        ▌
+                ▐                                                                                      ▌
+                ▐                                                                                      ▌
+                ▐                                                                                      ▌
+                ▐   LCARS 47 // STARFLEET ENGINEERING // ORIGINAL COMPOSITION                          ▌
+                ▐                                                                                      ▌
+                ▘                                                                                      ▝
+
+
+
+
+
+

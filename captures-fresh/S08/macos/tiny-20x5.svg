@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="90" viewBox="0 0 180 90" font-family="DejaVu Sans Mono, Menlo, monospace" font-size="15">
+<title>tiny-20x5</title>
+<rect width="100%" height="100%" fill="#000000"/>
+<rect x="0.0" y="0.0" width="9.6" height="18.6" fill="#ff9d45"/>
+<rect x="54.0" y="0.0" width="36.6" height="18.6" fill="#ff9d45"/>
+<text x="9.0" y="14.0" fill="#0a090f" font-weight="bold">L</text>
+<text x="18.0" y="14.0" fill="#0a090f" font-weight="bold">C</text>
+<text x="27.0" y="14.0" fill="#0a090f" font-weight="bold">A</text>
+<text x="36.0" y="14.0" fill="#0a090f" font-weight="bold">R</text>
+<text x="45.0" y="14.0" fill="#0a090f" font-weight="bold">S</text>
+<text x="9.0" y="32.0" fill="#ffc978" font-weight="bold">0</text>
+<text x="18.0" y="32.0" fill="#ffc978" font-weight="bold">8</text>
+<text x="27.0" y="32.0" fill="#ffc978" font-weight="bold">:</text>
+<text x="36.0" y="32.0" fill="#ffc978" font-weight="bold">4</text>
+<text x="45.0" y="32.0" fill="#ffc978" font-weight="bold">5</text>
+<text x="54.0" y="32.0" fill="#ffc978" font-weight="bold">:</text>
+<text x="63.0" y="32.0" fill="#ffc978" font-weight="bold">1</text>
+<text x="72.0" y="32.0" fill="#ffc978" font-weight="bold">7</text>
+</svg>

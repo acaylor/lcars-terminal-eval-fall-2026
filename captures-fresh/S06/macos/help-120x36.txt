@@ -1,0 +1,36 @@
+                                                       ▞
+        LCARS 47 // ENGINEERING STATUS                 ▐
+                                                       ▟
+      ╰
+        ▄▄██▀▀██▄▄  ▄▄██▀▀██▄▄          ████  ████  ▄▄██▀▀██▄▄          ████  ████    ▄▄██        CPU / TOTAL
+ 47     ████  ████  ▀▀██▄▄██▀▀      ▀▀  ████▄▄████      ▄▄██▀▀      ▀▀  ████▄▄████      ██
+        ████  ████  ████  ████      ▀▀        ████  ▄▄██▀▀          ▀▀        ████      ██        ▄█▀█▄ ██ ██        A
+          ▀▀▀▀▀▀      ▀▀▀▀▀▀                  ▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀                ▀▀▀▀    ▀▀▀▀▀▀      ██ ██ ██▄██
+                                                                                                  ██ ██    ██        U
+                                                                                                   ▀▀▀     ▀▀ %
+                                                                                                                     X
+ ENG
+           2026-11-02 MON            LCARS // COMMAND REFERENCE
+
+            ◉ ALL SYSTEMS NOMINAL    Q / ESC    Return terminal to shell                        LOAD 01/05/15
+            STARFLEET ENGINEERING    SPACE      Pause or resume sampling
+                                     P          Toggle process diagnostics                      1.50  2.05  1.95
+          ━━━━━━━━━━━━━━━━━━━━━━━━   TAB        Cycle command views
+                                     ?          Close this reference                            UP 6d 18h 38m
+           MEMORY        11.5G USE                                                                    0—100%
+                         48.1% ALL
+                                     UNICODE        PRESS ? TO RESUME
+           ROOT /        253G USED
+                         54.9% CAP
+
+           NETWORK       ▼ 320K/s RX  /  ▲ 6.02K/s TX
+                                                                                   ⠠⠤⠤⠤⠤⠄         ⠒⠒⠒⠒⠒
+                                                                          ⠒⠒⠒⠒⠢⠤⠤⠤⠤⠄    ⠠⠤⠤⠤⠤⠒⠒⠒⠒⠒     ⠤⠤⠤⠤⠤
+
+                                                                          T-180 SAMPLES             NOW →
+
+
+                                                       ▛
+         SYS     NOMINAL                               ▌
+                                                       ▙
+       COMMAND                                             LIVE       SPACE PAUSE   P DIAG   TAB VIEW   ? HELP   Q QUIT

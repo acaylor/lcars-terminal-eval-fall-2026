@@ -1,0 +1,8 @@
+ LCARS
+
+08:37:50 CPU 0%
+
+NOMINAL
+
+
+Q quit

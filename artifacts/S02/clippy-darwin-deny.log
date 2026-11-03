@@ -1,0 +1,5 @@
+$ cargo clippy --all-targets --target aarch64-apple-darwin -- -D warnings
+   Compiling libc v0.2.189
+    Checking unicode-width v0.2.2
+    Checking lcarsmon v1.0.0 (<workspace>/evaluation/work/S02)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.67s

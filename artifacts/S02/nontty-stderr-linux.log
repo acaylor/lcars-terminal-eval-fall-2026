@@ -1,0 +1,1 @@
+lcarsmon: stdout is not a terminal. Run lcarsmon in an interactive terminal, or use `lcarsmon --snapshot command` to print a single frame.

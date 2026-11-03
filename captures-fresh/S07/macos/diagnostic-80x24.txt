@@ -1,0 +1,24 @@
+
+  ▐  47 / SYS ▌   LCARS  / DIAGNOSTICS                       ▐        ONLINE ▌
+
+
+
+
+   02       macOS 27.2 / arm64
+
+            PROCESSES / 913     SWAP / 0 B / 0 B
+            PROCESSOR ARRAY / 10 CORES
+            000   22.9%  ▂   001   22.9%  ▂   002   12.5%  ▁
+            003   20.8%  ▂   004    2.1%  ▁   005    2.1%  ▁
+
+
+           ▐                                         CPU / FIVE MOST ACTIVE ▌
+
+             PID        PROCESS                        CPU %      RESIDENT
+             1277       svc39                             0.1     1.1 GiB
+   DX        1917       svc02                             0.1     501.4 MiB
+             61274      lcars                             0.0     6.7 MiB
+             60850      python3.14                        0.0     42.9 MiB
+             978        sharingd                          0.0     87.4 MiB
+   01    [p] diagnostics   [tab] view   [space] hold   [?] help   [q] exit
+

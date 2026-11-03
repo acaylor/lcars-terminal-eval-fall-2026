@@ -1,0 +1,45 @@
+$ cargo clippy --all-targets --target aarch64-apple-darwin -- -D warnings
+   Compiling libc v0.2.190
+    Checking lcars-mon v0.3.0 (<workspace>/evaluation/work/S09)
+error: use of deprecated struct `libc::mach_timebase_info`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:101:46
+    |
+101 |             let mut tb = MaybeUninit::<libc::mach_timebase_info>::zeroed();
+    |                                              ^^^^^^^^^^^^^^^^^^
+    |
+    = note: `-D deprecated` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(deprecated)]`
+
+error: use of deprecated function `libc::mach_timebase_info`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:102:22
+    |
+102 |             if libc::mach_timebase_info(tb.as_mut_ptr()) == 0 {
+    |                      ^^^^^^^^^^^^^^^^^^
+
+error: use of deprecated function `libc::mach_host_self`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:153:23
+    |
+153 |                 libc::mach_host_self(),
+    |                       ^^^^^^^^^^^^^^
+
+error: use of deprecated function `libc::mach_host_self`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:202:23
+    |
+202 |                 libc::mach_host_self(),
+    |                       ^^^^^^^^^^^^^^
+
+error: use of deprecated field `libc::mach_timebase_info::numer`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:104:18
+    |
+104 |                 (tb.numer.max(1) as u64, tb.denom.max(1) as u64)
+    |                  ^^^^^^^^
+
+error: use of deprecated field `libc::mach_timebase_info::denom`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:104:42
+    |
+104 |                 (tb.numer.max(1) as u64, tb.denom.max(1) as u64)
+    |                                          ^^^^^^^^
+
+error: could not compile `lcars-mon` (lib) due to 6 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `lcars-mon` (lib test) due to 6 previous errors

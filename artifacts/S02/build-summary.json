@@ -1,0 +1,7 @@
+{
+  "build-release-locked": {"rc": 0, "seconds": 4.1},
+  "test": {"rc": 0, "seconds": 3.6},
+  "fmt-check": {"rc": 0, "seconds": 0.1},
+  "clippy-warnings": {"rc": 0, "seconds": 0.7},
+  "clippy-deny": {"rc": 0, "seconds": 0.4}
+}

@@ -1,0 +1,4 @@
+total 1936
+drwxrwxr-x 2 user user    4096 Nov  2 08:29 .
+drwxrwxr-x 7 user user    4096 Nov  2 08:29 ..
+-rwxrwxr-x 1 user user 1970336 Nov  2 08:29 lcars

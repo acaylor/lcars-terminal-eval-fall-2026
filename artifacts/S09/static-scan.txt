@@ -1,0 +1,112 @@
+S09: 6010 LOC in 14 files, 13 test fns, deps=1 panic=abort
+
+FILES
+     205 src/app.rs
+     196 src/bench.rs
+    1010 src/canvas.rs
+     367 src/collector/linux.rs
+     398 src/collector/macos.rs
+     185 src/collector/mod.rs
+       9 src/lib.rs
+     210 src/main.rs
+     317 src/model.rs
+     287 src/sampler.rs
+     223 src/terminal.rs
+     252 src/theme.rs
+    1829 src/ui.rs
+     522 tests/lcars_tests.rs
+
+SUBPROCESS (0)
+
+
+UNSAFE_BLOCK (24)
+  src/bench.rs:162: unsafe {
+  src/bench.rs:179: unsafe {
+  src/collector/linux.rs:27: let clk_tck = unsafe {
+  src/collector/linux.rs:35: let page_size = unsafe {
+  src/collector/macos.rs:91: let page_size = unsafe {
+  src/collector/macos.rs:100: let (timebase_numer, timebase_denom) = unsafe {
+  src/collector/macos.rs:121: unsafe {
+  src/collector/macos.rs:147: unsafe {
+  src/collector/macos.rs:178: let mem_total = unsafe {
+  src/collector/macos.rs:198: let mem_avail = mem_total.and_then(|total| unsafe {
+  src/collector/macos.rs:222: let (swap_total, swap_used) = unsafe {
+  src/collector/macos.rs:247: unsafe {
+  src/collector/macos.rs:278: unsafe {
+  src/collector/mod.rs:74: unsafe {
+  src/collector/mod.rs:99: let res = unsafe { libc::gethostname(buf.as_mut_ptr() as *mut libc::c_char, buf.len()) };
+  src/collector/mod.rs:104: let cstr = unsafe { CStr::from_ptr(buf.as_ptr() as *const libc::c_char) };
+  src/collector/mod.rs:115: unsafe {
+  src/collector/mod.rs:153: let n = unsafe { libc::getloadavg(loads.as_mut_ptr(), 3) };
+  src/collector/mod.rs:164: unsafe {
+  src/terminal.rs:58: unsafe {
+  src/terminal.rs:79: unsafe {
+  src/terminal.rs:157: unsafe {
+  src/terminal.rs:193: unsafe {
+  src/terminal.rs:205: unsafe fn install_signal_handlers() {
+
+CGO (0)
+
+
+GO_UNSAFE (0)
+
+
+PLACEHOLDER (0)
+
+
+PANIC_HOOK (2)
+  src/terminal.rs:116: let prev_hook = std::panic::take_hook();
+  src/terminal.rs:117: std::panic::set_hook(Box::new(move |info| {
+
+SIGNAL_HANDLING (7)
+  src/terminal.rs:209: let mut sa_term = MaybeUninit::<libc::sigaction>::zeroed().assume_init();
+  src/terminal.rs:210: sa_term.sa_sigaction = handle_termination_signal as *const () as usize;
+  src/terminal.rs:214: for &sig in &[libc::SIGINT, libc::SIGTERM, libc::SIGHUP, libc::SIGQUIT] {
+  src/terminal.rs:215: let _ = libc::sigaction(sig, &sa_term, std::ptr::null_mut());
+  src/terminal.rs:218: let mut sa_winch = MaybeUninit::<libc::sigaction>::zeroed().assume_init();
+  src/terminal.rs:219: sa_winch.sa_sigaction = handle_winch_signal as *const () as usize;
+  src/terminal.rs:222: let _ = libc::sigaction(libc::SIGWINCH, &sa_winch, std::ptr::null_mut());
+
+SCOPE_MOUSE (0)
+
+
+SCOPE_PROTOCOLS (1)
+  src/theme.rs:48: if t_low.contains("256color") || t_low.contains("kitty") || t_low.contains("alacritty")
+
+SCOPE_CONFIG (0)
+
+
+SCOPE_PROC_MGMT (0)
+
+
+FULL_CLEAR (2)
+  src/terminal.rs:127: .write_all(b"\x1b[?1049h\x1b[?25l\x1b[0m\x1b[2J\x1b[H")
+  tests/lcars_tests.rs:496: assert!(!out.contains("\x1b[2J"), "Diff renderer must not clear screen");
+
+DT_ASSUMPTION (26)
+  src/app.rs:50: /// Takes a fresh OS sample and computes rates against actual elapsed monotonic time.
+  src/app.rs:52: let now = Instant::now();
+  src/app.rs:154: let mut next_tick = Instant::now() + refresh_interval;
+  src/app.rs:157: let now = Instant::now();
+  src/app.rs:177: if Instant::now() >= next_tick {
+  src/app.rs:183: next_tick = Instant::now() + refresh_interval;
+  src/bench.rs:18: let t_cold_start = Instant::now();
+  src/bench.rs:37: let cold_startup_dur = t_cold_start.elapsed();
+  src/bench.rs:46: let wall_before = Instant::now();
+  src/bench.rs:52: let tc = Instant::now();
+  src/bench.rs:55: total_collect_primary += tc.elapsed();
+  src/bench.rs:57: let tr = Instant::now();
+  src/bench.rs:60: total_render_primary += tr.elapsed();
+  src/bench.rs:65: let wall_elapsed = wall_before.elapsed();
+  src/bench.rs:70: let t_proc_start = Instant::now();
+  src/bench.rs:75: let avg_proc_collect = t_proc_start.elapsed() / (proc_iters as u32);
+  src/bench.rs:113: cold_startup_dur.as_secs_f64() * 1000.0,
+  src/bench.rs:114: avg_collect_primary.as_secs_f64() * 1000.0,
+  src/bench.rs:115: avg_proc_collect.as_secs_f64() * 1000.0,
+  src/bench.rs:116: avg_render_primary.as_secs_f64() * 1000.0,
+  src/bench.rs:117: avg_frame_total.as_secs_f64() * 1000.0,
+  src/bench.rs:121: wall_elapsed.as_secs_f64() * 1000.0,
+  src/sampler.rs:14: /// and elapsed durations into presentation-ready `SystemTelemetry`.
+  src/sampler.rs:34: /// Processes a new raw system snapshot given the elapsed time `dt` since the previous sample.
+  src/sampler.rs:38: let dt_secs = dt.as_secs_f64();
+  tests/lcars_tests.rs:267: // 500ms elapsed: +5,000 RX bytes -> 10,000 B/s; +2,500 TX bytes -> 5,000 B/s.

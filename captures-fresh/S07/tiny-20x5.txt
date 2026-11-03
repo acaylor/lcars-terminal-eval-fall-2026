@@ -1,0 +1,5 @@
+ LCARS / COMPACT
+
+ 08:40:52  02 Nov ~
+ q exit / ? help /~
+ CPU 0.4%  UP 10d ~

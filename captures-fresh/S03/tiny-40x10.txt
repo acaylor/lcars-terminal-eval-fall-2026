@@ -1,0 +1,10 @@
+ LCARS / COMPACT COMMAND
+
+ 2026-11-02 08:36:40
+ HOST linux
+ CPU  0.5%
+ MEM  23.8 GiB / 93.4 GiB
+ LOAD 0.05
+ ROOT 65%
+ RX   3.7 KiB/s
+ q EXIT  ? HELP  p DIAG

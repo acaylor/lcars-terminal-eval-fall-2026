@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="144" viewBox="0 0 270 144" font-family="DejaVu Sans Mono, Menlo, monospace" font-size="15">
+<title>resize-30x8</title>
+<rect width="100%" height="100%" fill="#000000"/>
+<rect x="0.0" y="0.0" width="270.6" height="18.6" fill="#ff9948"/>
+<rect x="0.0" y="18.0" width="27.6" height="18.6" fill="#ff9948"/>
+<rect x="27.0" y="18.0" width="243.6" height="18.6" fill="#0e0c16"/>
+<rect x="0.0" y="36.0" width="27.6" height="18.6" fill="#ff9948"/>
+<rect x="27.0" y="36.0" width="243.6" height="18.6" fill="#0e0c16"/>
+<text x="45.0" y="50.0" fill="#f4edde">L</text>
+<text x="54.0" y="50.0" fill="#f4edde">C</text>
+<text x="63.0" y="50.0" fill="#f4edde">A</text>
+<text x="72.0" y="50.0" fill="#f4edde">R</text>
+<text x="81.0" y="50.0" fill="#f4edde">S</text>
+<rect x="0.0" y="54.0" width="27.6" height="18.6" fill="#ff9948"/>
+<rect x="27.0" y="54.0" width="243.6" height="18.6" fill="#0e0c16"/>
+<rect x="0.0" y="72.0" width="27.6" height="18.6" fill="#ff9948"/>
+<rect x="27.0" y="72.0" width="243.6" height="18.6" fill="#0e0c16"/>
+<text x="45.0" y="86.0" fill="#ffc65c">0</text>
+<text x="54.0" y="86.0" fill="#ffc65c">8</text>
+<text x="63.0" y="86.0" fill="#ffc65c">:</text>
+<text x="72.0" y="86.0" fill="#ffc65c">4</text>
+<text x="81.0" y="86.0" fill="#ffc65c">3</text>
+<text x="90.0" y="86.0" fill="#ffc65c">:</text>
+<text x="99.0" y="86.0" fill="#ffc65c">1</text>
+<text x="108.0" y="86.0" fill="#ffc65c">6</text>
+<rect x="0.0" y="90.0" width="27.6" height="18.6" fill="#ff9948"/>
+<rect x="27.0" y="90.0" width="243.6" height="18.6" fill="#0e0c16"/>
+<rect x="0.0" y="108.0" width="27.6" height="18.6" fill="#ff9948"/>
+<rect x="27.0" y="108.0" width="243.6" height="18.6" fill="#0e0c16"/>
+<text x="45.0" y="122.0" fill="#f4edde">C</text>
+<text x="54.0" y="122.0" fill="#f4edde">P</text>
+<text x="63.0" y="122.0" fill="#f4edde">U</text>
+<text x="81.0" y="122.0" fill="#f4edde">2</text>
+<text x="90.0" y="122.0" fill="#f4edde">%</text>
+<rect x="0.0" y="126.0" width="27.6" height="18.6" fill="#ff9948"/>
+<rect x="27.0" y="126.0" width="243.6" height="18.6" fill="#0e0c16"/>
+<text x="207.0" y="140.0" fill="#776d84">Q</text>
+<text x="225.0" y="140.0" fill="#776d84">Q</text>
+<text x="234.0" y="140.0" fill="#776d84">U</text>
+<text x="243.0" y="140.0" fill="#776d84">I</text>
+<text x="252.0" y="140.0" fill="#776d84">T</text>
+</svg>

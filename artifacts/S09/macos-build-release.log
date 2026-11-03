@@ -1,0 +1,45 @@
+$ cargo build --release --locked
+ Downloading crates ...
+  Downloaded libc v0.2.190
+   Compiling libc v0.2.190
+   Compiling lcars-mon v0.3.0 (/Users/user/lcars-eval/work/S09)
+warning: use of deprecated struct `libc::mach_timebase_info`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:101:46
+    |
+101 |             let mut tb = MaybeUninit::<libc::mach_timebase_info>::zeroed();
+    |                                              ^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated function `libc::mach_timebase_info`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:102:22
+    |
+102 |             if libc::mach_timebase_info(tb.as_mut_ptr()) == 0 {
+    |                      ^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated function `libc::mach_host_self`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:153:23
+    |
+153 |                 libc::mach_host_self(),
+    |                       ^^^^^^^^^^^^^^
+
+warning: use of deprecated function `libc::mach_host_self`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:202:23
+    |
+202 |                 libc::mach_host_self(),
+    |                       ^^^^^^^^^^^^^^
+
+warning: use of deprecated field `libc::mach_timebase_info::numer`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:104:18
+    |
+104 |                 (tb.numer.max(1) as u64, tb.denom.max(1) as u64)
+    |                  ^^^^^^^^
+
+warning: use of deprecated field `libc::mach_timebase_info::denom`: Use the `mach2` crate instead
+   --> src/collector/macos.rs:104:42
+    |
+104 |                 (tb.numer.max(1) as u64, tb.denom.max(1) as u64)
+    |                                          ^^^^^^^^
+
+warning: `lcars-mon` (lib) generated 6 warnings
+    Finished `release` profile [optimized] target(s) in 2.74s

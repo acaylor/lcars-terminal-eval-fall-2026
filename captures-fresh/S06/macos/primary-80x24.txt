@@ -1,0 +1,24 @@
+      LCARS // ENGINEERING                 ▞
+                                           ▟
+    ╰
+      ▄█▀█▄ ▄█▀█▄     ██ ██ ▀▀▀█▄     ▄█▀█▄ ██ ██         CPU
+47    ██ ██ ▀█▄█▀   ▀ ██▄██  ▄▄█▀   ▀ ██ ██ ██▄██         ▄█▀█▄
+      ██ ██ ██ ██   ▀    ██    ██   ▀ ██ ██    ██         ▀█▄█▀
+       ▀▀▀   ▀▀▀         ▀▀ ▀▀▀▀       ▀▀▀     ▀▀         ██ ██
+                                                           ▀▀▀  %
+
+      2026-11-02 MON         MAC-HOST.LOCAL
+                                                         LOAD 1/5/15
+        ◉ ALL SYSTEMS NOMINAL                          1.57 2.03 1.95
+        STARFLEET ENGINEERING
+       MEMORY        11.6G USED  /  19.7G FREE  /  24.0G TOTAL
+                     48.1% ALLOCATED
+       ROOT /        253G USED  /  208G FREE  /  460G TOTAL
+                     54.9% CAPACITY
+       NETWORK       ▼ 1.20M/s RX  /  ▲ 11.8K/s TX
+
+                                          UP 6d 18h 38m
+
+
+       SYS OK
+       COMMAND                                SPC PAUSE  P DIAG  ? HELP  Q QUIT

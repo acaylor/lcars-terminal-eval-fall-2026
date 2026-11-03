@@ -1,0 +1,3 @@
+$ cargo clippy --all-targets -- -D warnings
+    Checking lcars-mon v0.3.0 (<workspace>/evaluation/work/S09)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.23s

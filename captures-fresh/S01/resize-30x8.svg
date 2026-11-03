@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="144" viewBox="0 0 270 144" font-family="DejaVu Sans Mono, Menlo, monospace" font-size="15">
+<title>resize-30x8</title>
+<rect width="100%" height="100%" fill="#000000"/>
+<text x="9.0" y="14.0" fill="#ff9900">▗</text>
+<text x="18.0" y="14.0" fill="#ff9900">▄</text>
+<text x="27.0" y="14.0" fill="#ff9900">▄</text>
+<text x="36.0" y="14.0" fill="#ff9900">▄</text>
+<text x="45.0" y="14.0" fill="#ff9900">▄</text>
+<text x="54.0" y="14.0" fill="#ff9900">▄</text>
+<text x="72.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="81.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="90.0" y="14.0" fill="#e3c6d2">▄</text>
+<text x="99.0" y="14.0" fill="#e3c6d2">▄</text>
+<text x="108.0" y="14.0" fill="#e3c6d2">▄</text>
+<text x="117.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="126.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="135.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="144.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="153.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="162.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="171.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="180.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="189.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="198.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="207.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="216.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="225.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="234.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="243.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="252.0" y="14.0" fill="#cc99cc">▄</text>
+<text x="261.0" y="14.0" fill="#cc99cc">▖</text>
+<rect x="216.0" y="18.0" width="45.6" height="18.6" fill="#cc99cc"/>
+<text x="0.0" y="32.0" fill="#ff9900">▐</text>
+<text x="9.0" y="32.0" fill="#ff9900">█</text>
+<text x="18.0" y="32.0" fill="#ff9900">█</text>
+<text x="27.0" y="32.0" fill="#ff9900">█</text>
+<text x="36.0" y="32.0" fill="#ff9900">█</text>
+<text x="45.0" y="32.0" fill="#ff9900">█</text>
+<text x="54.0" y="32.0" fill="#ff9900">█</text>
+<text x="72.0" y="32.0" fill="#cc99cc">█</text>
+<text x="81.0" y="32.0" fill="#cc99cc">█</text>
+<text x="90.0" y="32.0" fill="#cc99cc">█</text>
+<text x="99.0" y="32.0" fill="#cc99cc">█</text>
+<text x="108.0" y="32.0" fill="#cc99cc">█</text>
+<text x="117.0" y="32.0" fill="#cc99cc">█</text>
+<text x="126.0" y="32.0" fill="#cc99cc">█</text>
+<text x="135.0" y="32.0" fill="#cc99cc">█</text>
+<text x="144.0" y="32.0" fill="#cc99cc">█</text>
+<text x="153.0" y="32.0" fill="#cc99cc">█</text>
+<text x="162.0" y="32.0" fill="#cc99cc">█</text>
+<text x="171.0" y="32.0" fill="#cc99cc">█</text>
+<text x="180.0" y="32.0" fill="#cc99cc">█</text>
+<text x="189.0" y="32.0" fill="#cc99cc">█</text>
+<text x="198.0" y="32.0" fill="#cc99cc">█</text>
+<text x="207.0" y="32.0" fill="#cc99cc">█</text>
+<text x="216.0" y="32.0" fill="#000000" font-weight="bold">L</text>
+<text x="225.0" y="32.0" fill="#000000" font-weight="bold">C</text>
+<text x="234.0" y="32.0" fill="#000000" font-weight="bold">A</text>
+<text x="243.0" y="32.0" fill="#000000" font-weight="bold">R</text>
+<text x="252.0" y="32.0" fill="#000000" font-weight="bold">S</text>
+<text x="261.0" y="32.0" fill="#cc99cc">▌</text>
+<text x="0.0" y="50.0" fill="#ff9900">█</text>
+<text x="9.0" y="50.0" fill="#ff9900">█</text>
+<text x="18.0" y="50.0" fill="#ff9900">█</text>
+<text x="27.0" y="50.0" fill="#ff9900">█</text>
+<text x="36.0" y="50.0" fill="#ff9900">█</text>
+<text x="45.0" y="50.0" fill="#ff9900">▛</text>
+<text x="54.0" y="50.0" fill="#ff9900">▀</text>
+<text x="72.0" y="68.0" fill="#ffcc66" font-weight="bold">0</text>
+<text x="81.0" y="68.0" fill="#ffcc66" font-weight="bold">8</text>
+<text x="90.0" y="68.0" fill="#ffcc66" font-weight="bold">:</text>
+<text x="99.0" y="68.0" fill="#ffcc66" font-weight="bold">3</text>
+<text x="108.0" y="68.0" fill="#ffcc66" font-weight="bold">4</text>
+<text x="117.0" y="68.0" fill="#ffcc66" font-weight="bold">:</text>
+<text x="126.0" y="68.0" fill="#ffcc66" font-weight="bold">4</text>
+<text x="135.0" y="68.0" fill="#ffcc66" font-weight="bold">3</text>
+<text x="0.0" y="86.0" fill="#cc99cc">█</text>
+<text x="9.0" y="86.0" fill="#cc99cc">█</text>
+<text x="18.0" y="86.0" fill="#cc99cc">█</text>
+<text x="27.0" y="86.0" fill="#cc99cc">█</text>
+<text x="36.0" y="86.0" fill="#cc99cc">█</text>
+<text x="72.0" y="86.0" fill="#cc99cc">M</text>
+<text x="81.0" y="86.0" fill="#cc99cc">O</text>
+<text x="90.0" y="86.0" fill="#cc99cc">N</text>
+<text x="108.0" y="86.0" fill="#cc99cc">0</text>
+<text x="117.0" y="86.0" fill="#cc99cc">2</text>
+<text x="135.0" y="86.0" fill="#cc99cc">N</text>
+<text x="144.0" y="86.0" fill="#cc99cc">O</text>
+<text x="153.0" y="86.0" fill="#cc99cc">V</text>
+<text x="171.0" y="86.0" fill="#cc99cc">2</text>
+<text x="180.0" y="86.0" fill="#cc99cc">0</text>
+<text x="189.0" y="86.0" fill="#cc99cc">2</text>
+<text x="198.0" y="86.0" fill="#cc99cc">6</text>
+<text x="72.0" y="104.0" fill="#9999ff">N</text>
+<text x="81.0" y="104.0" fill="#9999ff">O</text>
+<text x="90.0" y="104.0" fill="#9999ff">M</text>
+<text x="99.0" y="104.0" fill="#9999ff">I</text>
+<text x="108.0" y="104.0" fill="#9999ff">N</text>
+<text x="117.0" y="104.0" fill="#9999ff">A</text>
+<text x="126.0" y="104.0" fill="#9999ff">L</text>
+<text x="0.0" y="122.0" fill="#ff9900">█</text>
+<text x="9.0" y="122.0" fill="#ff9900">█</text>
+<text x="18.0" y="122.0" fill="#ff9900">█</text>
+<text x="27.0" y="122.0" fill="#ff9900">█</text>
+<text x="36.0" y="122.0" fill="#ff9900">█</text>
+<text x="45.0" y="122.0" fill="#ff9900">▙</text>
+<text x="54.0" y="122.0" fill="#ff9900">▄</text>
+<rect x="144.0" y="126.0" width="117.6" height="18.6" fill="#cc99cc"/>
+<text x="0.0" y="140.0" fill="#ff9900">▝</text>
+<text x="9.0" y="140.0" fill="#ff9900">█</text>
+<text x="18.0" y="140.0" fill="#ff9900">█</text>
+<text x="27.0" y="140.0" fill="#ff9900">█</text>
+<text x="36.0" y="140.0" fill="#ff9900">█</text>
+<text x="45.0" y="140.0" fill="#ff9900">█</text>
+<text x="54.0" y="140.0" fill="#ff9900">█</text>
+<text x="72.0" y="140.0" fill="#cc99cc">█</text>
+<text x="81.0" y="140.0" fill="#cc99cc">█</text>
+<text x="90.0" y="140.0" fill="#cc99cc">█</text>
+<text x="99.0" y="140.0" fill="#cc99cc">█</text>
+<text x="108.0" y="140.0" fill="#cc99cc">█</text>
+<text x="117.0" y="140.0" fill="#cc99cc">█</text>
+<text x="126.0" y="140.0" fill="#cc99cc">█</text>
+<text x="135.0" y="140.0" fill="#cc99cc">█</text>
+<text x="144.0" y="140.0" fill="#000000" font-weight="bold">Q</text>
+<text x="162.0" y="140.0" fill="#000000" font-weight="bold">?</text>
+<text x="180.0" y="140.0" fill="#000000" font-weight="bold">S</text>
+<text x="189.0" y="140.0" fill="#000000" font-weight="bold">P</text>
+<text x="198.0" y="140.0" fill="#000000" font-weight="bold">C</text>
+<text x="216.0" y="140.0" fill="#000000" font-weight="bold">P</text>
+<text x="234.0" y="140.0" fill="#000000" font-weight="bold">T</text>
+<text x="243.0" y="140.0" fill="#000000" font-weight="bold">A</text>
+<text x="252.0" y="140.0" fill="#000000" font-weight="bold">B</text>
+<text x="261.0" y="140.0" fill="#cc99cc">▌</text>
+</svg>

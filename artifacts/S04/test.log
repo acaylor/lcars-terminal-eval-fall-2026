@@ -1,0 +1,45 @@
+$ cargo test --all-targets
+   Compiling libc v0.2.189
+   Compiling lcars-monitor v1.0.0 (<workspace>/evaluation/work/S04)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.78s
+     Running unittests src/lib.rs (target/debug/deps/lcars-7a5789b5b9882dea)
+
+running 14 tests
+test metrics::parse::tests::load_and_uptime_reject_garbage ... ok
+test metrics::parse::tests::meminfo_prefers_available_and_falls_back ... ok
+test metrics::parse::tests::missing_mem_is_not_zero ... ok
+test metrics::parse::tests::net_dev_skips_loopback_and_short_lines ... ok
+test metrics::parse::tests::os_release_prefers_pretty_name ... ok
+test metrics::parse::tests::proc_stat_handles_spaces_parens_and_non_utf8 ... ok
+test metrics::parse::tests::stat_ignores_guest_double_count_and_parses_cores ... ok
+test metrics::rate::tests::long_interval_is_an_average_not_a_guess ... ok
+test metrics::rate::tests::all_interfaces_gone_is_zero_not_a_crash ... ok
+test metrics::rate::tests::new_and_gone_interfaces_do_not_invent_traffic ... ok
+test metrics::rate::tests::rate_uses_elapsed_not_assumed_interval ... ok
+test metrics::rate::tests::rollover_or_reset_does_not_spike ... ok
+test metrics::rate::tests::zero_and_negative_elapsed_are_unavailable ... ok
+test render::font::tests::cell_glyphs_are_rectangles ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/lcars_monitor-a6558e376f964aac)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/layout.rs (target/debug/deps/layout-2474840fc1e6a627)
+
+running 9 tests
+test primary_is_asymmetric_with_negative_space ... ok
+test standard_and_tiny_layouts_do_not_panic_or_leak_processes ... ok
+test long_hostname_is_truncated ... ok
+test unavailable_metrics_are_not_fake_zeros ... ok
+test ascii_and_mono_fallbacks ... ok
+test secondary_shows_processes_and_differs ... ok
+test primary_hides_process_list_and_shows_core_metrics ... ok
+test focus_and_help_change_the_frame ... ok
+test live_sample_survives_missing_fields ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+

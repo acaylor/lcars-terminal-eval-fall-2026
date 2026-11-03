@@ -1,0 +1,36 @@
+
+  ▐  47 / SYS ▌   LCARS  / DIAGNOSTICS                                                               ▐        ONLINE ▌
+
+
+
+
+   02       macOS 27.2 / arm64
+
+            PROCESSES / 912     SWAP / 0 B / 0 B
+
+            PROCESSOR ARRAY / 10 CORES                                               PAGE 1/1  [ / ]
+
+            000    0.0%  ▁   001    0.0%  ▁   002    0.0%  ▁   003    0.0%  ▁   004    0.0%  ▁   005    0.0%  ▁
+            006    0.0%  ▁   007    0.0%  ▁   008    0.0%  ▁   009    0.0%  ▁
+
+
+
+
+
+
+
+           ▐                                                                                 CPU / FIVE MOST ACTIVE ▌
+
+             PID        PROCESS                                                                CPU %      RESIDENT
+             115        mbuseragent                                                                --     848.0 KiB
+             618        loginwindow                                                                --     92.8 MiB
+             908        distnoted                                                                  --     3.6 MiB
+             909        cfprefsd                                                                   --     5.8 MiB
+             920        secd                                                                       --     25.7 MiB
+
+   DX
+
+            CPU: 100% = one core   |   denied or exited processes are omitted
+
+   01    [p] diagnostics   [tab] view   [space] hold   [?] help   [q] exit
+

@@ -1,0 +1,17 @@
+{
+  "all_capture_files_stripped": [
+    "captures/diag-120x36.txt",
+    "captures/primary-120x36.txt"
+  ],
+  "captains_log_file": [],
+  "captains_log_readme_section": true,
+  "prebuilt_binaries_removed": [],
+  "primary_120x36_capture": true,
+  "primary_capture_files": [
+    "captures/primary-120x36.txt"
+  ],
+  "secondary_120x36_capture": true,
+  "secondary_capture_files": [
+    "captures/diag-120x36.txt"
+  ]
+}

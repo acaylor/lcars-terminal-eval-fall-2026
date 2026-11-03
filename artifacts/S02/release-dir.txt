@@ -1,0 +1,15 @@
+total 2004
+drwxrwxr-x 7 user user    4096 Nov  2 08:29 .
+drwxrwxr-x 5 user user    4096 Nov  2 08:29 ..
+-rw-rw-r-- 1 user user       0 Nov  2 08:29 .cargo-artifact-lock
+-rw-rw-r-- 1 user user       0 Nov  2 08:29 .cargo-build-lock
+-rw-rw-r-- 1 user user       0 Nov  2 08:29 .cargo-lock
+drwxrwxr-x 8 user user    4096 Nov  2 08:29 .fingerprint
+drwxrwxr-x 4 user user    4096 Nov  2 08:29 build
+drwxrwxr-x 2 user user    4096 Nov  2 08:29 deps
+drwxrwxr-x 2 user user    4096 Nov  2 08:29 examples
+drwxrwxr-x 2 user user    4096 Nov  2 08:29 incremental
+-rwxrwxr-x 2 user user  588632 Nov  2 08:29 lcarsmon
+-rw-rw-r-- 1 user user    2674 Nov  2 08:29 lcarsmon.d
+-rw-rw-r-- 1 user user    2583 Nov  2 08:29 liblcarsmon.d
+-rw-rw-r-- 2 user user 1421372 Nov  2 08:29 liblcarsmon.rlib

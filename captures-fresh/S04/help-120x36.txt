@@ -1,0 +1,36 @@
+▗
+         LCARS     04      ENG
+
+      ▘
+                                                                                                                      ▖
+             ▗    ▖   ▗    ▖       ▗    ▖         ▖        ▗▖     ▗                 CPU 1%
+      ▗01 ▖ ▗      ▖ ▗      ▖      ▘     ▖        ▘              ▗                                                    ▘
+      ▝   ▘                                     ▗▘
+                     ▝      ▘            ▘     ▗▘                            ▗                                        ▖
+                                              ▗                        ▗▖     MEM 23.8G AVL 69.6G /93.4G
+                     ▗      ▖            ▖                                   ▝                                        ▘
+      ▗02 ▖
+      ▝   ▘ ▝      ▘ ▝      ▘      ▖     ▘                       ▝      ▘                ▗RX 6K/s                     ▖
+             ▝    ▘   ▝    ▘       ▝    ▘     ▝▘                  ▝    ▘                 ▝                            ▘
+▝    ▘
+            LOAD                                                                             ▗TX 19K/s                ▖
+                                        ▗                        ▖                           ▝                        ▘
+                                         NOMINAL
+▗    ▖▗03 ▖                             ▝                        ▘                               ▗DSK 65% 915.5G      ▖
+      ▝   ▘                                                                                      ▝                    ▘
+
+                                    5m 0.20  15m 0.18
+▝    ▘
+            ⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀
+            TRACE
+▗    ▖▗04 ▖
+      ▝   ▘
+▝    ▘
+    ▗      ▖  Q / ESC  QUIT                                                                                          ▖
+     CMD      ?        HELP
+              SPACE    HOLD / RESUME
+              P        PROCESS DIAG
+              TAB      CYCLE FOCUS
+              LCARS_ASCII=1  LCARS_MONO=1                                                                              ▖
+
+    ▝      ▘                                                                                                         ▘ ▘

@@ -1,0 +1,8 @@
+ ◖██████LCARS COMPACT███████◗
+
+ 08:43:03 CPU  0.4%
+ MEM 25.5%
+
+
+
+ V1:CMD [P/TAB]

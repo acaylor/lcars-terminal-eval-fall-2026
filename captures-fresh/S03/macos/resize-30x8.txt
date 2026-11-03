@@ -1,0 +1,8 @@
+ LCARS / COMPACT COMMAND
+
+ 2026-11-02 08:40:07
+ HOST mac-host.local
+ CPU  7.5%
+ MEM  13.8 GiB / 24.0 GiB
+ LOAD 1.96
+ q EXIT  ? HELP  p DIAG

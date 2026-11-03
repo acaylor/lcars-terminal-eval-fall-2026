@@ -1,0 +1,36 @@
+
+     ▄▄▄               LCARS / ENGINEERING                                                  SYSTEM MONITOR  //  01
+   ▄               ▀▀▀▀
+                 ▀     COMMAND / LOCAL CHRONOMETRY
+   01
+                       ▄▄▄▄▄▄  ▄▄▄▄▄▄      ▄▄▄▄▄▄  ▄▄▄▄▄▄                                    ▗ ONLINE              ▖
+                       ██  ██  ██  ██  ██      ██  ██  ██                                    ▝                     ▘
+                       ██  ██  ██████      ██████  ██████   33
+   02                  ██  ██  ██  ██  ██      ██      ██                                      CPU    4.7%
+                       ▀▀▀
+                           ▗ COMMAND REFERENCE / ? CLOSE                                   ▖   UP   6d 18h 35m
+   03                  MON ▝                                                               ▘
+                             q / Esc    End terminal session
+                       02    ?          Open / close this reference                                         ▌
+                             Space      Hold / resume telemetry
+                             p          Open / close diagnostics
+   ENG                 LOA   Tab        Switch command / diagnostic view                       ROOT / 09
+
+   SYSTEMS              ▄    HOLD freezes time, counters and animation.                             ▄▄██████▄▄
+                       ██    -- means unavailable or awaiting a baseline.                          ██▀      ▀██
+                        █    CPU uses interval deltas; process 100% = one core.                   ██  61%     ██
+   07-ALPHA             █    Network sums interfaces, excluding loopback.                         ██  USED    ██
+                       ▀▀▀   Resize for more telemetry. No root access needed.                     ██▄      ▄██
+                                                                                                    ▀▀██████▀▀
+                       05m
+                                                                                               282.9 GiB / 460.4 GiB
+
+                       CPU TRACE   ──────────────────────────────────⠉⠉⠑⠉
+
+                       RX  397.6 KiB/s             TX  11.0 KiB/s                              LINK / ALL EXCL. LO
+
+                       NETWORK / 03     ─ ─ ● ─ ─ ─ ─
+ ▐
+ ▝                     q / ESC EXIT    ? HELP    SPACE HOLD    p DIAG    TAB VIEW
+
+

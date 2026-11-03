@@ -1,0 +1,82 @@
+S05: 2859 LOC in 18 files, 22 test fns, deps=5 panic=n/a
+
+FILES
+      53 cmd/lcars/main.go
+     298 internal/app/app.go
+     603 internal/app/view.go
+     155 internal/app/view_test.go
+      25 internal/metrics/collect.go
+     242 internal/metrics/darwin.go
+     268 internal/metrics/linux.go
+     165 internal/metrics/metrics_test.go
+      14 internal/metrics/other.go
+     199 internal/metrics/rates.go
+      82 internal/metrics/types.go
+     142 internal/render/big.go
+      89 internal/render/cell.go
+     111 internal/render/render_test.go
+     136 internal/render/shapes.go
+      32 internal/render/size_unix.go
+     126 internal/render/term.go
+     119 internal/render/theme.go
+
+SUBPROCESS (0)
+
+
+UNSAFE_BLOCK (0)
+
+
+CGO (0)
+
+
+GO_UNSAFE (12)
+  internal/metrics/darwin.go:10: "unsafe"
+  internal/metrics/darwin.go:79: *(*uint64)(unsafe.Pointer(&raw[0])), *(*uint64)(unsafe.Pointer(&raw[8])),
+  internal/metrics/darwin.go:80: *(*uint64)(unsafe.Pointer(&raw[16])), *(*uint64)(unsafe.Pointer(&raw[24])),
+  internal/metrics/darwin.go:81: 0, *(*uint64)(unsafe.Pointer(&raw[32])), 0, 0,
+  internal/metrics/darwin.go:84: g := func(i int) uint64 { return uint64(*(*uint32)(unsafe.Pointer(&raw[i*4]))) }
+  internal/metrics/darwin.go:105: return *(*uint32)(unsafe.Pointer(&raw[off]))
+  internal/metrics/darwin.go:132: r64 := func(off int) uint64 { return *(*uint64)(unsafe.Pointer(&raw[off])) }
+  internal/metrics/darwin.go:181: msglen := int(*(*uint16)(unsafe.Pointer(&buf[off])))
+  internal/metrics/darwin.go:186: rx := *(*uint32)(unsafe.Pointer(&buf[off+36]))
+  internal/metrics/darwin.go:187: tx := *(*uint32)(unsafe.Pointer(&buf[off+40]))
+  internal/render/size_unix.go:6: "unsafe"
+  internal/render/size_unix.go:17: syscall.TIOCGWINSZ, uintptr(unsafe.Pointer(&ws)))
+
+PLACEHOLDER (3)
+  internal/app/view.go:221: // short salmon stub to the right of the header
+  internal/app/view.go:383: // left stub rail
+  internal/app/view.go:421: // stub rail
+
+PANIC_HOOK (0)
+
+
+SIGNAL_HANDLING (3)
+  internal/app/app.go:122: signal.Notify(sig, syscall.SIGINT, syscall.SIGTERM, syscall.SIGHUP, syscall.SIGWINCH)
+  internal/app/app.go:153: return nil // SIGINT/SIGTERM/SIGHUP: defer restore()
+  internal/app/app.go:229: if c == 0x03 { // Ctrl-C byte (raw mode: no SIGINT from tty)
+
+SCOPE_MOUSE (0)
+
+
+SCOPE_PROTOCOLS (0)
+
+
+SCOPE_CONFIG (0)
+
+
+SCOPE_PROC_MGMT (0)
+
+
+FULL_CLEAR (4)
+  internal/app/app.go:191: os.Stdout.WriteString("\x1b[H\x1b[2J" + sb.String() + "\n")
+  internal/render/render_test.go:28: if first == 0 || !strings.Contains(buf.String(), "\x1b[2J") {
+  internal/render/render_test.go:47: if !strings.Contains(buf.String(), "\x1b[2J") {
+  internal/render/term.go:73: out.WriteString("\x1b[H\x1b[2J")
+
+DT_ASSUMPTION (5)
+  internal/metrics/darwin.go:57: up := time.Since(time.Unix(v.Sec, int64(v.Usec)*1000))
+  internal/metrics/metrics_test.go:128: // Zero elapsed: no NaN, net not ok.
+  internal/metrics/metrics_test.go:131: t.Fatalf("zero elapsed: %+v", z)
+  internal/metrics/rates.go:11: // resets (cur < prev), shrinking slices, and zero elapsed ticks.
+  internal/metrics/rates.go:46: // elapsed time; zero/negative dt yields CPUPctOK=false rather than a panic.

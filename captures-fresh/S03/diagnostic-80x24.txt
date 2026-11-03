@@ -1,0 +1,24 @@
+
+     ▄▄▄         LCARS / ENGINEERING                SYSTEM MONITOR  //  01
+   ▄         ▀▀▀▀
+           ▀     DIAGNOSTIC / ENGINEERING ANALYSIS
+   01
+                 Linux / amd64                      PROCESSES / 511
+
+                 HOST linux                         CPU  0.4%
+   02
+                 SWAP  0 B / 0 B                    UP   10d 13h 42m
+
+   03            04 / PROCESS ACTIVITY
+
+                 PID      COMMAND                   CPU %       RESIDENT
+
+                 2318     svc12                        4.3      188.4 MiB
+   ENG           1917     svc24                        4.3      213.9 MiB
+                 1952238  svc10                        2.1      377.6 MiB
+                 1967664  lcars                        2.1      6.8 MiB
+                 1        systemd                      0.0      16.4 MiB
+ ▐               CORE  00    0%    01    4%    02    0%             +21
+ ▝               q / ESC EXIT    ? HELP    SPACE HOLD    p DIAG    TAB VIEW
+
+                 CPU: 100% = ONE CORE   /   p RETURN TO COMMAND

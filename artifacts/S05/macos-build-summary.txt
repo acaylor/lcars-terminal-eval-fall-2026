@@ -1,0 +1,3 @@
+build-release rc=0
+test rc=0
+vet rc=0

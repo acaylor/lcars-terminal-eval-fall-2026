@@ -1,0 +1,9 @@
+S01: start=2.46ms frame=4.48ms cpu=0.0% rss=2992KiB B/s=1096.4 clear=False size=670704
+S02: start=2.69ms frame=3.23ms cpu=0.125% rss=3648KiB B/s=4317.5 clear=False size=588632
+S03: start=3.24ms frame=4.23ms cpu=0.0% rss=5124KiB B/s=452.2 clear=False size=2015356
+S04: start=2.97ms frame=6.11ms cpu=0.0% rss=2792KiB B/s=11445.9 clear=False size=467984
+S05: start=3.33ms frame=20.31ms cpu=1.499% rss=8656KiB B/s=611.8 clear=False size=1970336
+S06: start=93.78ms frame=97.63ms cpu=0.25% rss=10852KiB B/s=618.2 clear=False size=720792
+S07: start=3.66ms frame=3.94ms cpu=0.125% rss=8048KiB B/s=492.3 clear=False size=2105468
+S08: start=39.37ms frame=41.51ms cpu=0.625% rss=4252KiB B/s=3690.5 clear=False size=823688
+S09: start=3.09ms frame=30.25ms cpu=0.0% rss=3672KiB B/s=1633.9 clear=False size=557336

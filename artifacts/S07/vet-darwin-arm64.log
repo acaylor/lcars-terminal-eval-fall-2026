@@ -1,0 +1,9 @@
+$ env GOOS=darwin GOARCH=arm64 CGO_ENABLED=0 go vet ./...
+# lcars/internal/app
+internal/app/app.go:115:34: undefined: metrics.NewCollector
+# lcars/internal/app
+# [lcars/internal/app]
+vet: internal/app/app.go:115:34: undefined: metrics.NewCollector
+# lcars/cmd/capture
+# [lcars/cmd/capture]
+vet: cmd/capture/main.go:28:23: undefined: metrics.NewCollector

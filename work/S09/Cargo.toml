@@ -1,0 +1,16 @@
+[package]
+name = "lcars-mon"
+version = "0.3.0"
+edition = "2021"
+description = "LCARS-inspired terminal system monitor for Starfleet engineering workstations"
+license = "MIT"
+
+[dependencies]
+libc = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true
+panic = "abort"

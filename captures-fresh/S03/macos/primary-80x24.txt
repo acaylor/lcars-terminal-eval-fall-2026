@@ -1,0 +1,24 @@
+
+     ▄▄▄         LCARS / ENGINEERING                SYSTEM MONITOR  //  01
+   ▄         ▀▀▀▀
+           ▀     COMMAND / LOCAL CHRONOMETRY
+   01
+                 ▄▄▄ ▄▄▄   ▄▄▄ ▄▄▄                     ▗ ONLINE             ▖
+                 █ █ █ █ █   █ █ █                     ▝                    ▘
+                 █ █ ███   ███ ███  54
+   02            █ █ █ █ █   █   █                       CPU 3.6%
+                 ▀▀▀ ▀▀▀   ▀▀▀ ▀▀▀  SEC
+                                                         UP 6d 18h 35m
+   03            MON 02 NOV 2026  /  mac-host.local
+
+                 02 / RESOURCE TELEMETRY
+
+                 LOAD  2.05 / 2.15 / 1.95
+   ENG
+                 MEM   13.8 GiB / 24.0 GiB         FREE  10.2 GiB
+
+                 RX 395.5 KiB/s  TX 3.0 KiB/s      ROOT 61% 460.4 GiB
+ ▐
+ ▝               q / ESC EXIT    ? HELP    SPACE HOLD    p DIAG    TAB VIEW
+
+

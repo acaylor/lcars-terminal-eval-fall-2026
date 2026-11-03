@@ -1,0 +1,29 @@
+[package]
+name = "lcars"
+version = "1.0.0"
+edition = "2021"
+description = "LCARS-inspired terminal system monitor for macOS and Linux"
+license = "MIT"
+rust-version = "1.80"
+
+[[bin]]
+name = "lcars"
+path = "src/main.rs"
+
+[dependencies]
+# Terminal lifecycle only: raw mode, alternate screen, keyboard + resize events.
+# Rendering is done with hand-written ANSI output, so crossterm's style API is unused.
+crossterm = { version = "0.29", default-features = false, features = ["events"] }
+# Direct OS APIs: /proc helpers and statvfs on Linux; sysctl, Mach host statistics,
+# libproc and routing sockets on macOS; localtime_r and gethostname on both.
+libc = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "unwind"   # keep unwinding so the terminal-restore panic hook always runs
+strip = true
+
+[profile.dev]
+opt-level = 1

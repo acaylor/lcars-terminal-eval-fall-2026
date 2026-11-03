@@ -1,0 +1,10 @@
+ LCARS
+ 08:41:52
+ DATE 02 NOV 2026
+ HOST linux
+ UP   10d13h47m
+ CPU  0%  L 0.06
+ MEM  23.8G / 93.4G
+ DSK  71%
+ NET  8.7 KB/s / 45.7 KB/s
+ Q QUIT  ?  P  TAB

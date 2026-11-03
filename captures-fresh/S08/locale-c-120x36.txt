@@ -1,0 +1,36 @@
+
+        LCARS 47                     ENGINEERING                      OPS // 2380                   DECK 07
+
+          * LIVE  SAMPLE 1.00s                                                 ASCII/24BIT
+          LOCAL TIME  24H                                  SECTOR 001 // STANDARD             CORE LOAD
+            ######     ######            ##     ######          ##       ######               ALL CORES // LIVE
+ SYS      ##      ## ##      ##        ####   ##      ##      ####     ##      ##
+          ##      ## ##      ##      ##  ##           ##        ##     ##      ##               ######     ######
+          ##      ## ##      ##    ##    ##           ##        ##     ##      ##             ##      ## ##      ##
+          ##      ##   ######      ##    ##         ##          ##       ########             ##      ## ##      ##
+          ##      ## ##      ##    ##########     ##            ##             ##             ##      ## ##      ##
+          ##      ## ##      ##          ##     ##              ##             ##             ##      ## ##      ##
+ CPU      ##      ## ##      ##          ##   ##                ##           ##               ##      ## ##      ##
+            ######     ######            ##   ##########      ######     ####                 ##      ## ##      ##
+          ----------------------===----------------------------------------------             ##      ## ##      ##
+          MON 02 NOV 2026   //   UPTIME 10d 13:48:26                                            ######     ######   %
+          HOST // linux                                            STATUS NOMINAL
+          LOAD AVERAGE // 1M                                                                  ----------------------
+ MEM       ###     ###     #      5M 0.12
+          #   #   #   #   ##      15M 0.16                                                    CORE STATUS
+          #   #   #   #  # #                                                                         NOMINAL
+          #   #   #   # #  #      CORE TRACE // 0-100%
+          #   #   #   # #  #
+          #   #   #   # #####     -=+*#+=-.:-=+*#+=-.:-=+*#+=-.:-=+*#+=-.:-=+*#+=
+ NET      #   #   #   #    #
+          #   #   #   #    #
+           ###     ###     #                                                                 NET  ALL IF 16
+          ? MEMORY                                                          USED / TOTAL    v RX 5.3 KB/s
+          23.8G / 93.4G                                                      AVAIL 69.6G    ^ TX 21.7 KB/s
+                                                                                                     ++++++++--------
+ DSK      25%   UTILIZED                                                PRESSURE NOMINAL
+                                                                                             ROOT  /
+                                                                                            646G / 916G            71%
+
+
+     Q  QUIT   ?  HELP   SPACE  HOLD   P  PROCS   TAB  VIEW                         LCARS 47 // STARFLEET ENGINEERING

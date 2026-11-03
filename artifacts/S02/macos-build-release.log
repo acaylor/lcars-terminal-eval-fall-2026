@@ -1,0 +1,5 @@
+$ cargo build --release --locked
+   Compiling libc v0.2.189
+   Compiling unicode-width v0.2.2
+   Compiling lcarsmon v1.0.0 (/Users/user/lcars-eval/work/S02)
+    Finished `release` profile [optimized] target(s) in 3.71s

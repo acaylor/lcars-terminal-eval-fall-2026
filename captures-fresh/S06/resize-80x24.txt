@@ -1,0 +1,24 @@
+      LCARS // ENGINEERING                 ▞
+                                           ▟
+    ╰
+      ▄█▀█▄ ▄█▀█▄     ▀▀▀█▄ ▄█▀█▄     ██▀▀▀ ▀▀▀█▄         CPU
+47    ██ ██ ▀█▄█▀   ▀  ▄▄█▀ ▀█▄██   ▀ ██▄▄   ▄▄█▀         ▄█▀█▄
+      ██ ██ ██ ██   ▀    ██    ██   ▀    ██    ██         ██ ██
+       ▀▀▀   ▀▀▀      ▀▀▀▀   ▀▀▀      ▀▀▀▀  ▀▀▀▀          ██ ██
+                                                           ▀▀▀  %
+
+      2026-11-02 MON         LINUX
+                                                         LOAD 1/5/15
+        ● ALL SYSTEMS NOMINAL                          0.19 0.17 0.17
+        STARFLEET ENGINEERING
+       MEMORY        23.8G USED  /  69.6G FREE  /  93.4G TOTAL
+                     25.5% ALLOCATED
+       ROOT /        646G USED  /  270G FREE  /  916G TOTAL
+                     70.5% CAPACITY
+       NETWORK       ▼ 40.9K/s RX  /  ▲ 2.19K/s TX
+
+                                          UP 10d 13h 46m
+
+
+       SYS OK
+       COMMAND                                SPC PAUSE  P DIAG  ? HELP  Q QUIT

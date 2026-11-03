@@ -1,0 +1,101 @@
+{
+  "sid": "S06",
+  "binary": "target/release/lcars-monitor",
+  "binary_size_bytes": 720792,
+  "host_loadavg_before": [
+    "0.01",
+    "0.08",
+    "0.11"
+  ],
+  "measured_at": "2026-11-02 08:50:47",
+  "startup": {
+    "first_byte": {
+      "median_ms": 93.78,
+      "min_ms": 92.06,
+      "max_ms": 95.1,
+      "n": 15,
+      "all_ms": [
+        93.4,
+        93.25,
+        93.78,
+        94.22,
+        94.34,
+        92.79,
+        92.84,
+        94.05,
+        93.84,
+        92.06,
+        95.1,
+        93.05,
+        93.17,
+        94.74,
+        95.02
+      ]
+    },
+    "first_substantial_frame": {
+      "median_ms": 97.63,
+      "min_ms": 95.81,
+      "max_ms": 101.31,
+      "n": 15,
+      "all_ms": [
+        97.26,
+        97.86,
+        97.66,
+        97.64,
+        97.63,
+        101.31,
+        96.22,
+        98.2,
+        97.56,
+        95.81,
+        99.24,
+        96.98,
+        97.45,
+        98.48,
+        96.72
+      ]
+    }
+  },
+  "steady": {
+    "window_s": 8.005,
+    "cpu_pct_one_core": 0.25,
+    "cpu_ticks": 2,
+    "rss_kib_mean": 10852,
+    "rss_kib_peak": 10852,
+    "rss_kib_min": 10852,
+    "vm_hwm_kib": 11324,
+    "threads": 1,
+    "pty_bytes": 4949,
+    "pty_bytes_per_sec": 618.2,
+    "frames_per_sec": 1.0,
+    "bytes_per_frame": 618.6,
+    "steady_seq_counts": {
+      "clear_2J": 0,
+      "clear_3J": 0,
+      "RIS_esc_c": 0,
+      "erase_below_J": 0,
+      "erase_line_K": 0,
+      "cup_moves": 101,
+      "alt_enter": 0,
+      "alt_exit": 0,
+      "cursor_hide": 0,
+      "cursor_show": 0,
+      "sync_update": 8,
+      "mouse_enable": 0
+    },
+    "steady_full_clear_present": false,
+    "full_screen_equivalent_bytes": 4320,
+    "long_run": {
+      "seconds": 60,
+      "rss_first_kib": 10852,
+      "rss_last_kib": 10888,
+      "rss_max_kib": 10888,
+      "alive": true
+    }
+  },
+  "host_loadavg_after": [
+    "0.00",
+    "0.06",
+    "0.10"
+  ]
+}

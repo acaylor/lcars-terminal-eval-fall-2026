@@ -1,0 +1,36 @@
+                                                       ▞
+        LCARS 47 // DIAGNOSTIC ARRAY                   ▐
+                                                       ▟
+      ╰
+          SYSTEM DIAGNOSTICS
+ 47
+          macOS 27.2 / AARCH64                                                                                       A
+
+          911 PROCESSES  /  UPTIME 6d 18h 38m                                                                        U
+
+          PER-CORE UTILIZATION                                 TOP CPU PROCESSES                                     X
+ ENG
+          C00 ━━━━━─────────────────────────────   14.4%       PID     PROCESS                CPU       MEMORY
+          C01 ━━━━──────────────────────────────   11.5%
+          C02 ━━━━──────────────────────────────   11.4%         1246  mediaanalysisd           29.5%   394M
+          C03 ━━━───────────────────────────────    8.7%         1277  svc39                     8.1%   1.09G
+          C04 ━━────────────────────────────────    6.7%         2013  svc03                     5.6%   123M
+          C05 ━━────────────────────────────────    5.7%        61165  lcars-monitor             5.1%   13.5M
+          C06 ━━────────────────────────────────    4.8%         1917  svc02                     3.6%   476M
+          C07 ━─────────────────────────────────    3.8%
+          C08 ━─────────────────────────────────    3.8%       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸╸╸
+          C09 ━─────────────────────────────────    2.9%       SWAP NOT CONFIGURED
+
+                                                               CPU% MAY EXCEED 100 ON
+                                                               MULTI-THREADED PROCESSES
+
+
+
+
+
+
+
+                                                       ▛
+         DIAG     TOP 5                                ▌
+                                                       ▙
+       DIAGNOSTIC                                          LIVE       SPACE PAUSE   P DIAG   TAB VIEW   ? HELP   Q QUIT

@@ -1,0 +1,10 @@
+ LCARS / COMPACT
+
+ 08:44:11  02 Nov 2026
+
+ CPU 4.9%  UP 06d 18h 40m
+
+ Resize to 60 x 20 for command view
+
+ q exit / ? help / space hold
+

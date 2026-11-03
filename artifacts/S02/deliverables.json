@@ -1,0 +1,36 @@
+{
+  "all_capture_files_stripped": [
+    "docs/captures/diagnostic-120x36.ansi",
+    "docs/captures/diagnostic-120x36.png",
+    "docs/captures/diagnostic-120x36.txt",
+    "docs/captures/diagnostic-80x24.ansi",
+    "docs/captures/diagnostic-80x24.png",
+    "docs/captures/diagnostic-80x24.txt",
+    "docs/captures/primary-120x36-ascii-mono.ansi",
+    "docs/captures/primary-120x36-ascii-mono.png",
+    "docs/captures/primary-120x36-ascii.txt",
+    "docs/captures/primary-120x36.ansi",
+    "docs/captures/primary-120x36.png",
+    "docs/captures/primary-120x36.txt",
+    "docs/captures/primary-80x24.ansi",
+    "docs/captures/primary-80x24.png",
+    "docs/captures/primary-80x24.txt"
+  ],
+  "captains_log_file": [
+    "docs/CAPTAINS_LOG.md"
+  ],
+  "captains_log_readme_section": false,
+  "prebuilt_binaries_removed": [],
+  "primary_120x36_capture": true,
+  "primary_capture_files": [
+    "docs/captures/primary-120x36.ansi",
+    "docs/captures/primary-120x36.png",
+    "docs/captures/primary-120x36.txt"
+  ],
+  "secondary_120x36_capture": true,
+  "secondary_capture_files": [
+    "docs/captures/diagnostic-120x36.ansi",
+    "docs/captures/diagnostic-120x36.png",
+    "docs/captures/diagnostic-120x36.txt"
+  ]
+}

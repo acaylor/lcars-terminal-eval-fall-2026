@@ -1,0 +1,24 @@
+  DIAGNOSTIC · LINUX                                                       02 ▄
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀          ▙
+                                                                     ▝
+  ◖ SYSTEM ◗ ───────────────────   ◖ CPU CORES · 24 · AVG 0% ◗ ────   ▄▄▄▄▄▄▄▄▄▄
+
+   HOST    linux                                                             21
+   OS      Ubuntu 26.04.1 LTS                                          SYS X86…
+   KERNEL  Linux 7.0.0-38-generi             ▂                 ▁      ▄▄▄▄▄▄▄▄▄▄
+   ARCH    x86_64                  0       4       8       12
+   CPUS    24 LOGICAL                                                        22
+   UPTIME  10D 13:41:40                                                CPU   24
+   PROCS   514                                                        ▄▄▄▄▄▄▄▄▄▄
+   SWAP    NOT CONFIGURED          16      20
+                                                                             23
+  ◖ TOP PROCESSES · CPU ◗ ─────────────────────────────────────────    SWP NONE
+    PID    NAME                 CPU                 MEMORY            ▄▄▄▄▄▄▄▄▄▄
+     1917  svc24                  6.5% ▬▬▬▬▬▬▬▬▬▬▬    215M   0.2%
+   301341  svc07                  3.3% ▬▬▬▬▬▬▬▬▬▬▬    224M   0.2%            24
+     2318  svc12                  3.3% ▬▬▬▬▬▬▬▬▬▬▬    188M   0.2%      PRC  514
+  1967425  lcarsmon               3.3% ▬▬▬▬▬▬▬▬▬▬▬   3.24M   0.0%     ▄▄▄▄▄▄▄▄▄▄
+   828730  svc28                  0.0% ▬▬▬▬▬▬▬▬▬▬▬   15.8G  16.9%
+                                                                      ▄▄▄▄▄▄▄▄▄▄
+                                                                     ▗         ▛
+   P RETURN · TAB COMMAND · ? HELP · Q EXIT                                   ▀

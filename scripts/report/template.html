@@ -1,0 +1,851 @@
+<title>LCARS Challenge Fall 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an LCARS console frame. A coloured rail with elbows runs down the left and doubles as navigation;
+   content sits to its right in a single reading column. On phones the rail folds into a horizontal strip. */
+:root {
+  color-scheme: dark;
+  --void: #000000;
+  --panel: #0e0b10;
+  --rule: #2b2420;
+  --ink: #f4e8d8;
+  --ink-2: #bcae9e;
+  --ink-3: #85786c;
+  /* frame hues (decoration and navigation) */
+  --f-amber: #ff9c3a;
+  --f-peach: #ffc48a;
+  --f-lilac: #c79be6;
+  --f-sky: #8fb2ff;
+  --f-salmon: #ee8a6e;
+  --f-tan: #d9a877;
+  /* chart series, validated on black */
+  --s-vis: #a77bd0;
+  --s-eng: #d4761a;
+  /* status */
+  --ok: #7fd4a0;
+  --warn: #f2c14e;
+  --bad: #ff6450;
+  --display: "Antonio", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body: "Barlow", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --code: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --rail: 168px;
+  --gap: 6px;
+}
+[hidden] { display: none !important; }
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--void); scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--void);
+  color: var(--ink);
+  font: 400 17px/1.55 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--f-sky); }
+code { font-family: var(--code); font-size: 0.86em; color: var(--f-peach); overflow-wrap: anywhere; }
+:focus-visible { outline: 2px solid var(--f-sky); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+.wrap {
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 40px;
+}
+.frame {
+  display: grid;
+  grid-template-columns: var(--rail) minmax(0, 1fr);
+  column-gap: 0;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ---------- top elbow ---------- */
+.corner {
+  grid-column: 1; grid-row: 1;
+  background: var(--f-amber);
+  border-top-left-radius: 64px;
+  min-height: 150px;
+  display: flex; align-items: flex-end; justify-content: flex-end;
+  padding: 0 12px 10px 0;
+  font: 600 15px/1 var(--display); color: var(--void); letter-spacing: 0.06em;
+}
+.head { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; min-width: 0; }
+.topbar { display: flex; gap: var(--gap); height: 26px; }
+.topbar span { background: var(--f-amber); }
+.topbar .b1 { flex: 1 1 auto; }
+.topbar .b2 { flex: 0 0 64px; background: var(--f-lilac); }
+.topbar .b3 { flex: 0 0 180px; background: var(--f-tan); display: flex; align-items: center; justify-content: flex-end; padding-right: 14px; font: 600 15px/1 var(--display); color: var(--void); letter-spacing: 0.06em; }
+.topbar .b4 { flex: 0 0 26px; background: var(--f-sky); border-radius: 0 13px 13px 0; }
+.knee-row { display: flex; }
+.knee { width: 34px; height: 34px; background: var(--f-amber); position: relative; flex: none; }
+.knee::after { content: ""; position: absolute; inset: 0; background: var(--void); border-top-left-radius: 34px; }
+.title-block { padding: 2px 0 0 18px; min-width: 0; }
+.kicker { font: 500 14px/1.3 var(--body); color: var(--ink-2); margin: 0 0 6px; }
+h1 {
+  font: 700 clamp(44px, 7.4vw, 104px)/0.92 var(--display);
+  text-transform: uppercase; letter-spacing: 0.01em; margin: 0;
+  color: var(--f-peach); text-wrap: balance;
+}
+.lede { max-width: 62ch; font-size: 19px; color: var(--ink); margin: 18px 0 0; }
+
+/* ---------- rail / nav ---------- */
+.rail { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; gap: var(--gap); padding-top: var(--gap); }
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); display: flex; flex-direction: column; gap: var(--gap); }
+.nav a {
+  display: flex; flex-direction: column; justify-content: space-between;
+  height: 62px; padding: 6px 12px 7px; text-decoration: none; color: var(--void);
+  background: var(--c, var(--f-peach));
+  font: 600 16px/1 var(--display); letter-spacing: 0.06em; text-transform: uppercase; text-align: right;
+  transition: filter .15s;
+}
+.nav a small { font-size: 12px; font-weight: 400; opacity: 0.75; }
+.nav a:hover { filter: brightness(1.12); }
+.nav a[aria-current="true"] { box-shadow: inset -10px 0 0 var(--void); }
+.rail-fill { flex: 1 1 auto; background: var(--f-lilac); min-height: 40px; }
+.main { grid-column: 2; grid-row: 2; min-width: 0; padding: 30px 0 0 28px; display: flex; flex-direction: column; gap: 64px; }
+
+/* bottom elbow */
+.corner-b {
+  grid-column: 1; grid-row: 3;
+  background: var(--f-lilac); border-bottom-left-radius: 64px; min-height: 110px; margin-top: var(--gap);
+  display: flex; align-items: flex-end; justify-content: flex-end; padding: 0 12px 10px 0;
+  font: 600 15px/1 var(--display); color: var(--void); letter-spacing: 0.06em;
+}
+.foot { grid-column: 2; grid-row: 3; display: flex; flex-direction: column; justify-content: flex-end; margin-top: var(--gap); min-width: 0; }
+.foot .knee { transform: scaleY(-1); background: var(--f-lilac); }
+.foot-text { padding: 0 0 14px 18px; color: var(--ink-2); font-size: 14px; max-width: 80ch; }
+.botbar { display: flex; gap: var(--gap); height: 26px; }
+.botbar span { background: var(--f-lilac); }
+.botbar .b1 { flex: 1 1 auto; }
+.botbar .b2 { flex: 0 0 120px; background: var(--f-salmon); }
+.botbar .b3 { flex: 0 0 26px; background: var(--f-amber); border-radius: 0 13px 13px 0; }
+
+/* ---------- section header bar (the console motif) ---------- */
+.sh { display: flex; align-items: center; gap: var(--gap); margin-bottom: 22px; }
+.sh .cap { width: 18px; height: 30px; border-radius: 15px 0 0 15px; background: var(--c); flex: none; }
+.sh h2 {
+  margin: 0; padding: 0 10px; flex: none;
+  font: 600 30px/1 var(--display); text-transform: uppercase; letter-spacing: 0.04em; color: var(--c);
+}
+.sh .bar { flex: 1 1 auto; height: 14px; background: var(--c); opacity: 0.85; min-width: 20px; }
+.sh .code { flex: none; font: 600 15px/1 var(--display); color: var(--c); letter-spacing: 0.08em; padding-left: 4px; }
+.sh .end { width: 14px; height: 14px; border-radius: 0 7px 7px 0; background: var(--c); flex: none; }
+section { scroll-margin-top: 16px; }
+h3 { font: 600 22px/1.15 var(--display); letter-spacing: 0.02em; margin: 0 0 10px; color: var(--ink); text-wrap: balance; }
+p { margin: 0 0 14px; }
+.prose { max-width: 68ch; }
+.muted { color: var(--ink-2); }
+.small { font-size: 14px; }
+.stack { display: flex; flex-direction: column; gap: 18px; }
+
+/* ---------- hero meter ---------- */
+.hero-meter { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; margin-top: 34px; max-width: 980px; }
+.hm-head, .hm-row { display: grid; grid-template-columns: 150px minmax(0, 260px) 44px minmax(0, 1fr); gap: 14px; align-items: center; }
+.hm-head { font-size: 13px; color: var(--ink-3); padding-bottom: 4px; border-bottom: 1px solid var(--rule); }
+.hm-row { padding: 6px 0; border-bottom: 1px solid var(--rule); }
+.hm-name { font: 600 18px/1.1 var(--display); letter-spacing: 0.02em; }
+.hm-val { font: 600 18px/1 var(--display); font-variant-numeric: tabular-nums; text-align: right; }
+.seg { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; height: 18px; }
+.seg i { background: #241e1a; }
+.seg i:first-child { border-radius: 9px 0 0 9px; }
+.seg i:last-child { border-radius: 0 9px 9px 0; }
+.seg i.on { background: var(--seg, var(--f-sky)); animation: light .5s ease-out both; animation-delay: calc(var(--n) * 45ms + var(--r) * 70ms); }
+@keyframes light { from { background: #241e1a; } }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; color: var(--ink); }
+.status::before { content: ""; width: 10px; height: 10px; flex: none; background: var(--st); }
+.status.ok { --st: var(--ok); }
+.status.ok::before { border-radius: 50%; }
+.status.warn { --st: var(--warn); }
+.status.warn::before { clip-path: polygon(50% 0, 100% 100%, 0 100%); width: 12px; height: 11px; }
+.status.bad { --st: var(--bad); }
+.status.bad::before { transform: rotate(45deg); width: 9px; height: 9px; }
+
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 30px; max-width: 980px; border-top: 1px solid var(--rule); }
+.facts div { padding: 14px 16px 4px 0; }
+.facts b { display: block; font: 600 34px/1 var(--display); color: var(--f-peach); font-variant-numeric: tabular-nums; }
+.facts span { display: block; font-size: 14px; color: var(--ink-2); margin-top: 6px; max-width: 24ch; }
+
+/* ---------- standings ---------- */
+.legend { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; color: var(--ink-2); margin-bottom: 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.legend i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+.lg-vis { background: var(--s-vis); }
+.lg-eng { background: var(--s-eng); }
+.lg-ded { background: repeating-linear-gradient(135deg, var(--bad) 0 2px, transparent 2px 5px); outline: 1px solid var(--bad); outline-offset: -1px; }
+.board { display: flex; flex-direction: column; }
+.row {
+  display: grid; grid-template-columns: 40px minmax(150px, 210px) minmax(0, 1fr) 78px; gap: 14px; align-items: center;
+  padding: 10px 6px; border: 0; border-bottom: 1px solid var(--rule); background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; width: 100%;
+}
+.row:hover, .row:focus-visible { background: var(--panel); }
+.rank { font: 600 24px/1 var(--display); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.row:first-child .rank { color: var(--f-amber); }
+.who { min-width: 0; }
+.who b { display: block; font: 600 19px/1.1 var(--display); letter-spacing: 0.02em; }
+.who small { color: var(--ink-3); font-size: 13px; }
+.track { position: relative; height: 22px; display: flex; gap: 2px; }
+.track span { height: 100%; }
+.t-vis { background: var(--s-vis); border-radius: 4px 0 0 4px; }
+.t-eng { background: var(--s-eng); }
+.t-eng.end { border-radius: 0 4px 4px 0; }
+.t-ded { background: repeating-linear-gradient(135deg, var(--bad) 0 2px, transparent 2px 5px); box-shadow: inset 0 0 0 1px var(--bad); border-radius: 0 4px 4px 0; }
+.grid-lines { position: absolute; inset: -4px 0; pointer-events: none; }
+.grid-lines i { position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(244, 232, 216, 0.10); }
+.final { font: 700 30px/1 var(--display); text-align: right; font-variant-numeric: tabular-nums; }
+.axis { display: grid; grid-template-columns: 40px minmax(150px, 210px) minmax(0, 1fr) 78px; gap: 14px; padding: 6px 6px 0; font-size: 12px; color: var(--ink-3); }
+.axis .ticks { position: relative; height: 16px; }
+.axis .ticks span { position: absolute; transform: translateX(-50%); font-variant-numeric: tabular-nums; }
+.axis .ticks span:first-child { transform: none; }
+.axis .ticks span:last-child { transform: translateX(-100%); }
+.tip {
+  position: fixed; z-index: 20; pointer-events: none; background: #17120f; border: 1px solid #3a302a; border-radius: 6px;
+  padding: 10px 12px; font-size: 14px; min-width: 210px; box-shadow: 0 8px 24px rgba(0,0,0,.6);
+}
+.tip h4 { margin: 0 0 6px; font: 600 16px/1.1 var(--display); letter-spacing: 0.02em; }
+.tip div { display: flex; justify-content: space-between; gap: 18px; font-variant-numeric: tabular-nums; }
+.tip div span:first-child { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); }
+.tip i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.tip .tot { border-top: 1px solid #3a302a; margin-top: 6px; padding-top: 6px; font-weight: 600; }
+
+.disclosure {
+  margin-top: 28px; display: grid; grid-template-columns: 12px minmax(0, 1fr); gap: 18px; max-width: 980px;
+}
+.disclosure::before { content: ""; background: repeating-linear-gradient(180deg, var(--f-amber) 0 26px, transparent 26px 32px); border-radius: 6px 0 0 6px; }
+.disclosure h3 { color: var(--f-amber); }
+.disclosure p { max-width: 74ch; }
+
+/* ---------- dossier ---------- */
+.picker { display: flex; flex-wrap: wrap; gap: var(--gap); margin-bottom: 20px; }
+.picker button {
+  border: 0; cursor: pointer; padding: 8px 16px 8px 14px; border-radius: 18px 4px 4px 18px;
+  background: #241e1a; color: var(--ink); font: 600 16px/1 var(--display); letter-spacing: 0.03em;
+}
+.picker button:hover { background: #3a2f27; }
+.picker button[aria-pressed="true"] { background: var(--f-peach); color: var(--void); }
+.dossier { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.screen { background: var(--void); border: 1px solid var(--rule); border-radius: 10px; padding: 8px; }
+.screen img { width: 100%; aspect-ratio: 5 / 3; border-radius: 4px; background: #000; }
+.screen-bar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; padding: 10px 2px 2px; }
+.seg-toggle { display: inline-flex; gap: 3px; }
+.seg-toggle button { border: 0; cursor: pointer; background: #241e1a; color: var(--ink-2); padding: 6px 12px; font: 500 14px/1 var(--body); }
+.seg-toggle button:first-child { border-radius: 14px 0 0 14px; }
+.seg-toggle button:last-child { border-radius: 0 14px 14px 0; }
+.seg-toggle button[aria-pressed="true"] { background: var(--f-sky); color: var(--void); }
+.d-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+.d-head h3 { font-size: 32px; margin: 0; }
+.d-score { font: 700 52px/1 var(--display); color: var(--f-peach); font-variant-numeric: tabular-nums; }
+.d-sum { font-size: 15px; color: var(--ink-2); margin: 4px 0 18px; font-variant-numeric: tabular-nums; }
+.cats { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) 66px; gap: 7px 12px; align-items: center; font-size: 14px; margin-bottom: 20px; }
+.cats .ct { height: 10px; background: #241e1a; border-radius: 5px; overflow: hidden; }
+.cats .ct i { display: block; height: 100%; background: var(--s-eng); border-radius: 0 5px 5px 0; }
+.cats .cv { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.cats .cv b { color: var(--ink); font-weight: 600; }
+.dl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 14px; margin: 0 0 20px; padding: 14px 0; border-block: 1px solid var(--rule); }
+.dl div { min-width: 0; }
+.dl dt { font-size: 12px; color: var(--ink-3); }
+.dl dd { margin: 2px 0 0; font: 600 19px/1.1 var(--display); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+.d-mac { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 14px; font-size: 15px; }
+.d-mac .seg { width: 180px; height: 12px; }
+.d-text { font-size: 16px; }
+
+/* ---------- tables ---------- */
+.tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th { font: 600 13px/1.2 var(--body); color: var(--ink-3); text-align: left; padding: 8px 10px; border-bottom: 1px solid #3a302a; vertical-align: bottom; }
+td { padding: 9px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.name { font: 600 17px/1.2 var(--display); letter-spacing: 0.02em; white-space: nowrap; }
+.mac-table td:nth-child(3) { min-width: 300px; }
+
+/* two bugs */
+.bugs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 30px; }
+.bug { background: var(--panel); border-radius: 22px 6px 6px 6px; padding: 20px 22px; }
+.bug h3 { color: var(--f-sky); }
+.bug .who-list { font-size: 14px; color: var(--ink-2); margin-top: 12px; }
+.formula { font-family: var(--code); font-size: 14px; background: #000; border-radius: 6px; padding: 10px 12px; color: var(--f-peach); margin: 12px 0 0; overflow-x: auto; white-space: pre; }
+
+/* ladder */
+.ladder { display: flex; flex-direction: column; gap: 4px; margin-top: 30px; max-width: 980px; }
+.ladder div { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 14px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--rule); }
+.ladder b { font: 600 22px/1 var(--display); color: var(--f-sky); font-variant-numeric: tabular-nums; text-align: right; }
+
+/* heatmap */
+.heat td.h { text-align: center; font-variant-numeric: tabular-nums; font-weight: 600; padding: 9px 6px; border: 2px solid var(--void); }
+.heat th.c { text-align: center; }
+.heat td.tot { font: 700 19px/1 var(--display); text-align: right; }
+
+/* perf bars */
+.pv { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.pv i { display: block; height: 4px; border-radius: 2px; background: var(--f-sky); min-width: 2px; align-self: stretch; transform-origin: left; }
+.pv i.hot { background: var(--f-salmon); }
+.pbar { width: 100%; height: 4px; background: #241e1a; border-radius: 2px; display: flex; }
+.flag { color: var(--f-salmon); font-weight: 600; }
+
+/* lifecycle */
+.life { display: grid; grid-template-columns: 120px repeat(9, minmax(28px, 1fr)); gap: 5px; max-width: 900px; font-size: 13px; }
+.life .lh { font: 600 13px/1.1 var(--display); color: var(--ink-2); text-align: center; writing-mode: vertical-rl; transform: rotate(180deg); justify-self: center; height: 96px; letter-spacing: 0.03em; }
+.life .lp { font-size: 14px; color: var(--ink-2); align-self: center; }
+.life .lc { aspect-ratio: 1.6; background: color-mix(in oklab, var(--ok) 26%, var(--void)); border-radius: 3px; display: grid; place-items: center; color: var(--ok); font-size: 14px; }
+
+/* honesty */
+.claims { display: flex; flex-direction: column; gap: 26px; }
+.claim { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 20px; border-top: 1px solid var(--rule); padding-top: 18px; }
+.claim .ded { font: 700 40px/1 var(--display); color: var(--bad); font-variant-numeric: tabular-nums; }
+.claim .ded small { display: block; font: 500 13px/1.3 var(--body); color: var(--ink-3); margin-top: 6px; }
+blockquote { margin: 0 0 10px; padding: 0 0 0 14px; border-left: 2px solid var(--f-lilac); font-style: italic; color: var(--ink); max-width: 70ch; }
+.vs { display: grid; grid-template-columns: 80px minmax(0, 1fr) 80px; gap: 6px 12px; align-items: center; margin: 12px 0 10px; max-width: 640px; font-size: 14px; }
+.vs .b { height: 14px; border-radius: 0 4px 4px 0; min-width: 2px; }
+.vs .claimed { background: var(--f-lilac); }
+.vs .measured { background: var(--f-amber); }
+.vs .n { font-variant-numeric: tabular-nums; text-align: right; }
+
+/* patterns */
+.patterns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 34px; }
+.pattern h3 { color: var(--f-tan); }
+
+/* method */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 10px; }
+.steps li::before { content: counter(s); font: 700 30px/1 var(--display); color: var(--f-lilac); }
+.steps b { display: block; font: 600 18px/1.2 var(--display); letter-spacing: 0.02em; margin-bottom: 4px; }
+.steps span { font-size: 15px; color: var(--ink-2); }
+.cols2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+ul.plain { margin: 0; padding-left: 18px; }
+ul.plain li { margin-bottom: 8px; }
+.files { font-family: var(--code); font-size: 13px; color: var(--ink-2); line-height: 1.8; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 980px) {
+  .dossier { grid-template-columns: minmax(0, 1fr); }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  :root { --rail: 72px; }
+  body { font-size: 16px; }
+  .frame { grid-template-columns: minmax(0, 1fr); }
+  .corner { grid-column: 1; grid-row: 1; min-height: 0; height: 64px; border-radius: 32px 0 0 0; padding: 0; justify-content: flex-start; align-items: center; }
+  .corner span { display: none; }
+  .head { grid-column: 1; grid-row: 2; }
+  .topbar, .knee-row .knee { display: none; }
+  .title-block { padding: 18px 0 0; }
+  .rail { grid-column: 1; grid-row: 3; padding-top: 18px; }
+  .nav { position: static; flex-direction: row; overflow-x: auto; padding-bottom: 4px; }
+  .nav a { height: 46px; flex: none; min-width: 108px; }
+  .rail-fill { display: none; }
+  .main { grid-column: 1; grid-row: 4; padding: 30px 0 0; }
+  .corner-b { display: none; }
+  .foot { grid-column: 1; grid-row: 5; }
+  .foot .knee-row { display: none; }
+  .foot-text { padding-left: 0; }
+  .hm-head { display: none; }
+  .hm-row { grid-template-columns: minmax(0, 1fr) 44px; gap: 6px 12px; }
+  .hm-row .seg { grid-column: 1 / -1; grid-row: 2; }
+  .hm-row .status { grid-column: 1 / -1; grid-row: 3; }
+  .row, .axis { grid-template-columns: 26px minmax(0, 1fr) 62px; gap: 6px 10px; }
+  .row .track { grid-column: 2 / 4; grid-row: 2; }
+  .axis > :nth-child(2) { display: none; }
+  .axis .ticks { grid-column: 2 / 4; }
+  .final { font-size: 24px; }
+  .dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bugs, .patterns, .cols2 { grid-template-columns: minmax(0, 1fr); }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .claim { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .life { grid-template-columns: 88px repeat(9, minmax(18px, 1fr)); gap: 3px; }
+  .life .lh { height: 80px; font-size: 11px; }
+  .sh h2 { font-size: 24px; }
+  .sh .code { display: none; }
+}
+</style>
+<!--BODY-->
+<div class="wrap">
+<div class="frame">
+
+  <div class="corner"><span>LCARS V3</span></div>
+  <header class="head">
+    <div class="topbar"><span class="b1"></span><span class="b2"></span><span class="b3">EVAL 2026-11-02</span><span class="b4"></span></div>
+    <div class="knee-row">
+      <div class="knee"></div>
+      <div class="title-block">
+        <p class="kicker">Fall 2026 LCARS terminal system monitor challenge. Engineering evaluation of nine coding models on prompt-v3.</p>
+        <h1>Decided on Apple Silicon</h1>
+        <p class="lede">All nine monitors built cleanly on Linux, passed their own tests and restored the terminal on every exit path. Then we ran them natively on an M4 Mac. Only one macOS collector reported every metric correctly.</p>
+      </div>
+    </div>
+  </header>
+
+  <aside class="rail" aria-label="Sections">
+    <nav class="nav" id="nav">
+      <a href="#standings" style="--c: var(--f-amber)"><small>01</small>Standings</a>
+      <a href="#dossiers" style="--c: var(--f-peach)"><small>02</small>Dossiers</a>
+      <a href="#macos" style="--c: var(--f-sky)"><small>03</small>macOS audit</a>
+      <a href="#breakdown" style="--c: var(--f-tan)"><small>04</small>Breakdown</a>
+      <a href="#performance" style="--c: var(--f-lilac)"><small>05</small>Performance</a>
+      <a href="#lifecycle" style="--c: var(--f-salmon)"><small>06</small>Lifecycle</a>
+      <a href="#honesty" style="--c: var(--f-peach)"><small>07</small>Honesty</a>
+      <a href="#patterns" style="--c: var(--f-amber)"><small>08</small>Patterns</a>
+      <a href="#method" style="--c: var(--f-sky)"><small>09</small>Method</a>
+    </nav>
+    <div class="rail-fill"></div>
+  </aside>
+
+  <main class="main">
+
+    <section id="overview" aria-label="macOS collector results">
+      <div class="hero-meter" id="heroMeter">
+        <div class="hm-head"><span>Model</span><span>macOS collector, native M4 run (each segment is 0.5 of 5)</span><span></span><span>What broke on real hardware</span></div>
+      </div>
+      <div class="facts">
+        <div><b>9 / 9</b><span>compiled from a clean snapshot with zero Linux warnings</span></div>
+        <div><b>45 / 45</b><span>exits restored the terminal (5 exit paths × 9 monitors)</span></div>
+        <div><b>4 of 7</b><span>native macOS collectors read process CPU in the wrong unit</span></div>
+        <div><b>1 of 9</b><span>macOS collectors fully correct on real hardware</span></div>
+      </div>
+    </section>
+
+    <section id="standings">
+      <div class="sh" style="--c: var(--f-amber)"><span class="cap"></span><h2>Standings</h2><span class="bar"></span><span class="code">01</span><span class="end"></span></div>
+      <p class="prose muted">Final score = human visual score (out of 30) + blind engineering score (out of 70) − honesty deduction. Engineering was graded and locked before model names or visual scores were revealed. Select a row to open its dossier.</p>
+      <div class="legend">
+        <span><i class="lg-vis"></i>Visual, human-judged (/30)</span>
+        <span><i class="lg-eng"></i>Engineering, blind (/70)</span>
+        <span><i class="lg-ded"></i>Honesty deduction</span>
+      </div>
+      <div class="board" id="board"></div>
+      <div class="axis" aria-hidden="true"><span></span><span></span><div class="ticks"><span style="left:0">0</span><span style="left:25%">25</span><span style="left:50%">50</span><span style="left:75%">75</span><span style="left:100%">100</span></div><span></span></div>
+      <p class="small muted" style="margin-top:14px">GPT-6.1 Sol and GPT-6 Astra tie on 91.5. Sol leads on engineering (67.5 vs 66.0); Astra leads on visuals (25.5 vs 24.0). The tie stands.</p>
+
+      <div class="disclosure">
+        <div>
+          <h3>Conflict of interest</h3>
+          <p>The evaluator and all nine blind grading agents ran on Claude Opus 5.5, which is also the winning contestant. Claude Fable 5.1, in second place, comes from the same lab.</p>
+          <p class="muted">The safeguards: snapshots were renamed S01 to S09 by a seeded shuffle, a grep found no model or vendor names in any of them, and the mapping stayed sealed until every scorecard was locked. Build, lint, test, terminal lifecycle, performance and the native macOS runs all come from scripts, not judgement. Every point in Opus's scorecard cites probe output or a <code>file:line</code>. A model might still recognise its own style, so weigh the judgement-based items with that in mind.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dossiers">
+      <div class="sh" style="--c: var(--f-peach)"><span class="cap"></span><h2>Dossiers</h2><span class="bar"></span><span class="code">02</span><span class="end"></span></div>
+      <div class="picker" id="picker" role="group" aria-label="Choose a model"></div>
+      <div class="dossier">
+        <figure class="screen" style="margin:0">
+          <img id="shot" alt="" width="1080" height="648" decoding="async">
+          <div class="screen-bar">
+            <div class="seg-toggle" role="group" aria-label="Screen">
+              <button type="button" id="viewMain" aria-pressed="true">Main view</button>
+              <button type="button" id="viewDiag" aria-pressed="false">Diagnostic view</button>
+            </div>
+            <figcaption class="small muted" id="shotCap">Fresh 120×36 capture on Linux</figcaption>
+          </div>
+        </figure>
+        <div id="dossier"></div>
+      </div>
+    </section>
+
+    <section id="macos">
+      <div class="sh" style="--c: var(--f-sky)"><span class="cap"></span><h2>macOS audit</h2><span class="bar"></span><span class="code">03</span><span class="end"></span></div>
+      <div class="prose">
+        <p>Eight of nine READMEs said plainly that the author never ran the macOS build; Gemini's says nothing either way. We built each one natively on an Apple M4 (macOS 27.2) and compared its screen against <code>sysctl</code>, <code>vm_stat</code>, <code>top</code> and <code>df</code> taken at the same moment.</p>
+      </div>
+      <div class="tscroll">
+        <table class="mac-table">
+          <thead><tr><th>Model</th><th>Approach</th><th>What broke on real hardware</th><th class="num">Score /5</th></tr></thead>
+          <tbody id="macBody"></tbody>
+        </table>
+      </div>
+
+      <div class="bugs">
+        <div class="bug">
+          <h3>The Mach-tick trap</h3>
+          <p class="small">On Intel Macs, <code>proc_taskinfo.pti_total_user</code> and <code>pti_total_system</code> are nanoseconds. On Apple Silicon they are Mach absolute-time ticks from a 24 MHz timebase, so they have to be scaled. Skip the scaling and process CPU reads about 40 times too low.</p>
+          <div class="formula">ns = ticks × timebase.numer / timebase.denom
+     = ticks × 125 / 3     # M4: one tick ≈ 41.7 ns</div>
+          <p class="who-list">Got it wrong: Fable 5.1, GPT-6.1 Sol, GPT-6 Astra, Grok 4.7. Scaled correctly: Opus 5.5, Gemini 4.</p>
+        </div>
+        <div class="bug">
+          <h3>The PID-count trap</h3>
+          <p class="small"><code>proc_listallpids(NULL, 0)</code> returns how many PIDs exist, not how many bytes to allocate. Treat the count as a byte size and the buffer ends up too small, so the process list is silently cut short and the top-5 misses busy processes.</p>
+          <div class="formula">n   = proc_listallpids(NULL, 0)        # a count
+buf = calloc(n + slack, sizeof(pid_t))  # not n bytes</div>
+          <p class="who-list">Got it wrong: Gemini 4 (297 of 915 processes), Grok 4.7 (74 of 916).</p>
+        </div>
+      </div>
+      <p class="prose small muted" style="margin-top:18px">Neither bug shows up in a cross-compile, <code>go vet</code>, clippy, or a code review that trusts the man page. Both appear only when the binary runs on Apple Silicon.</p>
+
+      <h3 style="margin-top:34px">Scoring ladder, after blind calibration</h3>
+      <div class="ladder">
+        <div><b>5.0</b><span>Complete and verified natively: Opus 5.5.</span></div>
+        <div><b>3.5</b><span>One materially wrong metric: Fable, Sol and Astra (Mach ticks), Kimi (memory available), DeepSeek (disk 256× from Darwin's 1 MiB <code>f_bsize</code>).</span></div>
+        <div><b>3.0</b><span>Process enumeration truncated: Gemini 4.</span></div>
+        <div><b>2.5</b><span>Enumeration truncated and CPU unscaled, so every top-5 row reads 0%: Grok 4.7.</span></div>
+        <div><b>1.0</b><span>Most metrics N/A or wrong, from bad struct offsets and a sysctl name that does not exist on macOS: Muse Wonder.</span></div>
+      </div>
+    </section>
+
+    <section id="breakdown">
+      <div class="sh" style="--c: var(--f-tan)"><span class="cap"></span><h2>Breakdown</h2><span class="bar"></span><span class="code">04</span><span class="end"></span></div>
+      <p class="prose muted">Engineering points by rubric category, after calibration. Cell shade shows the share of the category maximum; brighter is closer to full marks.</p>
+      <div class="tscroll">
+        <table class="heat">
+          <thead id="heatHead"></thead>
+          <tbody id="heatBody"></tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:34px">Blind calibration</h3>
+      <p class="prose">Nine independent graders read the same rubric bands nine ways. After all nine scorecards were locked, and before anything was unblinded, every card was compared item by item. Each change is recorded as an addendum inside the affected scorecard.</p>
+      <div class="tscroll">
+        <table>
+          <thead><tr><th>Model</th><th>Change</th><th>Reason</th></tr></thead>
+          <tbody>
+            <tr><td class="name">Grok 4.7</td><td class="num">64.0 → 63.5</td><td>Arithmetic: the subtotals summed to 63.5.</td></tr>
+            <tr><td class="name">GPT-6 Astra</td><td class="num">66.5 → 66.0</td><td>Arithmetic: the subtotals summed to 66.0.</td></tr>
+            <tr><td class="name">Grok 4.7</td><td class="num">macOS 3.0 → 2.5</td><td>Enumeration bug plus unscaled CPU is strictly worse than Gemini's enumeration bug alone.</td></tr>
+            <tr><td class="name">Kimi K3.1 Pro</td><td class="num">macOS 4.5 → 3.5</td><td>Memory available is materially wrong (19.8 G against about 10.2 GiB), the same band as the other single-metric faults.</td></tr>
+            <tr><td class="name">Gemini 4</td><td class="num">macOS 2.5 → 3.0</td><td>One bug affecting count and top-5. The deprecation warnings are already penalised under build and lint.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted" style="margin-top:12px">Ranking effects: Astra fell from sole third (92.0) into a tie with Sol at 91.5, and DeepSeek moved ahead of Grok (86.5 → 85.5). The top two and bottom two did not move.</p>
+    </section>
+
+    <section id="performance">
+      <div class="sh" style="--c: var(--f-lilac)"><span class="cap"></span><h2>Performance</h2><span class="bar"></span><span class="code">05</span><span class="end"></span></div>
+      <p class="prose muted">Linux, Ryzen 9 7900X, 120×36 PTY. Startup is the median of 15 launches; steady state is an 8-second window after 2 seconds of warm-up. Lower is better in every column, and each bar is scaled to its own column.</p>
+      <div class="tscroll">
+        <table>
+          <thead><tr><th>Model</th><th class="num">First byte</th><th class="num">First frame</th><th class="num">Idle CPU</th><th class="num">Peak RSS</th><th class="num">Output</th><th class="num">Per frame</th><th class="num">Binary</th></tr></thead>
+          <tbody id="perfBody"></tbody>
+        </table>
+      </div>
+      <div class="prose small muted" style="margin-top:14px">
+        <p>All nine are far inside the 250 ms startup target, none sent a full-screen clear during steady-state refresh, and memory stayed flat or bounded over a further 60 seconds. CPU resolution is 0.125% (100 Hz ticks over 8 s), so 0.0% means less than one tick. Grok rewrites every changed row in full, sending close to a full screen each second. Muse is the only entry above 1% idle CPU. Kimi and DeepSeek pay for <code>sysinfo</code>'s initial scan at startup.</p>
+      </div>
+    </section>
+
+    <section id="lifecycle">
+      <div class="sh" style="--c: var(--f-salmon)"><span class="cap"></span><h2>Lifecycle</h2><span class="bar"></span><span class="code">06</span><span class="end"></span></div>
+      <p class="prose">Each monitor was stopped five ways inside a 120×36 PTY, with the terminal's termios state recorded before launch and after exit. A pass means it exited, restored termios exactly, left the alternate screen and showed the cursor again. The same run was repeated natively on macOS.</p>
+      <div class="life" id="life" role="table" aria-label="Exit path results"></div>
+      <ul class="plain small muted prose" style="margin-top:20px">
+        <li>Every monitor survived 80×24, 40×10 and 20×5, and a live resize from 120×36 to 80×24 to 30×8 and back, without a panic.</li>
+        <li>Gemini and Grok build with <code>panic = "abort"</code> but install a panic hook that restores the terminal first.</li>
+        <li>The one latent risk: GPT-6 Astra's sampler goroutine has no <code>recover</code>, so a collector panic would skip restoration.</li>
+        <li>Kimi and DeepSeek send no colour reset after the quit key, but their last frame already ends in one. DeepSeek also renames the window title to "Terminal" on exit.</li>
+        <li>All nine detect redirected output and exit with a message that says what to do.</li>
+      </ul>
+    </section>
+
+    <section id="honesty">
+      <div class="sh" style="--c: var(--f-peach)"><span class="cap"></span><h2>Honesty</h2><span class="bar"></span><span class="code">07</span><span class="end"></span></div>
+      <p class="prose muted">Three deductions in total. Two are for the same thing: an in-process microbenchmark presented as whole-program startup time.</p>
+      <div class="claims">
+        <div class="claim">
+          <div class="ded">−1.0<small>Gemini 4 Argon</small></div>
+          <div>
+            <blockquote>“Measured cold startup + first-frame render is ~0.37 ms (nearly 700× faster than the 250 ms target)”</blockquote>
+            <div class="vs" aria-label="Claimed 0.37 ms against measured 30.25 ms">
+              <span class="muted">Claimed</span><span class="b claimed" style="width:1.2%"></span><span class="n">0.37 ms</span>
+              <span class="muted">Measured</span><span class="b measured" style="width:100%"></span><span class="n">30.25 ms</span>
+            </div>
+            <p class="small muted">The number comes from <code>bench.rs</code>, which skips exec, terminal setup, a 25 ms warm-up sleep and the terminal write. The README never says so.</p>
+          </div>
+        </div>
+        <div class="claim">
+          <div class="ded">−1.0<small>Muse Wonder</small></div>
+          <div>
+            <blockquote>“Verified the full brief”</blockquote>
+            <p class="small muted">The main view never shows memory available, which the brief requires. Per-core CPU is cut off at 120×36 and the frame breaks at 40×10.</p>
+          </div>
+        </div>
+        <div class="claim">
+          <div class="ded">−0.5<small>Claude Fable 5.1</small></div>
+          <div>
+            <blockquote>“starts in well under a millisecond after exec (measured 0.4–0.5 ms…)”</blockquote>
+            <div class="vs" aria-label="Claimed 0.5 ms against measured 4.48 ms">
+              <span class="muted">Claimed</span><span class="b claimed" style="width:11.2%"></span><span class="n">0.5 ms</span>
+              <span class="muted">Measured</span><span class="b measured" style="width:100%"></span><span class="n">4.48 ms</span>
+            </div>
+            <p class="small muted">Timed from the top of <code>main</code>. The README admits further down that the figure excludes exec, which contradicts the headline. That partial disclosure is why the deduction is half of Gemini's.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="patterns">
+      <div class="sh" style="--c: var(--f-amber)"><span class="cap"></span><h2>Patterns</h2><span class="bar"></span><span class="code">08</span><span class="end"></span></div>
+      <div class="patterns">
+        <div class="pattern">
+          <h3>Looks and engineering mostly disagree</h3>
+          <p class="small">Gemini tied Opus for the best-looking screen (9.5) yet scored 63 of 70, the only entry to fail <code>cargo fmt --check</code>. GPT-6.1 Sol scored a modest 8.0 visually but 67.5 on engineering, from the smallest codebase in the field. The two axes agree only at the ends: Opus led both, Muse trailed both.</p>
+        </div>
+        <div class="pattern">
+          <h3><code>sysinfo</code> is not free</h3>
+          <p class="small">The two entries that used the crate started 40 to 90 ms slower than the rest, and on Linux both listed threads as processes: about 1,630 against roughly 505 real ones, with duplicate thread IDs in the top-5.</p>
+        </div>
+        <div class="pattern">
+          <h3>No TUI frameworks, nine renderers</h3>
+          <p class="small">Every entry hand-rolled a cell buffer and a diff renderer. Eight diff at the cell or span level; Grok diffs whole rows. Toolchain hygiene was nearly universal: eight of nine were fmt- and lint-clean on Linux and on the darwin target.</p>
+        </div>
+        <div class="pattern">
+          <h3>Language did not decide it</h3>
+          <div class="tscroll">
+            <table class="small">
+              <thead><tr><th></th><th>Rust (6)</th><th>Go (3)</th></tr></thead>
+              <tbody>
+                <tr><td>Mean engineering</td><td>64.8</td><td>62.8 (66.75 without Muse)</td></tr>
+                <tr><td>Binary size</td><td>0.47–0.82 MB</td><td>1.97–2.11 MB</td></tr>
+                <tr><td>Idle RSS</td><td>2.7–10.6 MiB</td><td>5.0–8.5 MiB</td></tr>
+                <tr><td>macOS approach</td><td>4 hand-written FFI, 2 <code>sysinfo</code></td><td>2 cgo, 1 pure syscall</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="sh" style="--c: var(--f-sky)"><span class="cap"></span><h2>Method</h2><span class="bar"></span><span class="code">09</span><span class="end"></span></div>
+      <ol class="steps">
+        <li><div><b>Snapshot</b><span>Copied each original into S01–S09 with a seeded shuffle, stripping git history, binaries, cost files and the submitted screenshots. The originals were never touched.</span></div></li>
+        <li><div><b>Probe</b><span>Scripted release builds, tests, fmt and lint; PTY sessions with five exit paths, four sizes, live resize and seven colour modes; startup and steady-state performance.</span></div></li>
+        <li><div><b>Run on a Mac</b><span>Native build, tests and the same PTY probes on an M4, compared against live <code>sysctl</code>, <code>vm_stat</code>, <code>top</code> and <code>df</code>.</span></div></li>
+        <li><div><b>Grade blind</b><span>One isolated agent per snapshot, with access only to the brief, the rubric, its own snapshot and its own probe output.</span></div></li>
+        <li><div><b>Calibrate blind</b><span>Compared all nine scorecards item by item, fixed two arithmetic errors and put macOS scores on one severity ladder.</span></div></li>
+        <li><div><b>Lock, then unblind</b><span>Made every scorecard read-only, then opened the model mapping and added the human visual scores.</span></div></li>
+      </ol>
+
+      <div class="cols2" style="margin-top:34px">
+        <div>
+          <h3>Hosts</h3>
+          <div class="tscroll">
+            <table class="small">
+              <tbody>
+                <tr><td class="muted">Linux</td><td>AMD Ryzen 9 7900X, 93 GiB, Ubuntu 26.04.1, kernel 7.0. All scored runtime and performance measurements.</td></tr>
+                <tr><td class="muted">macOS</td><td>Apple M4, 24 GiB, macOS 27.2 (Darwin 27.2.0 arm64). Native collector cross-check.</td></tr>
+                <tr><td class="muted">Toolchains</td><td>Rust 1.99.1, Go 1.27.3, Python 3.14 harness with pyte.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 style="margin-top:26px">Caveats</h3>
+          <ul class="plain small muted">
+            <li>The Mac's toolchain had no clippy, so macOS code paths were linted from Linux against <code>aarch64-apple-darwin</code>.</li>
+            <li>The capture renderer drops bright-magenta backgrounds in the 16-colour images. Graders checked the raw streams; no score depends on the images.</li>
+            <li>The screens in the dossiers are the evaluator's fresh captures on the Linux host. Before publication, hostnames, process names and network identifiers in every capture and log were replaced with stand-ins such as <code>linux</code>, <code>mac-host</code> and <code>svc07</code>.</li>
+            <li>One host per OS. Absolute timings will differ on other hardware; the ratios should hold.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Cost and effort</h3>
+          <p class="small muted">Not scored. Reported verbatim from each run's <code>cost.txt</code>. Harnesses measure cost differently, so these figures are not comparable with each other.</p>
+          <div class="tscroll">
+            <table class="small">
+              <thead><tr><th>Model</th><th class="num">Reported cost</th><th class="num">Session span</th></tr></thead>
+              <tbody id="costBody"></tbody>
+            </table>
+          </div>
+          <p class="small muted" style="margin-top:8px">Session span is an upper bound from file timestamps, from the moment the brief was placed to the newest file.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="corner-b"><span>END</span></div>
+  <footer class="foot">
+    <div class="knee-row"><div class="knee"></div>
+      <div class="foot-text">
+        <p>Everything behind this report is in the <a href="https://github.com/acaylor/lcars-terminal-eval-fall-2026">GitHub repository</a>: <code>LEADERBOARD.md</code>, <code>FINAL-REPORT.md</code>, <code>METHODOLOGY.md</code>, <code>COST-APPENDIX.md</code>, the locked scorecards in <code>results/</code>, probe scripts in <code>scripts/</code>, raw probe output in <code>artifacts/</code>, captures in <code>captures-fresh/</code> and the graded snapshots in <code>work/</code>.</p>
+      </div>
+    </div>
+    <div class="botbar"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+  </footer>
+
+</div>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const SHOTS = /*__SHOTS__*/{};
+const CATS = [["Architecture & scope", 14], ["Metrics & macOS", 14], ["Lifecycle & robustness", 14], ["Build & tests", 10], ["Layout & colour", 8], ["Performance", 6], ["Docs", 4]];
+const M = [
+  { k: "opus", s: "S02", n: "Claude Opus 5.5", sh: "Opus 5.5", lang: "Rust", rank: "1", v: 28.5, e: 70, h: 0, f: 98.5,
+    cat: [14, 14, 14, 10, 8, 6, 4], mac: 5, macSt: "ok", macShort: "Fully correct",
+    macA: "Hand-written Mach, sysctl and libproc FFI", macB: "Nothing. Load, memory, disk, process count (917) and the top-5 all matched the reference.",
+    fb: 2.69, ff: 3.23, cpu: 0.125, rss: 3648, bps: 4318, bpf: 720, size: 588632, loc: 6084, deps: 2, tests: 77, cost: "n/r", span: "~42 min",
+    text: "A perfect engineering score. It is the only macOS collector that was fully correct on native hardware, scaling <code>proc_pidinfo</code> task times by <code>mach_timebase_info</code>. The sampler is pure with injected time, and it handles counter wrap versus reset, interface churn and PID reuse through <code>(pid, start)</code> keys. Its 77 deterministic tests include a layout sweep from 44×14 to 260×90. Dependencies are <code>libc</code> and <code>unicode-width</code> only. Restoration runs through a panic hook, a Drop guard and a signal self-pipe." },
+  { k: "fable", s: "S01", n: "Claude Fable 5.1", sh: "Fable 5.1", lang: "Rust", rank: "2", v: 27, e: 67, h: 0.5, f: 93.5,
+    cat: [13.5, 12.5, 14, 10, 7, 6, 4], mac: 3.5, macSt: "warn", macShort: "Process CPU% about 40× low",
+    macA: "Hand-written FFI", macB: "Process CPU% about 40× low: Mach ticks read as nanoseconds.",
+    fb: 2.46, ff: 4.48, cpu: 0, rss: 2992, bps: 1096, bpf: 274, size: 670704, loc: 5193, deps: 23, tests: 63, cost: "$14.89", span: "~38 min",
+    text: "Linux metrics, lifecycle, tests and performance are all clean: 0.0% idle CPU, 2.9 MiB and about 1.1 KB/s of diffed output. On macOS, process CPU% is about 40× low because <code>pti_total_*</code> Mach ticks are treated as nanoseconds (<code>macos.rs:392</code>). The compact layout tier corrupts between 60 and 77 columns, and the 16-colour terminal still receives 256-colour codes. Honesty −0.5 for a startup headline timed from the top of <code>main</code>." },
+  { k: "sol", s: "S03", n: "GPT-6.1 Sol", sh: "GPT-6.1 Sol", lang: "Go", rank: "3=", v: 24, e: 67.5, h: 0, f: 91.5,
+    cat: [13.5, 12.5, 14, 9.5, 8, 6, 4], mac: 3.5, macSt: "warn", macShort: "Process CPU% about 42× low",
+    macA: "cgo", macB: "The same Mach-tick bug: process CPU% about 42× low.",
+    fb: 3.24, ff: 4.23, cpu: 0, rss: 5124, bps: 452, bpf: 402, size: 2015356, loc: 1917, deps: 0, tests: 12, cost: "n/r", span: "~35 min (36m 4s reported)",
+    text: "The highest engineering score among the Go entries, from the smallest codebase in the field: 1,917 lines and zero third-party modules. Faults are isolated through an issues list that renders <code>--</code> values plus a PARTIAL status, and rate edge cases including NaN and infinite time deltas are tested. Steady output is about 450 B/s, the lowest of the nine. It shares the Apple Silicon Mach-tick bug with Fable and Astra (<code>collector_darwin.go:83,167</code>)." },
+  { k: "astra", s: "S07", n: "GPT-6 Astra", sh: "GPT-6 Astra", lang: "Go", rank: "3=", v: 25.5, e: 66, h: 0, f: 91.5,
+    cat: [12.5, 12.5, 13.5, 9.5, 8, 6, 4], mac: 3.5, macSt: "warn", macShort: "Process CPU% about 40× low",
+    macA: "cgo", macB: "The same Mach-tick bug: process CPU% about 40× low.",
+    fb: 3.66, ff: 3.94, cpu: 0.125, rss: 8048, bps: 492, bpf: 119, size: 2105468, loc: 2177, deps: 0, tests: 16, cost: "n/r", span: "~28 min",
+    text: "All 9 main-view and 5 diagnostic metrics are exact on Linux. It is a true cell diff with the fewest bytes per frame of the nine (119 B). On macOS it has the Mach-tick bug (<code>collect_darwin.go:133</code>). The sampler goroutine has no <code>recover</code>, so a collector panic would bypass terminal restoration. CJK process names become <code>?</code> instead of being clipped by display width. The macOS collector needs cgo, so a cgo-free darwin cross-build fails, as its README says." },
+  { k: "gemini", s: "S09", n: "Gemini 4 Argon", sh: "Gemini 4", lang: "Rust", rank: "5", v: 28.5, e: 63, h: 1, f: 90.5,
+    cat: [12.5, 12, 13, 7.5, 8, 6, 4], mac: 3, macSt: "warn", macShort: "Sees 297 of 915 processes",
+    macA: "Hand-written FFI", macB: "PID count treated as bytes, so 297 of 915 processes and an incomplete top-5. Deprecated libc Mach symbols.",
+    fb: 3.09, ff: 30.25, cpu: 0, rss: 3672, bps: 1634, bpf: 1189, size: 557336, loc: 6010, deps: 1, tests: 13, cost: "n/r", span: "~96 min",
+    text: "Tied for the best-looking screen, but it loses 7 engineering points and 1 for honesty. It is the only entry that fails <code>cargo fmt --check</code> (35 hunks), and deprecated libc Mach calls fail darwin clippy and warn in the native macOS build. On macOS the <code>proc_listallpids</code> count is treated as bytes. Name clipping counts characters, not display width. A 0.37 ms microbenchmark is presented as startup; the measured first frame is 30 ms. Its Linux metrics, lifecycle and synchronized cell diffing are excellent." },
+  { k: "deepseek", s: "S08", n: "DeepSeek V4.1 Flash 1017", sh: "DeepSeek V4.1", lang: "Rust", rank: "6", v: 22.5, e: 63.5, h: 0, f: 86,
+    cat: [12.5, 10.5, 13.5, 9.5, 7.5, 6, 4], mac: 3.5, macSt: "warn", macShort: "Disk 256× too large",
+    macA: "sysinfo plus its own statvfs", macB: "Disk 256× too large: <code>max(f_frsize, f_bsize)</code>, and Darwin's <code>f_bsize</code> is 1 MiB. Shows 115 T for a 460 GiB volume.",
+    fb: 39.37, ff: 41.51, cpu: 0.625, rss: 4252, bps: 3691, bpf: 509, size: 823688, loc: 5076, deps: 51, tests: 38, cost: "$1.78", span: "~46 min",
+    text: "Lifecycle and performance are flawless, and build, lint and tests are clean on both operating systems. Its <code>sysinfo</code> process list counts threads as processes: 1,626 against about 506 on Linux, with duplicate thread IDs in the top-5. Its own <code>statvfs</code> code makes the macOS disk read 115 T for a 460 GiB volume. Status labels such as PRESSURE NOMINAL are hardcoded rather than derived." },
+  { k: "grok", s: "S04", n: "Grok 4.7", sh: "Grok 4.7", lang: "Rust", rank: "7", v: 22.5, e: 63, h: 0, f: 85.5,
+    cat: [12.5, 10, 14, 9.5, 8, 5, 4], mac: 2.5, macSt: "bad", macShort: "74 of 916 processes, CPU reads 0%",
+    macA: "Hand-written FFI", macB: "The PID-count bug (74 of 916 processes) plus the Mach-tick bug, so every top-5 row reads 0%.",
+    fb: 2.97, ff: 6.11, cpu: 0, rss: 2792, bps: 11446, bpf: 11452, size: 467984, loc: 3595, deps: 1, tests: 23, cost: "$5.53", span: "~59 min",
+    text: "The leanest binary of the nine (468 KB, <code>libc</code> only), with 0.0% idle CPU and 2.7 MiB. Its diffing is row-level: every changed row is rewritten whole, at 11.4 KB/s. The diagnostic per-core pills always render an ellipsis and the swap readout is clipped. On macOS it has both the PID-count bug and unscaled Mach ticks." },
+  { k: "kimi", s: "S06", n: "Kimi K3.1 Pro", sh: "Kimi K3.1", lang: "Rust", rank: "8", v: 21, e: 62.25, h: 0, f: 83.25,
+    cat: [13, 10.5, 13.25, 9, 7.25, 5.5, 3.75], mac: 3.5, macSt: "warn", macShort: "Memory available about 2× high",
+    macA: "sysinfo", macB: "Memory available about 2× high: 19.8 G free against about 10 GiB, and used plus free exceeds total.",
+    fb: 93.78, ff: 97.63, cpu: 0.25, rss: 10852, bps: 618, bpf: 619, size: 720792, loc: 2452, deps: 51, tests: 14, cost: "$1.55", span: "~39 min (12m 52s reported)",
+    text: "The slowest startup (94 ms, still inside the 250 ms target) and the most memory (10.6 MiB), both from <code>sysinfo</code>'s initial scan. Like DeepSeek it counts threads as processes, 1,630 against 505, and it shows a 931% CPU spike on the first frame after switching views. <code>NO_COLOR</code> strips the background colour rails, so it differs from <code>--mono</code>. No tests cover sampling, because the collector has no injectable source." },
+  { k: "muse", s: "S05", n: "Muse Wonder", sh: "Muse Wonder", lang: "Go", rank: "9", v: 19.5, e: 55, h: 1, f: 73.5,
+    cat: [11, 8.5, 12, 9, 6, 5, 3.5], mac: 1, macSt: "bad", macShort: "Most metrics show N/A",
+    macA: "Pure-Go syscalls with hand-computed offsets", macB: "CPU, load, memory, per-core and swap all N/A. <code>kern.cp_time</code> does not exist on macOS, the loadavg and <code>if_data</code> offsets are wrong, and TX reads the error counter.",
+    fb: 3.33, ff: 20.31, cpu: 1.499, rss: 8656, bps: 612, bpf: 612, size: 1970336, loc: 2859, deps: 5, tests: 22, cost: "$5.09", span: "~14 min",
+    text: "Terminal lifecycle and redirected-output handling are excellent, but the macOS backend is largely broken. On Linux the main view omits memory available, a required metric. The frame breaks at 40×10, there is no 16-colour path, and idle CPU is 1.5%, the only entry above 1%. Honesty −1 for claiming it verified the full brief." },
+];
+const BYK = Object.fromEntries(M.map(m => [m.k, m]));
+const fmt = (x, d = 1) => x.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+const pts = x => (Number.isInteger(x) ? x.toFixed(1) : String(x));
+const segs = (score, r) => { let h = ""; for (let i = 0; i < 10; i++) h += `<i class="${i < score * 2 ? "on" : ""}" style="--n:${i};--r:${r}"></i>`; return `<div class="seg" role="img" aria-label="${score} of 5">${h}</div>`; };
+const kb = b => b >= 1e6 ? fmt(b / 1e6, 2) + " MB" : Math.round(b / 1e3) + " KB";
+
+/* hero meter: ordered by macOS score, ties in standings order */
+const hm = document.getElementById("heroMeter");
+[...M].sort((a, b) => b.mac - a.mac).forEach((m, r) => {
+  const d = document.createElement("div");
+  d.className = "hm-row";
+  d.style.setProperty("--seg", m.mac === 5 ? "var(--ok)" : "var(--f-sky)");
+  d.innerHTML = `<span class="hm-name">${m.sh}</span>${segs(m.mac, r)}<span class="hm-val">${fmt(m.mac)}</span><span class="status ${m.macSt}">${m.macShort}</span>`;
+  hm.appendChild(d);
+});
+
+/* standings */
+const board = document.getElementById("board");
+const tip = document.getElementById("tip");
+M.forEach(m => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "row"; b.dataset.k = m.k;
+  b.setAttribute("aria-label", `${m.n}, rank ${m.rank}, final ${pts(m.f)}. Open dossier.`);
+  const engSolid = m.e - m.h;
+  b.innerHTML = `<span class="rank">${m.rank}</span>
+    <span class="who"><b>${m.n}</b><small>${m.lang}, snapshot ${m.s}</small></span>
+    <span class="track"><span class="grid-lines">${[25, 50, 75].map(x => `<i style="left:${x}%"></i>`).join("")}</span>
+      <span class="t-vis" style="width:${m.v}%"></span><span class="t-eng ${m.h ? "" : "end"}" style="width:${engSolid}%"></span>${m.h ? `<span class="t-ded" style="width:${m.h}%"></span>` : ""}</span>
+    <span class="final">${pts(m.f)}</span>`;
+  b.addEventListener("click", () => { select(m.k); document.getElementById("dossiers").scrollIntoView({ block: "start" }); });
+  const show = e => {
+    tip.innerHTML = `<h4>${m.n}</h4>
+      <div><span><i style="background:var(--s-vis)"></i>Visual</span><span>${pts(m.v)} / 30</span></div>
+      <div><span><i style="background:var(--s-eng)"></i>Engineering</span><span>${pts(m.e)} / 70</span></div>
+      <div><span><i class="lg-ded"></i>Honesty</span><span>${m.h ? "−" + pts(m.h) : "0"}</span></div>
+      <div class="tot"><span>Final</span><span>${pts(m.f)} / 100</span></div>`;
+    tip.hidden = false;
+    const x = Math.min(e.clientX + 16, window.innerWidth - tip.offsetWidth - 12);
+    const y = Math.min(e.clientY + 16, window.innerHeight - tip.offsetHeight - 12);
+    tip.style.left = x + "px"; tip.style.top = y + "px";
+  };
+  b.addEventListener("mousemove", show);
+  b.addEventListener("mouseleave", () => { tip.hidden = true; });
+  board.appendChild(b);
+});
+
+/* dossiers */
+const picker = document.getElementById("picker");
+let cur = "opus", view = "p";
+M.forEach(m => {
+  const b = document.createElement("button");
+  b.type = "button"; b.textContent = m.sh; b.dataset.k = m.k; b.setAttribute("aria-pressed", "false");
+  b.addEventListener("click", () => select(m.k));
+  picker.appendChild(b);
+});
+function renderShot() {
+  const m = BYK[cur], img = document.getElementById("shot");
+  const src = SHOTS[m.s] && SHOTS[m.s][view];
+  if (src) img.src = src;
+  img.alt = `${m.n} ${view === "p" ? "main" : "diagnostic"} view at 120 by 36 characters`;
+  document.getElementById("viewMain").setAttribute("aria-pressed", view === "p");
+  document.getElementById("viewDiag").setAttribute("aria-pressed", view === "d");
+  document.getElementById("shotCap").textContent = view === "p" ? "Main view, fresh 120×36 capture on Linux" : "Diagnostic view (p key), fresh 120×36 capture on Linux";
+}
+function select(k) {
+  cur = k;
+  const m = BYK[k];
+  picker.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === k));
+  renderShot();
+  const cats = CATS.map(([name, max], i) => `<span>${name}</span><span class="ct"><i style="width:${m.cat[i] / max * 100}%"></i></span><span class="cv"><b>${m.cat[i]}</b> / ${max}</span>`).join("");
+  document.getElementById("dossier").innerHTML = `
+    <div class="d-head"><h3>${m.n}</h3><span class="d-score">${pts(m.f)}</span></div>
+    <p class="d-sum">Rank ${m.rank}. ${pts(m.v)} visual + ${pts(m.e)} engineering${m.h ? " − " + pts(m.h) + " honesty" : ""}. ${m.lang}, snapshot ${m.s}.</p>
+    <div class="cats">${cats}</div>
+    <dl class="dl">
+      <div><dt>First frame</dt><dd>${fmt(m.ff)} ms</dd></div>
+      <div><dt>Idle CPU</dt><dd>${fmt(m.cpu, 2)}%</dd></div>
+      <div><dt>Peak RSS</dt><dd>${fmt(m.rss / 1024)} MiB</dd></div>
+      <div><dt>Output</dt><dd>${m.bps.toLocaleString("en-US")} B/s</dd></div>
+      <div><dt>Binary</dt><dd>${kb(m.size)}</dd></div>
+      <div><dt>Source lines</dt><dd>${m.loc.toLocaleString("en-US")}</dd></div>
+      <div><dt>Test functions</dt><dd>${m.tests}</dd></div>
+      <div><dt>Third-party pkgs</dt><dd>${m.deps}</dd></div>
+    </dl>
+    <div class="d-mac"><span class="muted">macOS</span><span style="--seg:${m.mac === 5 ? "var(--ok)" : "var(--f-sky)"}">${segs(m.mac, 0)}</span><span class="status ${m.macSt}">${m.macShort}</span></div>
+    <p class="d-text">${m.text}</p>`;
+}
+document.getElementById("viewMain").addEventListener("click", () => { view = "p"; renderShot(); });
+document.getElementById("viewDiag").addEventListener("click", () => { view = "d"; renderShot(); });
+select("opus");
+
+/* macOS table */
+document.getElementById("macBody").innerHTML = [...M].sort((a, b) => b.mac - a.mac).map(m =>
+  `<tr><td class="name">${m.sh}</td><td>${m.macA}</td><td>${m.macB}</td><td class="num"><span class="status ${m.macSt}">${fmt(m.mac)}</span></td></tr>`).join("");
+
+/* heatmap */
+document.getElementById("heatHead").innerHTML = `<tr><th>Model</th>${CATS.map(([n, mx]) => `<th class="c">${n}<br><span style="font-weight:400">/${mx}</span></th>`).join("")}<th class="num">Total /70</th></tr>`;
+document.getElementById("heatBody").innerHTML = M.map(m => `<tr><td class="name">${m.sh}</td>${m.cat.map((v, i) => {
+  const frac = v / CATS[i][1];
+  const pct = Math.round(Math.max(0, Math.min(1, (frac - 0.5) / 0.5)) * 78 + 12);
+  const dark = pct > 58;
+  return `<td class="h" style="background:color-mix(in oklab, var(--s-eng) ${pct}%, var(--void));color:${dark ? "var(--void)" : "var(--ink)"}">${v}</td>`;
+}).join("")}<td class="tot">${pts(m.e)}</td></tr>`).join("");
+
+/* performance */
+const cols = [["fb", v => fmt(v) + " ms"], ["ff", v => fmt(v) + " ms"], ["cpu", v => fmt(v, 2) + "%"], ["rss", v => fmt(v / 1024) + " MiB"], ["bps", v => v.toLocaleString("en-US") + " B/s"], ["bpf", v => v.toLocaleString("en-US") + " B"], ["size", kb]];
+const maxes = Object.fromEntries(cols.map(([c]) => [c, Math.max(...M.map(m => m[c]))]));
+document.getElementById("perfBody").innerHTML = M.map(m => `<tr><td class="name">${m.sh}</td>${cols.map(([c, f]) => {
+  const w = m[c] / maxes[c] * 100;
+  const hot = w > 70;
+  return `<td class="num"><div class="pv"><span class="${hot ? "flag" : ""}">${f(m[c])}</span><span class="pbar"><i class="${hot ? "hot" : ""}" style="width:${Math.max(w, 1.5)}%"></i></span></div></td>`;
+}).join("")}</tr>`).join("");
+document.querySelectorAll(".pbar i").forEach(i => i.style.display = "block");
+
+/* lifecycle */
+const paths = ["q key", "Esc", "Ctrl-C byte", "OS SIGINT", "SIGTERM"];
+let lh = `<span></span>` + M.map(m => `<span class="lh" role="columnheader">${m.sh}</span>`).join("");
+paths.forEach(p => { lh += `<span class="lp" role="rowheader">${p}</span>` + M.map(m => `<span class="lc" role="cell" title="${m.sh}, ${p}: exited, termios restored, alt screen left, cursor shown" aria-label="pass">✓</span>`).join(""); });
+document.getElementById("life").innerHTML = lh;
+
+/* cost */
+document.getElementById("costBody").innerHTML = M.map(m => `<tr><td class="name">${m.sh}</td><td class="num">${m.cost === "n/r" ? '<span class="muted">not recorded</span>' : m.cost}</td><td class="num">${m.span}</td></tr>`).join("");
+
+/* nav highlight */
+const links = [...document.querySelectorAll("#nav a")];
+const obs = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + e.target.id)); });
+}, { rootMargin: "-30% 0px -60% 0px" });
+links.forEach(a => { const s = document.querySelector(a.getAttribute("href")); if (s) obs.observe(s); });
+</script>

@@ -1,0 +1,24 @@
+
+  ▐  47 / SYS ▌   LCARS  / DIAGNOSTICS                       ▐        ONLINE ▌
+
+
+
+
+   02       Ubuntu 26.04.1 LTS / amd64
+
+            PROCESSES / 505     SWAP / 0 B / 0 B
+            PROCESSOR ARRAY / 24 CORES
+            000    0.0%  ▁   001    0.0%  ▁   002    2.1%  ▁
+            003    0.0%  ▁   004    2.1%  ▁   005    2.1%  ▁
+
+
+           ▐                                         CPU / FIVE MOST ACTIVE ▌
+
+             PID        PROCESS                        CPU %      RESIDENT
+             2318       svc12                             2.1     188.2 MiB
+   DX        1246092    zsh                               2.1     10.8 MiB
+             1          systemd                           0.0     16.4 MiB
+             2          kthreadd                          0.0     0 B
+             3          pool_workqueue_release            0.0     0 B
+   01    [p] diagnostics   [tab] view   [space] hold   [?] help   [q] exit
+

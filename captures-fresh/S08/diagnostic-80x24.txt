@@ -1,0 +1,24 @@
+▗          LCARS 47          ▖  ▗                DIAGNOSTICS                 ▖
+▘                            ▝  ▘                                            ▝
+▗▖  DIAGNOSTIC SUBSYSTEM
+▐▌  ▐OS▌ Ubuntu 26.04                   PROCESS MANIFEST
+▐▌  KRN 7.0.0-38-generic   ARCH x86_64  TOP 5 // CPU
+▘▝  ▐HOST▌ linux                             PID     COMMAND
+▗▖  CORE MATRIX // %          24 CORES  ▐01▌ 1967145 python
+▐▌                                        CPU 13.4%   ━╌╌╌╌╌╌        MEM 84.0M
+▐▌  00 ╌╌╌   0 08 ╌╌╌   0 16 ╌╌╌   0    ▐02▌ 301341  svc07
+▘▝  01 ╌╌╌   0 09 ╌╌╌   0 17 ╌╌╌   0      CPU 10.7%   ━╌╌╌╌╌╌         MEM 226M
+▗▖  02 ╌╌╌   2 10 ╌╌╌   0 18 ╌╌╌   0    ▐03▌   1917  svc24
+▐▌  03 ╌╌╌   0 11 ╌╌╌   0 19 ╌╌╌   0      CPU 10.7%   ━╌╌╌╌╌╌         MEM 217M
+▐▌  04 ╌╌╌   0 12 ╌╌╌   0 20 ╌╌╌   0    ▐04▌   2318  svc12
+▘▝  05 ╌╌╌  13 13 ╌╌╌   2 21 ╌╌╌   0      CPU 8.1%    ━╌╌╌╌╌╌         MEM 193M
+▗▖  06 ╌╌╌   2 14 ╌╌╌   0 22 ╌╌╌   0    ▐05▌ 955697  svc19
+▐▌  07 ╌╌╌   0 15 ╌╌╌   0 23 ╌╌╌   0      CPU 8.1%    ━╌╌╌╌╌╌        MEM 70.8M
+▐▌
+▘▝  ▐SWAP▌ NO SWAP
+▗▖
+▐▌  LOAD 0.07 / 0.14 / 0.16
+▐▌  PROCESSES 1626
+▘▝
+
+    ▐TAB▌ COMMAND  ▐P▌ CLOSE  ▐?▌ HELP  ▐SPACE▌ HOLD  ▐Q▌ QUIT

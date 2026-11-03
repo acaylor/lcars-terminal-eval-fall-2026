@@ -1,0 +1,21 @@
+[package]
+name = "lcarsmon"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.75"
+description = "An LCARS-inspired terminal system monitor for macOS and Linux"
+license = "MIT"
+
+[dependencies]
+# Raw OS APIs: termios, poll, signals, sysctl, Mach host statistics, libproc.
+libc = "0.2.180"
+# Terminal column width of process names / hostnames (CJK, emoji, combining marks).
+unicode-width = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+# Keep unwinding so the terminal guard's Drop runs if anything ever panics.
+panic = "unwind"

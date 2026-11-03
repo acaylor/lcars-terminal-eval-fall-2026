@@ -1,0 +1,4 @@
+$ cargo clippy --all-targets
+    Checking libc v0.2.190
+    Checking lcars-mon v0.3.0 (<workspace>/evaluation/work/S09)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.57s

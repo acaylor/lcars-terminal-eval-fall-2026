@@ -1,0 +1,72 @@
+$ cargo test --all-targets
+   Compiling libc v0.2.191
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling bitflags v2.13.2
+   Compiling unicode-segmentation v1.13.3
+   Compiling parking_lot_core v0.9.12
+   Compiling signal-hook v0.3.18
+   Compiling smallvec v1.16.4
+   Compiling cfg-if v1.0.5
+   Compiling scopeguard v1.2.0
+   Compiling log v0.4.34
+   Compiling rustix v1.1.6
+   Compiling objc2-core-foundation v0.3.2
+   Compiling lock_api v0.4.14
+   Compiling convert_case v0.10.0
+   Compiling litrs v1.0.1
+   Compiling memchr v2.8.3
+   Compiling unicode-width v0.2.2
+   Compiling document-features v0.2.12
+   Compiling syn v2.0.119
+   Compiling errno v0.3.14
+   Compiling mio v1.2.4
+   Compiling objc2-io-kit v0.3.2
+   Compiling signal-hook-registry v1.4.8
+   Compiling parking_lot v0.12.5
+   Compiling sysinfo v0.39.6
+   Compiling signal-hook-mio v0.2.5
+   Compiling derive_more-impl v2.1.1
+   Compiling derive_more v2.1.1
+   Compiling crossterm v0.29.0
+   Compiling lcars-monitor v1.0.0 (/Users/user/lcars-eval/work/S06)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.34s
+     Running unittests src/lib.rs (target/debug/deps/lcars_monitor-898b554c328270ed)
+
+running 7 tests
+test model::tests::rates_handle_reset_and_zero_or_long_intervals ... ok
+test model::tests::rates_use_real_elapsed_time ... ok
+test render::tests::clipping_preserves_unicode_width ... ok
+test buffer::tests::wide_unicode_is_clipped_without_losing_grid_alignment ... ok
+test buffer::tests::tiny_buffers_never_panic ... ok
+test model::tests::byte_formatting_is_compact ... ok
+test model::tests::history_is_bounded ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/lcars_monitor-42cfff418e5903e2)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/rendering.rs (target/debug/deps/rendering-25e184df605bb868)
+
+running 7 tests
+test diff_renderer_skips_unchanged_cells ... ok
+test compact_80_by_24_is_deliberately_simplified ... ok
+test primary_has_required_metrics_but_no_process_list ... ok
+test help_and_pause_are_visible_without_changing_views ... ok
+test secondary_contains_diagnostics_and_five_processes ... ok
+test primary_composition_is_asymmetric_and_preserves_negative_space ... ok
+test layouts_and_ascii_fallback_survive_extreme_sizes ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running unittests examples/capture.rs (target/debug/examples/capture-b7537f84beba17d3)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

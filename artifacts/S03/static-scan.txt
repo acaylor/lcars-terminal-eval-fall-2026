@@ -1,0 +1,76 @@
+S03: 1917 LOC in 17 files, 12 test fns, deps=0 panic=n/a
+
+FILES
+      56 cmd/lcars/main.go
+     187 internal/app/app.go
+      51 internal/app/app_test.go
+     173 internal/metrics/collector_darwin.go
+      12 internal/metrics/collector_darwin_nocgo.go
+     207 internal/metrics/collector_linux.go
+      61 internal/metrics/collector_linux_test.go
+     141 internal/metrics/metrics.go
+      77 internal/metrics/metrics_test.go
+      10 internal/terminal/ioctl_darwin.go
+      10 internal/terminal/ioctl_linux.go
+      95 internal/terminal/render.go
+      71 internal/terminal/render_test.go
+     100 internal/terminal/terminal.go
+     161 internal/ui/canvas.go
+     389 internal/ui/view.go
+     116 internal/ui/view_test.go
+
+SUBPROCESS (0)
+
+
+UNSAFE_BLOCK (0)
+
+
+CGO (4)
+  internal/metrics/collector_darwin.go:6: #cgo LDFLAGS: -lproc
+  internal/metrics/collector_darwin.go:95: import "C"
+  internal/metrics/collector_darwin.go:113: n := C.native_collect(C.int(p))
+  internal/metrics/collector_darwin.go:114: defer C.native_free(&n)
+
+GO_UNSAFE (7)
+  internal/metrics/collector_darwin.go:101: "unsafe"
+  internal/terminal/terminal.go:9: "unsafe"
+  internal/terminal/terminal.go:18: func ioctl(fd uintptr, request uintptr, arg unsafe.Pointer) error {
+  internal/terminal/terminal.go:27: err := ioctl(os.Stdout.Fd(), syscall.TIOCGWINSZ, unsafe.Pointer(&s))
+  internal/terminal/terminal.go:35: if err := ioctl(os.Stdin.Fd(), getTermios, unsafe.Pointer(&t)); err != nil {
+  internal/terminal/terminal.go:48: if err := ioctl(os.Stdin.Fd(), setTermios, unsafe.Pointer(&t)); err != nil {
+  internal/terminal/terminal.go:62: _ = ioctl(os.Stdin.Fd(), setTermios, unsafe.Pointer(&s.saved))
+
+PLACEHOLDER (0)
+
+
+PANIC_HOOK (0)
+
+
+SIGNAL_HANDLING (1)
+  internal/app/app.go:55: signal.Notify(signals, os.Interrupt, syscall.SIGTERM, syscall.SIGHUP, syscall.SIGWINCH, syscall.SIGQUIT)
+
+SCOPE_MOUSE (0)
+
+
+SCOPE_PROTOCOLS (0)
+
+
+SCOPE_CONFIG (0)
+
+
+SCOPE_PROC_MGMT (0)
+
+
+FULL_CLEAR (5)
+  internal/terminal/render.go:63: b.WriteString("\x1b[2J")
+  internal/terminal/render_test.go:35: if out.Len() > initial/10 || strings.Contains(out.String(), "\x1b[2J") {
+  internal/terminal/render_test.go:42: if !strings.Contains(out.String(), "\x1b[2J") {
+  internal/terminal/terminal.go:51: if _, err := fmt.Fprint(os.Stdout, "\x1b[?1049h\x1b[?25l\x1b[?7l\x1b[2J\x1b[H"); err != nil {
+  internal/ui/view_test.go:17: return metrics.Snapshot{Raw: metrics.Raw{At: time.Date(2026, 9, 30, 12, 34, 56, 0, time.UTC), Host: strings.Repeat("long-host-", 30), OS: "L
+
+DT_ASSUMPTION (5)
+  internal/metrics/metrics.go:58: func Delta(before, after uint64, elapsed float64) Value {
+  internal/metrics/metrics.go:59: if elapsed <= 0 || math.IsNaN(elapsed) || math.IsInf(elapsed, 0) || after < before {
+  internal/metrics/metrics.go:62: return Known(float64(after-before) / elapsed)
+  internal/metrics/metrics_test.go:16: {"real elapsed", 100, 250, 2.5, 60, true}, {"long gap", 0, 100, 1000, .1, true},
+  internal/metrics/metrics_test.go:66: t.Fatal("zero elapsed sample or bounded list failed")

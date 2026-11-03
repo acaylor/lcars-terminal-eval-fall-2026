@@ -1,0 +1,35 @@
+{
+  "all_capture_files_stripped": [
+    "captures/diagnostic-120x36.ansi",
+    "captures/diagnostic-120x36.png",
+    "captures/diagnostic-120x36.svg",
+    "captures/diagnostic-120x36.txt",
+    "captures/help-120x36.txt",
+    "captures/measurements.txt",
+    "captures/primary-120x36.ansi",
+    "captures/primary-120x36.png",
+    "captures/primary-120x36.svg",
+    "captures/primary-120x36.txt",
+    "captures/primary-80x24.txt",
+    "captures/verification.txt"
+  ],
+  "captains_log_file": [
+    "CAPTAINS_LOG.md"
+  ],
+  "captains_log_readme_section": false,
+  "prebuilt_binaries_removed": [],
+  "primary_120x36_capture": true,
+  "primary_capture_files": [
+    "captures/primary-120x36.ansi",
+    "captures/primary-120x36.png",
+    "captures/primary-120x36.svg",
+    "captures/primary-120x36.txt"
+  ],
+  "secondary_120x36_capture": true,
+  "secondary_capture_files": [
+    "captures/diagnostic-120x36.ansi",
+    "captures/diagnostic-120x36.png",
+    "captures/diagnostic-120x36.svg",
+    "captures/diagnostic-120x36.txt"
+  ]
+}

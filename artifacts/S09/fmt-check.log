@@ -1,0 +1,539 @@
+$ cargo fmt --check
+Diff in <workspace>/evaluation/work/S09/src/bench.rs:125:
+         exe_size
+             .map(format_bytes)
+             .unwrap_or_else(|| "unknown".to_string()),
+[31m-        if acceptance.is_asymmetric { "PASS" } else { "FAIL" },
+(B[m[32m+        if acceptance.is_asymmetric {
+(B[m[32m+            "PASS"
+(B[m[32m+        } else {
+(B[m[32m+            "FAIL"
+(B[m[32m+        },
+(B[m         acceptance.left_structural_cells,
+         acceptance.right_structural_cells,
+         if acceptance.has_dominant_focal_element {
+Diff in <workspace>/evaluation/work/S09/src/canvas.rs:227:
+ 
+     /// Stamps a compact LCARS cutout stencil label inside a solid spine block or rail,
+     /// keeping the outer structural glyphs intact so the silhouette remains solid.
+[31m-    pub fn stamp_stencil_label(
+(B[m[31m-        &mut self,
+(B[m[31m-        x: usize,
+(B[m[31m-        y: usize,
+(B[m[31m-        text: &str,
+(B[m[31m-        rail_tone: LcarsTone,
+(B[m[31m-    ) {
+(B[m[32m+    pub fn stamp_stencil_label(&mut self, x: usize, y: usize, text: &str, rail_tone: LcarsTone) {
+(B[m         if y >= self.height {
+             return;
+         }
+Diff in <workspace>/evaluation/work/S09/src/canvas.rs:653:
+             if i < full_cells {
+                 self.put_char(cx, y, '█', active_fg, ColorSpec::Reset);
+             } else if i == full_cells && has_half {
+[31m-                self.put_char(
+(B[m[31m-                    cx,
+(B[m[31m-                    y,
+(B[m[31m-                    '▌',
+(B[m[31m-                    active_fg,
+(B[m[31m-                    ColorSpec::Tone(LcarsTone::TrackDark),
+(B[m[31m-                );
+(B[m[32m+                self.put_char(cx, y, '▌', active_fg, ColorSpec::Tone(LcarsTone::TrackDark));
+(B[m             } else {
+                 // Structural guide track (`━`) so the conduit remains visible even without color/text
+                 self.put_char(
+Diff in <workspace>/evaluation/work/S09/src/canvas.rs:677:
+         } else {
+             LcarsTone::TrackDark
+         };
+[31m-        self.put_char(x + width - 1, y, '◗', ColorSpec::Tone(end_tone), ColorSpec::Reset);
+(B[m[32m+        self.put_char(
+(B[m[32m+            x + width - 1,
+(B[m[32m+            y,
+(B[m[32m+            '◗',
+(B[m[32m+            ColorSpec::Tone(end_tone),
+(B[m[32m+            ColorSpec::Reset,
+(B[m[32m+        );
+(B[m     }
+ 
+     /// Draws 3-row high custom LCARS vector digits (`0-9`, `:`, `.`, `%`, `-`, ` `) using half-block and quadrant glyphs.
+Diff in <workspace>/evaluation/work/S09/src/canvas.rs:700:
+                 let fg = ColorSpec::interpolate(tone_top, tone_bot, ratio);
+                 for (col_idx, gch) in row_str.chars().enumerate() {
+                     if gch != ' ' {
+[31m-                        self.put_styled(cur_x + col_idx, cy, gch, fg, ColorSpec::Reset, true, false);
+(B[m[32m+                        self.put_styled(
+(B[m[32m+                            cur_x + col_idx,
+(B[m[32m+                            cy,
+(B[m[32m+                            gch,
+(B[m[32m+                            fg,
+(B[m[32m+                            ColorSpec::Reset,
+(B[m[32m+                            true,
+(B[m[32m+                            false,
+(B[m[32m+                        );
+(B[m                     }
+                 }
+             }
+Diff in <workspace>/evaluation/work/S09/src/collector/linux.rs:232:
+ }
+ 
+ /// Parses `/proc/meminfo` into `(mem_total, mem_avail, swap_total, swap_used)` in bytes.
+[31m-pub fn parse_proc_meminfo(
+(B[m[31m-    content: &str,
+(B[m[31m-) -> (Option<u64>, Option<u64>, Option<u64>, Option<u64>) {
+(B[m[32m+pub fn parse_proc_meminfo(content: &str) -> (Option<u64>, Option<u64>, Option<u64>, Option<u64>) {
+(B[m     let mut mem_total_kb: Option<u64> = None;
+     let mut mem_avail_kb: Option<u64> = None;
+     let mut mem_free_kb: Option<u64> = None;
+Diff in <workspace>/evaluation/work/S09/src/collector/macos.rs:65:
+         .saturating_add(purgeable_pages);
+     let avail_bytes = reclaimable_pages.saturating_mul(page_size).min(total_bytes);
+     let used_bytes = total_bytes.saturating_sub(avail_bytes);
+[31m-    (total_bytes, avail_bytes.max(total_bytes.saturating_sub(used_bytes)))
+(B[m[32m+    (
+(B[m[32m+        total_bytes,
+(B[m[32m+        avail_bytes.max(total_bytes.saturating_sub(used_bytes)),
+(B[m[32m+    )
+(B[m }
+ 
+ /// Safely extracts a UTF-8 string from a fixed-size C char buffer (`pbi_name` or `pbi_comm`).
+Diff in <workspace>/evaluation/work/S09/src/sampler.rs:44:
+             (Some(curr), None) => {
+                 // First sample fallback: ratio of cumulative active/total if non-zero
+                 if curr.total > 0 {
+[31m-                    Some(((curr.active as f64 / curr.total as f64) * 100.0).clamp(0.0, 100.0) as f32)
+(B[m[32m+                    Some(
+(B[m[32m+                        ((curr.active as f64 / curr.total as f64) * 100.0).clamp(0.0, 100.0) as f32,
+(B[m[32m+                    )
+(B[m                 } else {
+                     None
+                 }
+Diff in <workspace>/evaluation/work/S09/src/sampler.rs:65:
+                     .or_else(|| self.last_cpu_cores.get(idx).copied())
+                     .unwrap_or(0.0)
+             } else if curr_core.total > 0 {
+[31m-                ((curr_core.active as f64 / curr_core.total as f64) * 100.0).clamp(0.0, 100.0) as f32
+(B[m[32m+                ((curr_core.active as f64 / curr_core.total as f64) * 100.0).clamp(0.0, 100.0)
+(B[m[32m+                    as f32
+(B[m             } else {
+                 0.0
+             };
+Diff in <workspace>/evaluation/work/S09/src/sampler.rs:94:
+         let swap = match (sample.swap_total_bytes, sample.swap_used_bytes) {
+             (Some(total), Some(used)) if total > 0 => {
+                 let clamped_used = used.min(total);
+[31m-                let used_pct = ((clamped_used as f64 / total as f64) * 100.0).clamp(0.0, 100.0) as f32;
+(B[m[32m+                let used_pct =
+(B[m[32m+                    ((clamped_used as f64 / total as f64) * 100.0).clamp(0.0, 100.0) as f32;
+(B[m                 Some(SwapMetrics {
+                     used_bytes: clamped_used,
+                     total_bytes: total,
+Diff in <workspace>/evaluation/work/S09/src/sampler.rs:112:
+         ) {
+             (Some(total), Some(used), Some(avail)) if total > 0 => {
+                 let clamped_used = used.min(total);
+[31m-                let used_pct = ((clamped_used as f64 / total as f64) * 100.0).clamp(0.0, 100.0) as f32;
+(B[m[32m+                let used_pct =
+(B[m[32m+                    ((clamped_used as f64 / total as f64) * 100.0).clamp(0.0, 100.0) as f32;
+(B[m                 Some(DiskMetrics {
+                     used_bytes: clamped_used,
+                     avail_bytes: avail.min(total),
+Diff in <workspace>/evaluation/work/S09/src/theme.rs:178:
+ 
+     pub const fn ansi16_fg(self) -> u8 {
+         match self {
+[31m-            LcarsTone::Orange => 33,      // Yellow/Orange
+(B[m[31m-            LcarsTone::Amber => 93,       // Bright Yellow
+(B[m[31m-            LcarsTone::Salmon => 91,      // Bright Red
+(B[m[31m-            LcarsTone::Lavender => 35,    // Magenta
+(B[m[31m-            LcarsTone::Periwinkle => 95,  // Bright Magenta
+(B[m[31m-            LcarsTone::CoolBlue => 94,    // Bright Blue
+(B[m[31m-            LcarsTone::IceBlue => 96,     // Bright Cyan
+(B[m[31m-            LcarsTone::Cream => 97,       // Bright White
+(B[m[31m-            LcarsTone::Muted => 37,       // White/Gray
+(B[m[31m-            LcarsTone::TrackDark => 90,   // Bright Black (Dark Gray)
+(B[m[31m-            LcarsTone::CutoutDark => 30,  // Black
+(B[m[32m+            LcarsTone::Orange => 33,     // Yellow/Orange
+(B[m[32m+            LcarsTone::Amber => 93,      // Bright Yellow
+(B[m[32m+            LcarsTone::Salmon => 91,     // Bright Red
+(B[m[32m+            LcarsTone::Lavender => 35,   // Magenta
+(B[m[32m+            LcarsTone::Periwinkle => 95, // Bright Magenta
+(B[m[32m+            LcarsTone::CoolBlue => 94,   // Bright Blue
+(B[m[32m+            LcarsTone::IceBlue => 96,    // Bright Cyan
+(B[m[32m+            LcarsTone::Cream => 97,      // Bright White
+(B[m[32m+            LcarsTone::Muted => 37,      // White/Gray
+(B[m[32m+            LcarsTone::TrackDark => 90,  // Bright Black (Dark Gray)
+(B[m[32m+            LcarsTone::CutoutDark => 30, // Black
+(B[m         }
+     }
+ 
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:97:
+                 continue;
+             }
+             let is_structural = !ch.is_alphanumeric()
+[31m-                && !matches!(ch, ':' | '.' | '%' | '/' | '-' | '[' | ']' | '?' | '(' | ')');
+(B[m[32m+                && !matches!(
+(B[m[32m+                    ch,
+(B[m[32m+                    ':' | '.' | '%' | '/' | '-' | '[' | ']' | '?' | '(' | ')'
+(B[m[32m+                );
+(B[m             if is_structural {
+                 stripped_struct += 1;
+                 if x < mid_x {
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:304:
+ 
+     let meta_x = content_x + 34;
+     let host = t.hostname.as_deref().unwrap_or("USS-WORKSTATION");
+[31m-    let host_trunc = truncate_chars(host, w.saturating_sub(meta_x + 2), state.glyph_mode == GlyphMode::Unicode);
+(B[m[32m+    let host_trunc = truncate_chars(
+(B[m[32m+        host,
+(B[m[32m+        w.saturating_sub(meta_x + 2),
+(B[m[32m+        state.glyph_mode == GlyphMode::Unicode,
+(B[m[32m+    );
+(B[m     canvas.draw_text(
+         meta_x,
+         3,
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:363:
+     );
+ 
+     let load_str = match t.load_avg {
+[31m-        Some([l1, l5, l15]) => format!("LOAD VEC // 1M {:4.2}   5M {:4.2}   15M {:4.2}", l1, l5, l15),
+(B[m[32m+        Some([l1, l5, l15]) => format!(
+(B[m[32m+            "LOAD VEC // 1M {:4.2}   5M {:4.2}   15M {:4.2}",
+(B[m[32m+            l1, l5, l15
+(B[m[32m+        ),
+(B[m         None => "LOAD VEC // OFFLINE".to_string(),
+     };
+     canvas.draw_text(
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:413:
+     }
+ 
+     if let Some(disk) = t.disk_root {
+[31m-        canvas.draw_pill(content_x + 3, low_y + 2, 8, LcarsTone::Amber, Some("ROOT /"));
+(B[m[32m+        canvas.draw_pill(
+(B[m[32m+            content_x + 3,
+(B[m[32m+            low_y + 2,
+(B[m[32m+            8,
+(B[m[32m+            LcarsTone::Amber,
+(B[m[32m+            Some("ROOT /"),
+(B[m[32m+        );
+(B[m         canvas.draw_conduit_gauge(
+             content_x + 12,
+             low_y + 2,
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:439:
+     }
+ 
+     if let Some(net) = t.network {
+[31m-        canvas.draw_pill(content_x + 6, low_y + 4, 8, LcarsTone::CoolBlue, Some("NET IO"));
+(B[m[32m+        canvas.draw_pill(
+(B[m[32m+            content_x + 6,
+(B[m[32m+            low_y + 4,
+(B[m[32m+            8,
+(B[m[32m+            LcarsTone::CoolBlue,
+(B[m[32m+            Some("NET IO"),
+(B[m[32m+        );
+(B[m         let net_txt = format!(
+             "RX {:>10}   TX {:>10}",
+             format_rate(net.rx_bytes_per_sec),
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:688:
+         focus_tone(0, LcarsTone::Amber),
+         LcarsTone::Orange,
+     );
+[31m-    canvas.stamp_stencil_label(
+(B[m[31m-        spine_x + 2,
+(B[m[31m-        8,
+(B[m[31m-        "01-CHRONO",
+(B[m[31m-        focus_tone(0, LcarsTone::Amber),
+(B[m[31m-    );
+(B[m[32m+    canvas.stamp_stencil_label(spine_x + 2, 8, "01-CHRONO", focus_tone(0, LcarsTone::Amber));
+(B[m 
+     canvas.fill_solid_block(
+         spine_x,
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:813:
+         LcarsTone::CoolBlue,
+         LcarsTone::Lavender,
+     );
+[31m-    canvas.stamp_stencil_label(spine_x + 2, bot_elbow_y + 1, "SYS-LOCK", LcarsTone::CoolBlue);
+(B[m[32m+    canvas.stamp_stencil_label(
+(B[m[32m+        spine_x + 2,
+(B[m[32m+        bot_elbow_y + 1,
+(B[m[32m+        "SYS-LOCK",
+(B[m[32m+        LcarsTone::CoolBlue,
+(B[m[32m+    );
+(B[m 
+     // Floating status pill in the open bottom-right negative space
+     let pulse_char = match (t.tick % 4, state.paused) {
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:941:
+     } else {
+         LcarsTone::Orange
+     };
+[31m-    let cpu_digits_w = canvas.draw_big_digits(
+(B[m[31m-        focal_cpu_x,
+(B[m[31m-        4,
+(B[m[31m-        &cpu_big_str,
+(B[m[31m-        cpu_tone_top,
+(B[m[31m-        LcarsTone::Amber,
+(B[m[31m-    );
+(B[m[32m+    let cpu_digits_w =
+(B[m[32m+        canvas.draw_big_digits(focal_cpu_x, 4, &cpu_big_str, cpu_tone_top, LcarsTone::Amber);
+(B[m     canvas.draw_text(
+         focal_cpu_x,
+         8,
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:1156:
+         canvas.draw_text(
+             net_x + 2,
+             29,
+[31m-            &format!("SUBSPACE LINKS // {} ACTIVE INTERFACES", net.active_interfaces),
+(B[m[32m+            &format!(
+(B[m[32m+                "SUBSPACE LINKS // {} ACTIVE INTERFACES",
+(B[m[32m+                net.active_interfaces
+(B[m[32m+            ),
+(B[m             ColorSpec::Tone(LcarsTone::Muted),
+             ColorSpec::Reset,
+             false,
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:1412:
+             canvas.put_char(cx, div_y, ch, fg, ColorSpec::Reset);
+         }
+     }
+[31m-    canvas.stamp_stencil_label(div_start_x + 2, div_y, "PROC-TELEMETRY", LcarsTone::CoolBlue);
+(B[m[32m+    canvas.stamp_stencil_label(
+(B[m[32m+        div_start_x + 2,
+(B[m[32m+        div_y,
+(B[m[32m+        "PROC-TELEMETRY",
+(B[m[32m+        LcarsTone::CoolBlue,
+(B[m[32m+    );
+(B[m 
+     // Lower-right spine blocks (`y = 19..30`)
+     let bot_elbow_y = h.saturating_sub(5);
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:1443:
+         LcarsTone::Orange,
+         LcarsTone::Amber,
+     );
+[31m-    canvas.stamp_stencil_label(spine_left_x + 2, bot_elbow_y + 1, "DIAG-LOCK", LcarsTone::Amber);
+(B[m[32m+    canvas.stamp_stencil_label(
+(B[m[32m+        spine_left_x + 2,
+(B[m[32m+        bot_elbow_y + 1,
+(B[m[32m+        "DIAG-LOCK",
+(B[m[32m+        LcarsTone::Amber,
+(B[m[32m+    );
+(B[m 
+     // =========================================================================
+     // 2. UPPER ENGINEERING DECK: OS / ARCH, PROCESS COUNT, SWAP & PER-CORE ARRAY
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:1565:
+             } else {
+                 LcarsTone::CoolBlue
+             };
+[31m-            canvas.draw_text(cx, cy, &lbl, ColorSpec::Tone(LcarsTone::Amber), ColorSpec::Reset, true);
+(B[m[32m+            canvas.draw_text(
+(B[m[32m+                cx,
+(B[m[32m+                cy,
+(B[m[32m+                &lbl,
+(B[m[32m+                ColorSpec::Tone(LcarsTone::Amber),
+(B[m[32m+                ColorSpec::Reset,
+(B[m[32m+                true,
+(B[m[32m+            );
+(B[m             let bar_w = col_w.saturating_sub(13).clamp(6, 22);
+             canvas.draw_conduit_gauge(cx + 4, cy, bar_w, pct, tone, LcarsTone::Salmon);
+             canvas.draw_text(
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:1629:
+                 false,
+             );
+ 
+[31m-            let clean_name = truncate_chars(
+(B[m[31m-                &proc_entry.name,
+(B[m[31m-                24,
+(B[m[31m-                state.glyph_mode == GlyphMode::Unicode,
+(B[m[31m-            );
+(B[m[32m+            let clean_name =
+(B[m[32m+                truncate_chars(&proc_entry.name, 24, state.glyph_mode == GlyphMode::Unicode);
+(B[m             let pid_and_name = format!("{:>8}    {:<24}", proc_entry.pid, clean_name);
+             canvas.draw_text(
+                 indent + 12,
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:1744:
+     }
+ 
+     // Left LCARS elbow frame on the modal
+[31m-    canvas.draw_upper_left_elbow(
+(B[m[31m-        bx,
+(B[m[31m-        by,
+(B[m[31m-        8,
+(B[m[31m-        4,
+(B[m[31m-        box_w,
+(B[m[31m-        1,
+(B[m[31m-        LcarsTone::Amber,
+(B[m[31m-        LcarsTone::Orange,
+(B[m[31m-    );
+(B[m[32m+    canvas.draw_upper_left_elbow(bx, by, 8, 4, box_w, 1, LcarsTone::Amber, LcarsTone::Orange);
+(B[m     canvas.draw_lower_left_elbow(
+         bx,
+         by + box_h - 3,
+Diff in <workspace>/evaluation/work/S09/src/ui.rs:1781:
+ 
+     let rows = [
+         ("[TAB]       ", "Cycle command & diagnostic views"),
+[31m-        ("[P]         ", "Open / close Secondary Process Diagnostic View"),
+(B[m[32m+        (
+(B[m[32m+            "[P]         ",
+(B[m[32m+            "Open / close Secondary Process Diagnostic View",
+(B[m[32m+        ),
+(B[m         ("[SPACE]     ", "Pause / resume live telemetry sampling"),
+[31m-        ("[C]         ", "Cycle color mode (TrueColor/256/16/Monochrome)"),
+(B[m[31m-        ("[U]         ", "Toggle Unicode Hi-Res / ASCII fallback glyphs"),
+(B[m[31m-        ("[?]         ", "Toggle this LCARS command reference overlay"),
+(B[m[32m+        (
+(B[m[32m+            "[C]         ",
+(B[m[32m+            "Cycle color mode (TrueColor/256/16/Monochrome)",
+(B[m[32m+        ),
+(B[m[32m+        (
+(B[m[32m+            "[U]         ",
+(B[m[32m+            "Toggle Unicode Hi-Res / ASCII fallback glyphs",
+(B[m[32m+        ),
+(B[m[32m+        (
+(B[m[32m+            "[?]         ",
+(B[m[32m+            "Toggle this LCARS command reference overlay",
+(B[m[32m+        ),
+(B[m         ("[Q] / [ESC] ", "Restore terminal state and exit"),
+     ];
+ 
+Diff in <workspace>/evaluation/work/S09/src/main.rs:58:
+             "-i" | "--interval" => {
+                 i += 1;
+                 let Some(val) = args.get(i) else {
+[31m-                    return Err("Missing value for `--interval <ms>` (expected e.g. 750).".to_string());
+(B[m[32m+                    return Err(
+(B[m[32m+                        "Missing value for `--interval <ms>` (expected e.g. 750).".to_string()
+(B[m[32m+                    );
+(B[m                 };
+[31m-                let ms: u64 = val
+(B[m[31m-                    .parse()
+(B[m[31m-                    .map_err(|_| format!("Invalid interval `{}`: expected integer milliseconds.", val))?;
+(B[m[32m+                let ms: u64 = val.parse().map_err(|_| {
+(B[m[32m+                    format!("Invalid interval `{}`: expected integer milliseconds.", val)
+(B[m[32m+                })?;
+(B[m                 cfg.refresh_ms = ms.clamp(100, 10_000);
+             }
+             "--color" => {
+Diff in <workspace>/evaluation/work/S09/tests/lcars_tests.rs:10:
+     compute_macos_vm_memory, extract_c_char_slice, parse_mach_cpu_load_info,
+ };
+ use lcars_mon::model::{
+[31m-     truncate_chars, CpuTimes, LocalClock, RawNetBytes, RawProcessSample, RawSystemSample,
+(B[m[32m+    truncate_chars, CpuTimes, LocalClock, RawNetBytes, RawProcessSample, RawSystemSample,
+(B[m     SystemTelemetry,
+ };
+ use lcars_mon::sampler::{counter_delta, TelemetrySampler};
+Diff in <workspace>/evaluation/work/S09/tests/lcars_tests.rs:237:
+     let mach_ticks = [100i32, 50, 850, 0, 200, 100, 700, 0];
+     let (ov, cores) = parse_mach_cpu_load_info(&mach_ticks);
+     assert_eq!(cores.len(), 2);
+[31m-    assert_eq!(cores[0], CpuTimes { active: 150, total: 1000 });
+(B[m[31m-    assert_eq!(cores[1], CpuTimes { active: 300, total: 1000 });
+(B[m[31m-    assert_eq!(ov, Some(CpuTimes { active: 450, total: 2000 }));
+(B[m[32m+    assert_eq!(
+(B[m[32m+        cores[0],
+(B[m[32m+        CpuTimes {
+(B[m[32m+            active: 150,
+(B[m[32m+            total: 1000
+(B[m[32m+        }
+(B[m[32m+    );
+(B[m[32m+    assert_eq!(
+(B[m[32m+        cores[1],
+(B[m[32m+        CpuTimes {
+(B[m[32m+            active: 300,
+(B[m[32m+            total: 1000
+(B[m[32m+        }
+(B[m[32m+    );
+(B[m[32m+    assert_eq!(
+(B[m[32m+        ov,
+(B[m[32m+        Some(CpuTimes {
+(B[m[32m+            active: 450,
+(B[m[32m+            total: 2000
+(B[m[32m+        })
+(B[m[32m+    );
+(B[m 
+[31m-    let (tot, avail) = compute_macos_vm_memory(16 * 1024 * 1024 * 1024, 16384, 100_000, 50_000, 10_000);
+(B[m[32m+    let (tot, avail) =
+(B[m[32m+        compute_macos_vm_memory(16 * 1024 * 1024 * 1024, 16384, 100_000, 50_000, 10_000);
+(B[m     assert_eq!(tot, 16 * 1024 * 1024 * 1024);
+     assert_eq!(avail, 160_000 * 16384);
+ 
+Diff in <workspace>/evaluation/work/S09/tests/lcars_tests.rs:319:
+ fn test_process_disappearance_and_top5_sorting() {
+     let mut sampler = TelemetrySampler::new();
+     let mut s1 = RawSystemSample {
+[31m-        cpu_cores: vec![CpuTimes { active: 10, total: 100 }; 4],
+(B[m[32m+        cpu_cores: vec![
+(B[m[32m+            CpuTimes {
+(B[m[32m+                active: 10,
+(B[m[32m+                total: 100
+(B[m[32m+            };
+(B[m[32m+            4
+(B[m[32m+        ],
+(B[m         ..RawSystemSample::default()
+     };
+     for pid in 1..=8 {
+Diff in <workspace>/evaluation/work/S09/tests/lcars_tests.rs:335:
+ 
+     // In sample 2, PID 8 disappears, and PIDs 1..=7 advance by `pid * 100ms` over 1s
+     let mut s2 = RawSystemSample {
+[31m-        cpu_cores: vec![CpuTimes { active: 20, total: 200 }; 4],
+(B[m[32m+        cpu_cores: vec![
+(B[m[32m+            CpuTimes {
+(B[m[32m+                active: 20,
+(B[m[32m+                total: 200
+(B[m[32m+            };
+(B[m[32m+            4
+(B[m[32m+        ],
+(B[m         ..RawSystemSample::default()
+     };
+     for pid in 1..=7 {
+Diff in <workspace>/evaluation/work/S09/tests/lcars_tests.rs:363:
+     let mut primary_canvas = Canvas::new(120, 36, GlyphMode::Unicode);
+     render_ui(&mut primary_canvas, &telem, &state);
+     let report = analyze_visual_acceptance(&primary_canvas);
+[31m-    assert!(report.is_asymmetric, "Primary silhouette must be asymmetric");
+(B[m     assert!(
+[32m+        report.is_asymmetric,
+(B[m[32m+        "Primary silhouette must be asymmetric"
+(B[m[32m+    );
+(B[m[32m+    assert!(
+(B[m         report.has_dominant_focal_element,
+         "Primary view must have a dominant focal element"
+     );
+Diff in <workspace>/evaluation/work/S09/tests/lcars_tests.rs:425:
+ #[test]
+ fn test_responsive_layouts_and_extreme_sizes_never_panic() {
+     let mut telem = sample_fixture_telemetry();
+[31m-    telem.hostname = Some("a-very-long-starship-hostname-that-exceeds-any-normal-column-budget-ncc-1701-enterprise".to_string());
+(B[m[32m+    telem.hostname = Some(
+(B[m[32m+        "a-very-long-starship-hostname-that-exceeds-any-normal-column-budget-ncc-1701-enterprise"
+(B[m[32m+            .to_string(),
+(B[m[32m+    );
+(B[m     let mut state = UiState::default();
+ 
+[31m-    for &(w, h) in &[(0, 0), (1, 1), (5, 2), (20, 8), (45, 13), (80, 24), (100, 30), (120, 36), (180, 50)] {
+(B[m[32m+    for &(w, h) in &[
+(B[m[32m+        (0, 0),
+(B[m[32m+        (1, 1),
+(B[m[32m+        (5, 2),
+(B[m[32m+        (20, 8),
+(B[m[32m+        (45, 13),
+(B[m[32m+        (80, 24),
+(B[m[32m+        (100, 30),
+(B[m[32m+        (120, 36),
+(B[m[32m+        (180, 50),
+(B[m[32m+    ] {
+(B[m         for view in [ViewMode::PrimaryCommand, ViewMode::ProcessDiagnostics] {
+             for help in [false, true] {
+                 state.view = view;
+Diff in <workspace>/evaluation/work/S09/tests/lcars_tests.rs:493:
+     let mut out = String::new();
+     c1.render_diff(None, ColorMode::TrueColor, &mut out);
+     assert!(out.len() > 5000);
+[31m-    assert!(!out.contains("\x1b[2J"), "Diff renderer must not clear screen");
+(B[m[32m+    assert!(
+(B[m[32m+        !out.contains("\x1b[2J"),
+(B[m[32m+        "Diff renderer must not clear screen"
+(B[m[32m+    );
+(B[m 
+     // Rendering an identical frame against `c1` should emit only the synchronized update wrapper
+     let mut out2 = String::new();

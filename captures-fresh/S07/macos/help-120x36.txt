@@ -1,0 +1,36 @@
+
+  ▐  47 / SYS ▌   LCARS  / ENGINEERING                                                               ▐        ONLINE ▌
+
+     ▗▄
+   ▗
+  ▗ COMMAND
+               ▛▀
+              ▘
+       01-A        CHRONOMETRY                                              MON / 02 NOV 2026
+                                  COMPUTER / OPERATOR REFERENCE
+                  ████████
+                  ██    ██
+                  ██    ██        q / Esc     Leave command display
+        080       ██    ██        ?           Open / close this reference
+                  ████████        Space       Hold / resume telemetry and clock
+                                  p / Tab     Command / process diagnostics
+                   LOCAL TI       [ / ]       Previous / next core page
+        214
+                                  --          Acquiring or unavailable telemetry
+                   01 / COM       RX / TX     All non-loopback interfaces                     / RESOURCE TELEMETRY ▌
+                                  CPU         Process 100% = one logical core
+       NET         ████                                                                      4.0 GiB
+                      █           Press ? to return                                          ilable
+                   ████
+                   █                                                                         460.4 GiB
+                   ████ █                                                                    ailable
+
+                   LOAD / 1 MIN                                            RX  267.0 KiB/s      TX  2.0 KiB/s
+
+                                                           ⣀⣀⣀⣀     UP / 06d 18h 39m                              ◉
+  ▝           ▖
+   ▝           ▙▄
+     ▝▀                                                  ▐       LOCAL / 01 ▌  ▐                     COMPUTER ACCESS ▌
+
+   01    [p] diagnostics   [tab] view   [space] hold   [?] help   [q] exit
+

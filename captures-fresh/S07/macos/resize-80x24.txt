@@ -1,0 +1,24 @@
+
+  ▐  47 / SYS ▌   LCARS  / COMMAND                           ▐        ONLINE ▌
+
+     ▗▄
+   ▗       ▀
+  ▗       ▘   ████ ████    █  █ █  █      █  ████     02 NOV 2026
+    01-A      █  █ █  █ ██ █  █ █  █ ██  ██  █  █
+              █  █ ████    ████ ████      █  ████     MAC-HOST.LOCAL
+              █  █ █  █ ██    █    █ ██   █  █  █
+              ████ ████       █    █     ███ ████
+
+              CPU 2.4%            LOAD 1.71 / 2.02 / 1.95
+    CPU
+              MEM  13.8 GiB / 24.0 GiB           10.2 GiB available
+
+              /    283.0 GiB / 460.4 GiB         177.5 GiB available
+
+              RX 27.0 KiB/s                 TX 0 B/s
+
+              UP / 06d 18h 40m
+
+
+   01    [p] diagnostics   [tab] view   [space] hold   [?] help   [q] exit
+

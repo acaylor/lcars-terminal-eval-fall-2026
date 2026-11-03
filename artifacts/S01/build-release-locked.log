@@ -1,0 +1,22 @@
+$ cargo build --release --locked
+   Compiling libc v0.2.191
+   Compiling parking_lot_core v0.9.12
+   Compiling signal-hook v0.3.18
+   Compiling smallvec v1.16.4
+   Compiling log v0.4.34
+   Compiling cfg-if v1.0.5
+   Compiling scopeguard v1.2.0
+   Compiling rustix v1.1.6
+   Compiling bitflags v2.13.2
+   Compiling litrs v1.0.1
+   Compiling linux-raw-sys v0.12.1
+   Compiling lock_api v0.4.14
+   Compiling document-features v0.2.12
+   Compiling errno v0.3.14
+   Compiling mio v1.2.4
+   Compiling signal-hook-registry v1.4.8
+   Compiling parking_lot v0.12.5
+   Compiling signal-hook-mio v0.2.5
+   Compiling crossterm v0.29.0
+   Compiling lcars v1.0.0 (<workspace>/evaluation/work/S01)
+    Finished `release` profile [optimized] target(s) in 4.69s

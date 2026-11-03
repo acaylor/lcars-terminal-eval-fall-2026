@@ -1,0 +1,3 @@
+$ cargo clippy --all-targets -- -D warnings
+error: 'cargo-clippy' is not installed for the toolchain '1.99.1-aarch64-apple-darwin'.
+help: run `rustup component add --toolchain 1.99.1-aarch64-apple-darwin clippy` to install it

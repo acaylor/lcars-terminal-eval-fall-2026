@@ -1,0 +1,103 @@
+$ cargo test --all-targets
+   Compiling libc v0.2.191
+   Compiling parking_lot_core v0.9.12
+   Compiling signal-hook v0.3.18
+   Compiling rustix v1.1.6
+   Compiling smallvec v1.16.4
+   Compiling log v0.4.34
+   Compiling cfg-if v1.0.5
+   Compiling scopeguard v1.2.0
+   Compiling bitflags v2.13.2
+   Compiling litrs v1.0.1
+   Compiling linux-raw-sys v0.12.1
+   Compiling lock_api v0.4.14
+   Compiling document-features v0.2.12
+   Compiling errno v0.3.14
+   Compiling mio v1.2.4
+   Compiling signal-hook-registry v1.4.8
+   Compiling parking_lot v0.12.5
+   Compiling signal-hook-mio v0.2.5
+   Compiling crossterm v0.29.0
+   Compiling lcars v1.0.0 (<workspace>/evaluation/work/S01)
+    Finished `test` profile [optimized + debuginfo] target(s) in 2.02s
+     Running unittests src/lib.rs (target/debug/deps/lcars-5dae0ced6586d319)
+
+running 53 tests
+test app::tests::keys_drive_state ... ok
+test app::tests::clock_is_sane ... ok
+test metrics::linux::tests::live_root_statvfs_works ... ok
+test metrics::linux::tests::meminfo_parsing_with_and_without_memavailable ... ok
+test metrics::linux::tests::loadavg_and_uptime ... ok
+test metrics::linux::tests::net_dev_skips_loopback ... ok
+test metrics::linux::tests::pid_stat_handles_hostile_names ... ok
+test app::tests::draw_without_terminal ... ok
+test metrics::linux::tests::proc_stat_parsing ... ok
+test metrics::rates::tests::counter_reset_on_64bit_yields_none_then_recovers ... ok
+test metrics::rates::tests::counter_wrap_on_32bit_is_unwrapped ... ok
+test metrics::rates::tests::cpu_fraction_handles_resets_and_idle_boxes ... ok
+test metrics::rates::tests::history_is_bounded_and_left_padded ... ok
+test metrics::rates::tests::rate_uses_measured_elapsed_time ... ok
+test metrics::rates::tests::very_long_gap_still_produces_a_rate ... ok
+test metrics::rates::tests::zero_elapsed_is_skipped_without_losing_baseline ... ok
+test metrics::sampler::tests::cpu_percentages_need_two_samples ... ok
+test metrics::sampler::tests::interface_appearing_does_not_spike ... ok
+test metrics::sampler::tests::missing_metrics_are_reported_as_none ... ok
+test metrics::sampler::tests::processes_ranked_by_cpu_then_rss_and_vanishing_pids_drop_out ... ok
+test metrics::sampler::tests::top_list_is_capped ... ok
+test metrics::units::tests::byte_formatting ... ok
+test metrics::units::tests::percent_and_load ... ok
+test metrics::units::tests::rate_formatting_is_fixed_width ... ok
+test metrics::units::tests::uptime_formatting ... ok
+test term::buffer::tests::clipping_never_panics ... ok
+test term::buffer::tests::fit_truncates_with_ellipsis ... ok
+test term::buffer::tests::right_align ... ok
+test term::buffer::tests::wide_chars_take_two_columns ... ok
+test term::color::tests::ansi256_quantisation_hits_cube_and_grey ... ok
+test term::color::tests::detect_prefers_no_color_then_colorterm ... ok
+test term::color::tests::heat_ramp_is_monotone_in_hue_endpoints ... ok
+test term::glyphs::tests::ascii_mode_sanitises_data_text ... ok
+test term::glyphs::tests::braille_bits ... ok
+test term::glyphs::tests::locale_detection ... ok
+test term::glyphs::tests::mirror_is_an_involution ... ok
+test term::render::tests::full_frame_writes_every_cell ... ok
+test term::render::tests::mono_mode_emits_no_colour_sequences ... ok
+test term::render::tests::one_cell_change_writes_one_cell ... ok
+test term::render::tests::wide_chars_are_written_once ... ok
+test ui::font::tests::clock_width_is_stable ... ok
+test ui::font::tests::every_glyph_has_the_right_dimensions ... ok
+test ui::font::tests::renders_with_half_blocks_and_ascii ... ok
+test ui::frame::tests::blocks_cover_rows_with_single_gaps ... ok
+test ui::frame::tests::pill_and_sweep ... ok
+test ui::frame::tests::segments_fill_width_with_gaps ... ok
+test ui::tests::status_thresholds ... ok
+test ui::tests::tiers ... ok
+test ui::widgets::tests::core_bank_caps_to_width ... ok
+test ui::widgets::tests::gauge_fills_proportionally ... ok
+test ui::widgets::tests::trace_places_dots_by_value ... ok
+test ui::widgets::tests::trace_tolerates_short_and_empty_data ... ok
+test ui::frame::tests::frame_draws_on_any_size_and_mirrors ... ok
+
+test result: ok. 53 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/lcars-2314b41ff8a3e575)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/render.rs (target/debug/deps/render-3f8f9136c3d9706a)
+
+running 10 tests
+test compact_view_is_simplified_not_squeezed ... ok
+test diagnostic_view_shows_processes_and_cores ... ok
+test help_overlay_lists_every_key ... ok
+test negative_space_is_at_least_twenty_percent ... ok
+test diff_output_is_small_for_a_clock_tick ... ok
+test primary_view_at_120x36_carries_every_required_metric ... ok
+test silhouette_is_asymmetric_and_survives_text_removal ... ok
+test unavailable_metrics_render_as_unavailable_states ... ok
+test ascii_mode_emits_only_ascii ... ok
+test every_size_renders_without_panicking_or_overflowing ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

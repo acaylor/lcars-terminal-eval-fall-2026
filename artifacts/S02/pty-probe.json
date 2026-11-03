@@ -1,0 +1,538 @@
+{
+  "sid": "S02",
+  "platform": "linux",
+  "binary": "target/release/lcarsmon",
+  "started": "2026-11-02 08:35:06",
+  "primary_session": {
+    "alive_after_2_5s": true,
+    "primary_blank_fraction": 0.545,
+    "primary_distinct_colors": 79,
+    "primary_non_ascii_glyphs": 23,
+    "primary_has_PID_word": false,
+    "primary_ref_top_names_seen": [],
+    "primary_metric_checks": {
+      "hostname_present": false,
+      "time_hh_mm_ss_present": true,
+      "time_matches_wall_hh_mm": false,
+      "date_present": true,
+      "loadavg_matches": [
+        true,
+        true,
+        true
+      ],
+      "mem_total_present": true,
+      "mem_used_plausible": true,
+      "disk_pct_plausible": true,
+      "uptime_days_present": true
+    },
+    "primary_key_hints": {
+      "help_?": true,
+      "quit_q": true,
+      "pause_space": true,
+      "proc_p": true,
+      "tab": true
+    },
+    "primary_sgr": {
+      "truecolor": 1406,
+      "c256": 0,
+      "basic16": 0,
+      "other_attrs": 61
+    },
+    "terminal_queries_answered": {},
+    "diag_changed_cells_vs_primary": 3007,
+    "diag_metric_checks": {
+      "os_present": true,
+      "arch_present": true,
+      "pid_header_present": true,
+      "swap_label_present": true,
+      "process_count_plausible": true,
+      "ref_top5_names_seen": 4,
+      "ref_top5_pids_seen": 4
+    },
+    "diag_key_hints": {
+      "help_?": true,
+      "quit_q": true,
+      "pause_space": false,
+      "proc_p": true,
+      "tab": true
+    },
+    "p_toggle_back_structure_similarity_to_primary": 0.986,
+    "p_toggle_back_has_PID": false,
+    "help_changed_cells": 440,
+    "help_text_mentions": {
+      "quit": false,
+      "help": true,
+      "pause": false,
+      "space": false,
+      "tab": true,
+      "proc|diag": true
+    },
+    "help_closed_structure_similarity_to_primary": 0.989,
+    "help_closed_still_has_help_words": false,
+    "pause": {
+      "digits_equal_over_2_6s": true,
+      "text_equal_over_2_6s": false,
+      "changed_cells_over_2_6s": 30,
+      "changed_digit_tokens": [],
+      "pause_indicator_visible": true
+    },
+    "resume": {
+      "digits_changed_after_resume": true,
+      "changed_cells": 89
+    },
+    "tab_cycle": [
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 262
+      },
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 421
+      },
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 430
+      },
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 287
+      }
+    ],
+    "quit": {
+      "how": "q",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.001,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 31,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?2026l\u001b[?7h\u001b[?25h\u001b[?1049l"
+    },
+    "output_seq_counts": {
+      "clear_2J": 1,
+      "clear_3J": 0,
+      "RIS_esc_c": 0,
+      "erase_below_J": 0,
+      "erase_line_K": 0,
+      "cup_moves": 1474,
+      "alt_enter": 1,
+      "alt_exit": 1,
+      "cursor_hide": 1,
+      "cursor_show": 1,
+      "sync_update": 101,
+      "mouse_enable": 0
+    }
+  },
+  "lifecycle": {
+    "q": {
+      "how": "q",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.001,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 31,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?2026l\u001b[?7h\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "esc": {
+      "how": "esc",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.001,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 31,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?2026l\u001b[?7h\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "ctrl-c-byte": {
+      "how": "ctrl-c-byte",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.001,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 31,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?2026l\u001b[?7h\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "sigint": {
+      "how": "sigint",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.001,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 31,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?2026l\u001b[?7h\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "sigterm": {
+      "how": "sigterm",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.001,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 31,
+      "termios_restored": true,
+      "termios_after": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?2026l\u001b[?7h\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    }
+  },
+  "non_tty": {
+    "exit_code": 1,
+    "timed_out_3s": false,
+    "seconds": 0.002,
+    "stdout_bytes": 0,
+    "stdout_has_escape": false,
+    "stderr_has_escape": false,
+    "panic_text": false,
+    "stdout_head": "",
+    "stderr_head": "lcarsmon: stdout is not a terminal. Run lcarsmon in an interactive terminal, or use `lcarsmon --snapshot command` to print a single frame.\n"
+  },
+  "sizes": {
+    "primary-80x24": {
+      "alive": true,
+      "exit_code": null,
+      "panic_text": false,
+      "non_blank_cells": 1920,
+      "blank_fraction": 0.553,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": true
+        },
+        "termios_restored": true
+      }
+    },
+    "tiny-40x10": {
+      "alive": true,
+      "exit_code": null,
+      "panic_text": false,
+      "non_blank_cells": 400,
+      "blank_fraction": 0.767,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": true
+        },
+        "termios_restored": true
+      }
+    },
+    "tiny-20x5": {
+      "alive": true,
+      "exit_code": null,
+      "panic_text": false,
+      "non_blank_cells": 100,
+      "blank_fraction": 0.3,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": true
+        },
+        "termios_restored": true
+      }
+    },
+    "live_resize": {
+      "steps": [
+        {
+          "size": "80x24",
+          "alive": true,
+          "non_blank_cells": 1920
+        },
+        {
+          "size": "30x8",
+          "alive": true,
+          "non_blank_cells": 240
+        },
+        {
+          "size": "120x36",
+          "alive": true,
+          "non_blank_cells": 4320
+        }
+      ],
+      "panic_text": false,
+      "structure_similarity_back_vs_initial": 0.998,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": true
+        },
+        "termios_restored": true
+      }
+    }
+  },
+  "color_modes": {
+    "color256": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 1461,
+        "basic16": 0,
+        "other_attrs": 60
+      },
+      "non_ascii_codepoints_in_stream": 973,
+      "non_ascii_glyph_kinds_on_screen": 23,
+      "non_ascii_examples": "\u2584\u2580\u2596\u25bc\u25b2\u259d\u2599\u259c\u00b7\u2597\u259f\u259b\u2598\u25d6\u25d7\u2590\u258c\u25b8\u25cf\u2802",
+      "distinct_colors_on_screen": 19,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "color16": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 1386,
+        "other_attrs": 67
+      },
+      "non_ascii_codepoints_in_stream": 937,
+      "non_ascii_glyph_kinds_on_screen": 23,
+      "non_ascii_examples": "\u2584\u2580\u2596\u25bc\u25b2\u259d\u2599\u259c\u00b7\u2597\u259f\u259b\u2598\u25d6\u25d7\u2590\u258c\u25b8\u25cf\u2802",
+      "distinct_colors_on_screen": 6,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "no_color_env": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 339
+      },
+      "non_ascii_codepoints_in_stream": 900,
+      "non_ascii_glyph_kinds_on_screen": 23,
+      "non_ascii_examples": "\u2584\u2580\u2596\u25bc\u25b2\u259d\u2599\u259c\u00b7\u2597\u259f\u259b\u2598\u25d6\u25d7\u2590\u258c\u25b8\u25cf\u2802",
+      "distinct_colors_on_screen": 2,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "mono_documented": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 342
+      },
+      "non_ascii_codepoints_in_stream": 940,
+      "non_ascii_glyph_kinds_on_screen": 23,
+      "non_ascii_examples": "\u2584\u2580\u2596\u25bc\u25b2\u259d\u2599\u259c\u00b7\u2597\u259f\u259b\u2598\u25d6\u25d7\u2590\u258c\u25b8\u25cf\u2802",
+      "distinct_colors_on_screen": 2,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "ascii_documented": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 1747,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 62
+      },
+      "non_ascii_codepoints_in_stream": 0,
+      "non_ascii_glyph_kinds_on_screen": 0,
+      "non_ascii_examples": "",
+      "distinct_colors_on_screen": 79,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "locale_C": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 1733,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 59
+      },
+      "non_ascii_codepoints_in_stream": 0,
+      "non_ascii_glyph_kinds_on_screen": 0,
+      "non_ascii_examples": "",
+      "distinct_colors_on_screen": 79,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "term_dumb": {
+      "alive": false,
+      "exit_code": 1,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 0,
+      "non_ascii_glyph_kinds_on_screen": 0,
+      "non_ascii_examples": "",
+      "distinct_colors_on_screen": 2,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": "lcarsmon: TERM=dumb cannot position the cursor. Set TERM to a real terminal type (e.g. xterm-256color) or use `--snapshot`.\r\n"
+    }
+  },
+  "finished": "2026-11-02 08:36:08"
+}

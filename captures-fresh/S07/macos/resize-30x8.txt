@@ -1,0 +1,8 @@
+ LCARS / COMPACT
+
+ 08:44:19  02 Nov 2026
+
+ CPU 7.3%  UP 06d 18h 40m
+
+ q exit / ? help / space hold
+

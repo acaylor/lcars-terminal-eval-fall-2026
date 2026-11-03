@@ -1,0 +1,26 @@
+{
+  "all_capture_files_stripped": [
+    "captures/primary-120x36-text-stripped.txt",
+    "captures/primary-120x36.ansi",
+    "captures/primary-120x36.txt",
+    "captures/primary-80x24.txt",
+    "captures/secondary-120x36.ansi",
+    "captures/secondary-120x36.txt"
+  ],
+  "captains_log_file": [
+    "CAPTAINS_LOG.md"
+  ],
+  "captains_log_readme_section": true,
+  "prebuilt_binaries_removed": [],
+  "primary_120x36_capture": true,
+  "primary_capture_files": [
+    "captures/primary-120x36-text-stripped.txt",
+    "captures/primary-120x36.ansi",
+    "captures/primary-120x36.txt"
+  ],
+  "secondary_120x36_capture": true,
+  "secondary_capture_files": [
+    "captures/secondary-120x36.ansi",
+    "captures/secondary-120x36.txt"
+  ]
+}

@@ -1,0 +1,24 @@
+      LCARS // DIAGNOSTICS                 ▞
+                                           ▟
+    ╰
+      SYSTEM / CORE / PROCESS
+47
+      macOS 27.2 / AARCH64
+      SWAP N/A / AARCH64 / 912 PROC
+
+      CORES
+      C00 ━────────   11.5% C04 ━────────    7.7% C08 ─────────    2.9%
+      C01 ━────────   13.5% C05 ━────────    5.8% C09 ─────────    2.9%
+      C02 ━────────    9.5% C06 ─────────    4.8%
+      C03 ━────────    7.6% C07 ━────────    5.7%
+
+      PID     NAME             CPU      MEM
+
+        1277  svc39               48.3%  1.09G
+        2013  svc03                5.2%  123M
+       61210  lcars-monitor        4.2%  13.5M
+        1276  svc34                3.8%  26.5M
+        1917  svc02                1.7%  462M
+
+
+       DIAGNOSTIC                             SPC PAUSE  P DIAG  ? HELP  Q QUIT

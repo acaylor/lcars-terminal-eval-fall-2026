@@ -1,0 +1,9 @@
+{
+  "build-release": {"rc": 0, "seconds": 0.1},
+  "build-all": {"rc": 0, "seconds": 0.2},
+  "test": {"rc": 0, "seconds": 0.2},
+  "fmt-check": {"rc": 0, "seconds": 0.0},
+  "vet": {"rc": 0, "seconds": 0.1},
+  "vet-darwin-arm64": {"rc": 1, "seconds": 0.5},
+  "build-darwin-arm64": {"rc": 1, "seconds": 0.0}
+}

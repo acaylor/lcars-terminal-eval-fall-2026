@@ -1,0 +1,24 @@
+
+  ▐  47 / SYS ▌   LCARS  / COMMAND                           ▐        ONLINE ▌
+
+     ▗▄
+   ▗       ▀
+  ▗       ▘   ████ ████    █  █ ████    ████ ████     02 NOV 2026
+    01-A      █  █ █  █ ██ █  █ █  █ ██ █    █
+              █  █ ████    ████ █  █    ████ ████     LINUX
+              █  █ █  █ ██    █ █  █ ██    █ █  █
+              ████ ████       █ ████    ████ ████
+
+              CPU 0.2%            LOAD 0.18 / 0.17 / 0.17
+    CPU
+              MEM  23.8 GiB / 93.4 GiB           69.6 GiB available
+
+              /    599.0 GiB / 915.5 GiB         269.9 GiB available
+
+              RX 14.3 KiB/s                 TX 18.8 KiB/s
+
+              UP / 10d 13h 47m
+
+
+   01    [p] diagnostics   [tab] view   [space] hold   [?] help   [q] exit
+

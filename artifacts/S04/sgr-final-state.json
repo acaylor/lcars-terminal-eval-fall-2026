@@ -1,0 +1,12 @@
+{
+  "q": {
+    "last_sgr": "\u001b[0m",
+    "last_sgr_is_reset": true,
+    "bytes_after_last_sgr": "\u001b[?7h\u001b[?25h\u001b[?1049l"
+  },
+  "sigterm": {
+    "last_sgr": "\u001b[0m",
+    "last_sgr_is_reset": true,
+    "bytes_after_last_sgr": "\u001b[?7h\u001b[?25h\u001b[?1049l"
+  }
+}

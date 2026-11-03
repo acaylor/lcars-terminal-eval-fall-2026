@@ -1,0 +1,51 @@
+?   	lcars/cmd/lcars	[no test files]
+=== RUN   TestLayoutPrimary120x36
+--- PASS: TestLayoutPrimary120x36 (0.00s)
+=== RUN   TestDiagShowsProcs
+--- PASS: TestDiagShowsProcs (0.00s)
+=== RUN   TestCompact80x24NoBigClock
+--- PASS: TestCompact80x24NoBigClock (0.00s)
+=== RUN   TestTinySizesNoPanic
+--- PASS: TestTinySizesNoPanic (0.00s)
+=== RUN   TestHelpOverlay
+--- PASS: TestHelpOverlay (0.00s)
+=== RUN   TestASCIIFallback
+--- PASS: TestASCIIFallback (0.00s)
+=== RUN   TestEscLenAndKeys
+--- PASS: TestEscLenAndKeys (0.00s)
+=== RUN   TestPushRingBounded
+--- PASS: TestPushRingBounded (0.00s)
+PASS
+ok  	lcars/internal/app	0.003s
+=== RUN   TestParseStat
+--- PASS: TestParseStat (0.00s)
+=== RUN   TestCPUBusyPct
+--- PASS: TestCPUBusyPct (0.00s)
+=== RUN   TestParseMeminfo
+--- PASS: TestParseMeminfo (0.00s)
+=== RUN   TestParseLoadavgUptime
+--- PASS: TestParseLoadavgUptime (0.00s)
+=== RUN   TestParseNetDev
+--- PASS: TestParseNetDev (0.00s)
+=== RUN   TestParseProcStatTricky
+--- PASS: TestParseProcStatTricky (0.00s)
+=== RUN   TestComputeRates
+--- PASS: TestComputeRates (0.00s)
+=== RUN   TestComputeProcessRates
+--- PASS: TestComputeProcessRates (0.00s)
+=== RUN   TestSanitizeFormat
+--- PASS: TestSanitizeFormat (0.00s)
+PASS
+ok  	lcars/internal/metrics	0.003s
+=== RUN   TestRGBTo256
+--- PASS: TestRGBTo256 (0.00s)
+=== RUN   TestRendererDiff
+--- PASS: TestRendererDiff (0.00s)
+=== RUN   TestBigClock
+--- PASS: TestBigClock (0.00s)
+=== RUN   TestTrace
+--- PASS: TestTrace (0.00s)
+=== RUN   TestShapesClipAndBuffer
+--- PASS: TestShapesClipAndBuffer (0.00s)
+PASS
+ok  	lcars/internal/render	0.003s

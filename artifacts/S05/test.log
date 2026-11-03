@@ -1,0 +1,5 @@
+$ go test ./...
+?   	lcars/cmd/lcars	[no test files]
+ok  	lcars/internal/app	0.003s
+ok  	lcars/internal/metrics	0.002s
+ok  	lcars/internal/render	0.002s

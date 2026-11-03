@@ -1,0 +1,6 @@
+lcars-monitor: stdout is not a terminal. Run lcars-monitor in an interactive terminal.
+lcars-monitor — LCARS engineering display
+Run inside a terminal. Keys: q/esc quit, ? help, space pause, p diagnostics, tab focus.
+LCARS_ASCII=1 disables Unicode. LCARS_MONO=1 or NO_COLOR selects monochrome.
+--measure  print startup time after one sample and exit
+--dump primary|secondary [--width N --height N --shape --demo]

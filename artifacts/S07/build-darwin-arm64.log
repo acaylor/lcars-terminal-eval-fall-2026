@@ -1,0 +1,3 @@
+$ env GOOS=darwin GOARCH=arm64 CGO_ENABLED=0 go build -o <workspace>/evaluation/artifacts/S07/lcars-darwin-arm64 ./cmd/lcars
+# lcars/internal/app
+internal/app/app.go:115:34: undefined: metrics.NewCollector

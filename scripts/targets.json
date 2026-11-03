@@ -1,0 +1,12 @@
+{
+  "_comment": "Per-snapshot release binary (relative to evaluation/work/SXX) and documented fallback switches, taken from each README.",
+  "S01": {"bin": "target/release/lcars",         "mono": {"args": ["--mono"]},          "ascii": {"args": ["--ascii"]}},
+  "S02": {"bin": "target/release/lcarsmon",      "mono": {"args": ["--mono"]},          "ascii": {"args": ["--ascii"]}},
+  "S03": {"bin": "bin/lcars",                    "mono": {"args": ["--color", "mono"]}, "ascii": {"args": ["--ascii"]}},
+  "S04": {"bin": "target/release/lcars-monitor", "mono": {"env": {"LCARS_MONO": "1"}},  "ascii": {"env": {"LCARS_ASCII": "1"}}},
+  "S05": {"bin": "bin/lcars",                    "mono": {"args": ["--color=mono"]},    "ascii": {"args": ["--ascii"]}},
+  "S06": {"bin": "target/release/lcars-monitor", "mono": {"args": ["--mono"]},          "ascii": {"args": ["--ascii"]}},
+  "S07": {"bin": "bin/lcars",                    "mono": {"args": ["--color", "mono"]}, "ascii": {"args": ["--ascii"]}},
+  "S08": {"bin": "target/release/lcars-mon",     "mono": {"args": ["--color", "mono"]}, "ascii": {"args": ["--ascii"]}},
+  "S09": {"bin": "target/release/lcars-mon",     "mono": {"args": ["--mono"]},          "ascii": {"args": ["--ascii"]}}
+}

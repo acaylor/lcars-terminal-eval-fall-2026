@@ -1,0 +1,36 @@
+                                                       ▞
+        LCARS 47 // DIAGNOSTIC ARRAY                   ▐
+                                                       ▟
+      ╰
+          SYSTEM DIAGNOSTICS
+ 47
+          Linux (Ubuntu 26.04) / X86_64                                                                              A
+
+          1626 PROCESSES  /  UPTIME 10d 13h 45m                                                                      U
+
+          PER-CORE UTILIZATION                                 TOP CPU PROCESSES                                     X
+ ENG
+          C00 ──────────    1.0% C12 ──────────    0.0%        PID     PROCESS                CPU       MEMORY
+          C01 ──────────    4.9% C13 ──────────    0.0%
+          C02 ──────────    1.0% C14 ──────────    0.0%        1968727 lcars-monitor             3.9%   10.6M
+          C03 ──────────    0.0% C15 ──────────    0.0%          1834  svc12                     1.9%   86.0M
+          C04 ──────────    0.0% C16 ──────────    0.0%          1863  svc12                     1.0%   86.0M
+          C05 ──────────    1.9% C17 ──────────    0.0%          1896  svc12                     1.0%   86.0M
+          C06 ──────────    0.0% C18 ──────────    0.0%          1917  svc24                     1.0%   218M
+          C07 ──────────    1.0% C19 ──────────    0.0%
+          C08 ──────────    0.0% C20 ──────────    0.0%        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸╸╸
+          C09 ──────────    0.0% C21 ──────────    0.0%        SWAP NOT CONFIGURED
+          C10 ──────────    0.0% C22 ──────────    0.0%
+          C11 ──────────    1.0% C23 ──────────    0.0%        CPU% MAY EXCEED 100 ON
+                                                               MULTI-THREADED PROCESSES
+
+
+
+
+
+
+
+                                                       ▛
+         DIAG     TOP 5                                ▌
+                                                       ▙
+       DIAGNOSTIC                                          LIVE       SPACE PAUSE   P DIAG   TAB VIEW   ? HELP   Q QUIT

@@ -1,0 +1,24 @@
+  DIAGNOSTIC · MAC-HOST.LOCAL                                              02 ▄
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀          ▙
+                                                                     ▝
+  ◖ SYSTEM ◗ ───────────────────   ◖ CPU CORES · 10 · AVG 1% ◗ ────   ▄▄▄▄▄▄▄▄▄▄
+
+   HOST    mac-host.local                                                    21
+   OS      macOS 27.2                                                  SYS ARM…
+   KERNEL  Darwin 27.2.0                                              ▄▄▄▄▄▄▄▄▄▄
+   ARCH    arm64
+   CPUS    10 LOGICAL                                                        22
+   UPTIME  6D 18:34:42                                                 CPU   10
+   PROCS   914  (324 RESTRICTED)   ▄▄ ▂▂                              ▄▄▄▄▄▄▄▄▄▄
+   SWAP    NOT CONFIGURED          0  1  2  3  4  5  6  7  8  9
+                                                                             23
+  ◖ TOP PROCESSES · CPU ◗ ─────────────────────────────────────────    SWP NONE
+    PID    NAME                 CPU                 MEMORY            ▄▄▄▄▄▄▄▄▄▄
+    60960  lcarsmon               3.4% ▬▬▬▬▬▬▬▬▬▬▬   2.64M   0.0%
+    60850  python3.14             2.2% ▬▬▬▬▬▬▬▬▬▬▬   41.3M   0.2%            24
+     1268  svc31                  0.3% ▬▬▬▬▬▬▬▬▬▬▬   39.7M   0.2%      PRC  914
+     1159  ControlCenter          0.3% ▬▬▬▬▬▬▬▬▬▬▬   63.8M   0.3%     ▄▄▄▄▄▄▄▄▄▄
+     1917  svc02                  0.3% ▬▬▬▬▬▬▬▬▬▬▬    474M   1.9%
+                                                                      ▄▄▄▄▄▄▄▄▄▄
+                                                                     ▗         ▛
+   P RETURN · TAB COMMAND · ? HELP · Q EXIT                                   ▀

@@ -1,0 +1,36 @@
+                                                       ▞
+        LCARS 47 // ENGINEERING STATUS                 ▐
+                                                       ▟
+      ╰
+        ▄▄██▀▀██▄▄  ▄▄██▀▀██▄▄          ████  ████  ▄▄██▀▀██▄▄          ▄▄██▀▀██▄▄  ▀▀▀▀▀▀████    CPU / TOTAL
+ 47     ████  ████  ▀▀██▄▄██▀▀      ▀▀  ████▄▄████  ▀▀██▄▄██▀▀      ▀▀  ████  ████      ████
+        ████  ████  ████  ████      ▀▀        ████  ████  ████      ▀▀  ████  ████    ████         ▄█   ▄█▀█▄        A
+          ▀▀▀▀▀▀      ▀▀▀▀▀▀                  ▀▀▀▀    ▀▀▀▀▀▀              ▀▀▀▀▀▀      ▀▀▀▀          █   ██ ██
+                                                                                                    █   ██ ██        U
+                                                                                                   ▀▀▀   ▀▀▀  %
+                                                                                                                     X
+ ENG
+           2026-11-02 MON           HOST MAC-HOST.LOCAL
+
+            ◉ ALL SYSTEMS NOMINAL                                                               LOAD 01/05/15
+            STARFLEET ENGINEERING
+                                                                                                2.02  2.00  1.95
+          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸╸╸
+                                                                                                UP 6d 18h 43m
+           MEMORY        11.6G USED  /  19.7G FREE  /  24.0G TOTAL        CPU WAVEFORM                0—100%
+                         48.1% ALLOCATED
+
+           ROOT /        253G USED  /  208G FREE  /  460G TOTAL
+                         54.9% CAPACITY
+
+           NETWORK       ▼ 7.17K/s RX  /  ▲ 2.51K/s TX
+
+                                                                          ⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠊⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉
+
+                                                                          T-180 SAMPLES             NOW →
+
+
+                                                       ▛
+         SYS     NOMINAL                               ▌
+                                                       ▙
+       COMMAND                                             LIVE       SPACE PAUSE   P DIAG   TAB VIEW   ? HELP   Q QUIT

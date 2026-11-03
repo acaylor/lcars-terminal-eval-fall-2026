@@ -1,0 +1,158 @@
+{
+  "platform": "Linux",
+  "t_wall": "2026-11-02 08:41:24",
+  "hostname": "linux",
+  "loadavg": [
+    0.11,
+    0.15,
+    0.17
+  ],
+  "uptime_s": 913650.61,
+  "mem_kib": {
+    "MemTotal": 97979612,
+    "MemAvailable": 73021488,
+    "MemFree": 1325660,
+    "Buffers": 3715348,
+    "Cached": 70709100,
+    "SwapTotal": 0,
+    "SwapFree": 0
+  },
+  "mem_used_kib_total_minus_avail": 24958124,
+  "mem_total_gib": 93.44,
+  "mem_avail_gib": 69.64,
+  "mem_used_gib": 23.8,
+  "swap_total_gib": 0.0,
+  "swap_used_gib": 0.0,
+  "root_disk": {
+    "total_gib": 915.5,
+    "used_gib": 599.0,
+    "avail_gib": 269.9,
+    "used_pct_df": 68.9,
+    "used_pct_of_total": 65.4
+  },
+  "ncpu": 24,
+  "proc_stat_cpu": "cpu  6232110 13284 1974730 1998846506 180646282 0 109189 0 0 0",
+  "net_dev": {
+    "lo": {
+      "rx": 1640659926,
+      "tx": 1640659926
+    },
+    "eth0": {
+      "rx": 33958324452,
+      "tx": 17444281440
+    },
+    "wlan0": {
+      "rx": 0,
+      "tx": 0
+    },
+    "br0": {
+      "rx": 0,
+      "tx": 0
+    },
+    "cni_net": {
+      "rx": 71666,
+      "tx": 450
+    },
+    "cni_host": {
+      "rx": 450,
+      "tx": 71666
+    },
+    "cni_vxlan": {
+      "rx": 125430991,
+      "tx": 309672309
+    },
+    "veth00": {
+      "rx": 181791232,
+      "tx": 2405310382
+    },
+    "veth01": {
+      "rx": 583339316,
+      "tx": 38988753
+    },
+    "veth02": {
+      "rx": 9932013,
+      "tx": 56982737
+    },
+    "veth03": {
+      "rx": 378115706,
+      "tx": 160511138
+    },
+    "veth04": {
+      "rx": 18366,
+      "tx": 90
+    },
+    "veth05": {
+      "rx": 30295,
+      "tx": 98906
+    },
+    "veth06": {
+      "rx": 248615562,
+      "tx": 303743011
+    },
+    "veth_health": {
+      "rx": 37002693,
+      "tx": 44187168
+    },
+    "veth07": {
+      "rx": 74024568,
+      "tx": 79298285
+    }
+  },
+  "process_count": 506,
+  "os": "Linux 7.0.0-38-generic x86_64",
+  "cpu_pct_overall": 0.4,
+  "net_rate_non_lo_Bps": {
+    "rx": 12149,
+    "tx": 1166
+  },
+  "top_cpu_processes": [
+    {
+      "cpu_pct": 3.0,
+      "pid": 1969082,
+      "name": "lcars-mon",
+      "rss_kib": 3916
+    },
+    {
+      "cpu_pct": 2.0,
+      "pid": 301341,
+      "name": "svc07",
+      "rss_kib": 228780
+    },
+    {
+      "cpu_pct": 2.0,
+      "pid": 1834,
+      "name": "svc12",
+      "rss_kib": 86016
+    },
+    {
+      "cpu_pct": 1.0,
+      "pid": 1967145,
+      "name": "python",
+      "rss_kib": 83948
+    },
+    {
+      "cpu_pct": 1.0,
+      "pid": 3987,
+      "name": "svc13",
+      "rss_kib": 15988
+    },
+    {
+      "cpu_pct": 1.0,
+      "pid": 2318,
+      "name": "svc12",
+      "rss_kib": 192700
+    },
+    {
+      "cpu_pct": 1.0,
+      "pid": 1917,
+      "name": "svc24",
+      "rss_kib": 219348
+    },
+    {
+      "cpu_pct": 1.0,
+      "pid": 1308,
+      "name": "dbus-daemon",
+      "rss_kib": 7444
+    }
+  ]
+}

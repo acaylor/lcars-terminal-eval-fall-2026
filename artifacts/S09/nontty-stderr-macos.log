@@ -1,0 +1,1 @@
+lcars-mon: Standard input/output is not an interactive terminal (TTY). Run interactively in a terminal emulator, or pass `--capture-primary` / `--capture-secondary` for non-interactive output.

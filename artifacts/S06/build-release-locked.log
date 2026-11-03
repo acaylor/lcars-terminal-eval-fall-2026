@@ -1,0 +1,33 @@
+$ cargo build --release --locked
+   Compiling libc v0.2.191
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling unicode-segmentation v1.13.3
+   Compiling parking_lot_core v0.9.12
+   Compiling signal-hook v0.3.18
+   Compiling smallvec v1.16.4
+   Compiling scopeguard v1.2.0
+   Compiling rustix v1.1.6
+   Compiling log v0.4.34
+   Compiling cfg-if v1.0.5
+   Compiling bitflags v2.13.2
+   Compiling linux-raw-sys v0.12.1
+   Compiling litrs v1.0.1
+   Compiling memchr v2.8.3
+   Compiling unicode-width v0.2.2
+   Compiling lock_api v0.4.14
+   Compiling convert_case v0.10.0
+   Compiling document-features v0.2.12
+   Compiling syn v2.0.119
+   Compiling errno v0.3.14
+   Compiling mio v1.2.4
+   Compiling sysinfo v0.39.6
+   Compiling signal-hook-registry v1.4.8
+   Compiling parking_lot v0.12.5
+   Compiling signal-hook-mio v0.2.5
+   Compiling derive_more-impl v2.1.1
+   Compiling derive_more v2.1.1
+   Compiling crossterm v0.29.0
+   Compiling lcars-monitor v1.0.0 (<workspace>/evaluation/work/S06)
+    Finished `release` profile [optimized] target(s) in 4.86s

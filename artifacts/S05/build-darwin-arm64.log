@@ -1,0 +1,1 @@
+$ env GOOS=darwin GOARCH=arm64 CGO_ENABLED=0 go build -o <workspace>/evaluation/artifacts/S05/lcars-darwin-arm64 ./cmd/lcars

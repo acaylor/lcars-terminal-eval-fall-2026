@@ -1,0 +1,1 @@
+lcars-mon: stdin is not a terminal. Run lcars-mon from an interactive terminal, or use --snapshot for a one-frame capture.

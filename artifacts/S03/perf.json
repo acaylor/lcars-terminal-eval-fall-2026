@@ -1,0 +1,101 @@
+{
+  "sid": "S03",
+  "binary": "bin/lcars",
+  "binary_size_bytes": 2015356,
+  "host_loadavg_before": [
+    "0.40",
+    "0.15",
+    "0.14"
+  ],
+  "measured_at": "2026-11-02 08:47:04",
+  "startup": {
+    "first_byte": {
+      "median_ms": 3.24,
+      "min_ms": 2.64,
+      "max_ms": 3.82,
+      "n": 15,
+      "all_ms": [
+        2.86,
+        3.17,
+        3.24,
+        3.25,
+        3.13,
+        3.47,
+        3.23,
+        3.29,
+        3.59,
+        3.6,
+        3.82,
+        3.31,
+        3.11,
+        2.64,
+        3.17
+      ]
+    },
+    "first_substantial_frame": {
+      "median_ms": 4.23,
+      "min_ms": 3.45,
+      "max_ms": 9.47,
+      "n": 15,
+      "all_ms": [
+        3.45,
+        5.33,
+        3.8,
+        5.48,
+        5.01,
+        4.11,
+        3.83,
+        5.52,
+        4.23,
+        4.19,
+        9.47,
+        5.6,
+        3.7,
+        5.07,
+        3.74
+      ]
+    }
+  },
+  "steady": {
+    "window_s": 8.005,
+    "cpu_pct_one_core": 0.0,
+    "cpu_ticks": 0,
+    "rss_kib_mean": 4624,
+    "rss_kib_peak": 5124,
+    "rss_kib_min": 3840,
+    "vm_hwm_kib": 5236,
+    "threads": 8,
+    "pty_bytes": 3620,
+    "pty_bytes_per_sec": 452.2,
+    "frames_per_sec": 1.12,
+    "bytes_per_frame": 402.2,
+    "steady_seq_counts": {
+      "clear_2J": 0,
+      "clear_3J": 0,
+      "RIS_esc_c": 0,
+      "erase_below_J": 0,
+      "erase_line_K": 0,
+      "cup_moves": 84,
+      "alt_enter": 0,
+      "alt_exit": 0,
+      "cursor_hide": 0,
+      "cursor_show": 0,
+      "sync_update": 0,
+      "mouse_enable": 0
+    },
+    "steady_full_clear_present": false,
+    "full_screen_equivalent_bytes": 4320,
+    "long_run": {
+      "seconds": 60,
+      "rss_first_kib": 5236,
+      "rss_last_kib": 8220,
+      "rss_max_kib": 8912,
+      "alive": true
+    }
+  },
+  "host_loadavg_after": [
+    "0.17",
+    "0.14",
+    "0.14"
+  ]
+}

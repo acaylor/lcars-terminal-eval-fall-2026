@@ -1,0 +1,24 @@
+▗          LCARS 47          ▖  ▗                DIAGNOSTICS                 ▖
+▘                            ▝  ▘                                            ▝
+▗▖  DIAGNOSTIC SUBSYSTEM
+▐▌  ▐OS▌ Darwin 27.2                    PROCESS MANIFEST
+▐▌  KRN 27.2.0            ARCH aarch64  TOP 5 // CPU
+▘▝  ▐HOST▌ mac-host.local                    PID     COMMAND
+▗▖  CORE MATRIX // %          10 CORES  ▐01▌   1917  svc02
+▐▌                                        CPU 4.7%    ╌╌╌╌╌╌╌         MEM 466M
+▐▌  00 ━╌╌╌╌╌╌╌╌   6 05 ╌╌╌╌╌╌╌╌╌   0   ▐02▌   2013  svc03
+▘▝  01 ━╌╌╌╌╌╌╌╌  11 06 ╌╌╌╌╌╌╌╌╌   0     CPU 4.1%    ╌╌╌╌╌╌╌         MEM 123M
+▗▖  02 ━╌╌╌╌╌╌╌╌   6 07 ╌╌╌╌╌╌╌╌╌   0   ▐03▌   1277  svc39
+▐▌  03 ╌╌╌╌╌╌╌╌╌   0 08 ╌╌╌╌╌╌╌╌╌   0     CPU 3.0%    ╌╌╌╌╌╌╌        MEM 1.09G
+▐▌  04 ╌╌╌╌╌╌╌╌╌   3 09 ╌╌╌╌╌╌╌╌╌   0   ▐04▌  61344  lcars-mon
+▘▝                                        CPU 2.2%    ╌╌╌╌╌╌╌        MEM 7.88M
+▗▖                                      ▐05▌  60850  python
+▐▌                                        CPU 1.2%    ╌╌╌╌╌╌╌        MEM 43.8M
+▐▌
+▘▝  ▐SWAP▌ NO SWAP
+▗▖
+▐▌  LOAD 1.49 / 1.92 / 1.92
+▐▌  PROCESSES 912
+▘▝
+
+    ▐TAB▌ COMMAND  ▐P▌ CLOSE  ▐?▌ HELP  ▐SPACE▌ HOLD  ▐Q▌ QUIT

@@ -1,0 +1,25 @@
+[package]
+name = "lcars-monitor"
+version = "1.0.0"
+edition = "2021"
+description = "LCARS-inspired terminal engineering display"
+license = "MIT"
+publish = false
+
+[lib]
+name = "lcars"
+path = "src/lib.rs"
+
+[[bin]]
+name = "lcars-monitor"
+path = "src/main.rs"
+
+[dependencies]
+libc = "=0.2.189"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+strip = true
+panic = "abort"

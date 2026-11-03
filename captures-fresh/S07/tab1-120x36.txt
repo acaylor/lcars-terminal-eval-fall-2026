@@ -1,0 +1,36 @@
+
+  ▐  47 / SYS ▌   LCARS  / DIAGNOSTICS                                                               ▐        ONLINE ▌
+
+
+
+
+   02       Ubuntu 26.04.1 LTS / amd64
+
+            PROCESSES / 506     SWAP / 0 B / 0 B
+
+            PROCESSOR ARRAY / 24 CORES                                               PAGE 1/1  [ / ]
+
+            000    0.0%  ▁   001    2.4%  ▁   002    0.0%  ▁   003    0.0%  ▁   004    2.4%  ▁   005    0.0%  ▁
+            006    0.0%  ▁   007    0.0%  ▁   008    0.0%  ▁   009    0.0%  ▁   010    0.0%  ▁   011    0.0%  ▁
+            012    0.0%  ▁   013    0.0%  ▁   014    0.0%  ▁   015    0.0%  ▁   016    0.0%  ▁   017    0.0%  ▁
+            018    0.0%  ▁   019    0.0%  ▁   020    0.0%  ▁   021    0.0%  ▁   022    0.0%  ▁   023    0.0%  ▁
+
+
+
+
+
+           ▐                                                                                 CPU / FIVE MOST ACTIVE ▌
+
+             PID        PROCESS                                                                CPU %      RESIDENT
+             1952238    svc10                                                                     2.4     378.6 MiB
+             1968822    lcars                                                                     2.4     7.9 MiB
+             4065       svc13                                                                     2.4     15.9 MiB
+             120488     svc06                                                                     2.4     267.0 MiB
+             1          systemd                                                                   0.0     16.4 MiB
+
+   DX
+
+            CPU: 100% = one core   |   denied or exited processes are omitted
+
+   01    [p] diagnostics   [tab] view   [space] hold   [?] help   [q] exit
+

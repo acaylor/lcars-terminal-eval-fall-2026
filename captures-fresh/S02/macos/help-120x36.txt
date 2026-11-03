@@ -1,0 +1,36 @@
+▄                  OPERATIONS MONITOR                                                       M A C - H O S T . L O C A L
+ LCARS       01    MEM  USED 11.5G   AVAIL 12.5G   TOTAL 24.0G
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀   DSK  /   USED 283G   FREE 178G   TOTAL 460G
+         OPS-01 ▖  NET  ▼ RX 310K/s   ▲ TX 2.00K/s
+▝                ▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+  ▀▜                                                                                               MACOS 27.2 · ARM64
+
+  ▗▄▟                           COMMAND                                                                     FOCUS CPU
+ ▟               ▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+▟               ▘
+                                                                                       ◗ AVERAGE · 1 MIN
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄    ▗▟  ▙▖   ▟  ▙ ▗▟    HELP · COMMAND KEYS                            ▀▙ ▐▛▘  5 MIN   2.28
+                     ▛  ▜   ▐         ▘                                                ▀   ▀▙  15 MIN  1.98
+ ▸ TRACE     03      ▌  ▐   ▐ ▄▄        ◖  Q  ◗  EXIT  (ESC CLOSES THIS PANEL FIRST)   ▄▛ ▜▄▛  PER CPU 0.24
+ CPU         4%      ▌  ▐   ▗ ▛▜        ◖  ?  ◗  TOGGLE THIS PANEL
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄     ▌  ▐    ▛  ▜       ◖ SPC ◗  HOLD / RESUME TELEMETRY
+                     ▙  ▟    ▙  ▟       ◖  P  ◗  OPEN / CLOSE DIAGNOSTIC VIEW          TION   ▙  ● TELEMETRY LIVE
+             04     ▝▜  ▛▘  ▝▜  ▛       ◖ TAB ◗  CYCLE SENSOR FOCUS  (SHIFT-TAB BACK)  OMINAL ▛    1.0S · 10 CPU
+ MEM        48%                         ◖ ESC ◗  EXIT
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄    MONDAY 02 NOV
+                    UPTIME 6D 18:
+             05
+ DSK        61%
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄    ◖ CPU TRACE ◗       TRUECOLOR · UNICODE · INTERVAL 1.0S               ▗▄▄▄▟     ▙▄▄▄▖
+                                                                                       ▄▟                 ▙▄▖
+             06                                                                     ▄▟    ▀▀▘ ▄▄▖▄▄▄▄ ▝▀▀    ▙▄
+ NET       312K     ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂  ⠂          ▗    ▀▘▗▄     ▌       ▄▖▝▀    ▖
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄                                                                 ▟   ▀ ▄    ▛▀▀▀   ▀▀▀▜    ▄ ▀   ▙
+                    ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄  ⠄       ▗   ▛ ▄   ▛▀ ▄▟      ▛▙▄ ▀▜   ▄ ▜   ▖
+                                                                               ▟  ▛ ▟   ▘▗▟    ▀▀▀▀▀▟   ▙▖▝   ▙ ▜  ▙
+             07     ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀  ⡀      ▐    ▟   ▘▗   ▛▘       ▝▜   ▖▝   ▙    ▌
+ LOAD      2.36                                                       ⣶⢀⣤     ▀▜ ▌▗   ▘▗   ▘  SENSORS  ▝   ▖▝   ▖▐
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄    ⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡼⡹⣚⡜         ▐    ▐  ▛   NO SWAP   ▜  ▌    ▌
+ LIVE      1.0S     -106S  ·     ·     ·     ·     ·     ·     ·      NOW     CPU  MEM DSK              61%  48%  4%
+▝               ▙▖
+  ▀▜                  ? HELP   P DIAG   TAB FOCUS   SPC HOLD   Q EXIT                                                 ◗

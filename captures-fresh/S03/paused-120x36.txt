@@ -1,0 +1,36 @@
+
+     ▄▄▄               LCARS / ENGINEERING                                                  SYSTEM MONITOR  //  01
+   ▄               ▀▀▀▀
+                 ▀     COMMAND / LOCAL CHRONOMETRY
+   01
+                       ▄▄▄▄▄▄  ▄▄▄▄▄▄      ▄▄▄▄▄▄  ▄▄▄▄▄▄                                    ▗ HOLD                ▖
+                       ██  ██  ██  ██  ██      ██  ██                                        ▝                     ▘
+                       ██  ██  ██████      ██████  ██████   15
+   02                  ██  ██  ██  ██  ██      ██  ██  ██                                      CPU    0.7%
+                       ▀▀▀▀▀▀  ▀▀▀▀▀▀      ▀▀▀▀▀▀  ▀▀▀▀▀▀   SEC
+                                                                                               UP   10d 13h 42m
+   03                  MON 02 NOV 2026  /  linux
+
+                       02 / COMPUTE TELEMETRY                                                               ▌
+
+
+   ENG                 LOAD / 1 MIN                       MEMORY / 07                          ROOT / 09
+
+   SYSTEMS             ▄▄▄   ▄▄▄ ▄▄▄                      23.8 GiB  IN USE                          ▄▄██████▄▄
+                       █ █   █ █ █ █                                                               ██▀      ▀██
+                       █ █   █ █ ███                      69.6 GiB  AVAILABLE                     ██  65%     ██
+   07-ALPHA            █ █   █ █ █ █                                                              ██  USED    ██
+                       ▀▀▀ ▀ ▀▀▀ ▀▀▀                      93.4 GiB  INSTALLED                      ██▄      ▄██
+                                                                                                    ▀▀██████▀▀
+                       05m 0.23  /  15m 0.19
+                                                                                               599.0 GiB / 915.5 GiB
+
+                       CPU TRACE   ─────────────────────────────────⠈⠉⠉⠉⠉
+
+                       RX  13.0 KiB/s              TX  7.7 KiB/s                               LINK / ALL EXCL. LO
+
+                       NETWORK / 03     ─ ─ ─ ● ─ ─ ─
+ ▐
+ ▝                     q / ESC EXIT    ? HELP    SPACE HOLD    p DIAG    TAB VIEW
+
+

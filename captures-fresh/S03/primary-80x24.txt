@@ -1,0 +1,24 @@
+
+     ▄▄▄         LCARS / ENGINEERING                SYSTEM MONITOR  //  01
+   ▄         ▀▀▀▀
+           ▀     COMMAND / LOCAL CHRONOMETRY
+   01
+                 ▄▄▄ ▄▄▄   ▄▄▄ ▄▄▄                     ▗ ONLINE             ▖
+                 █ █ █ █ █   █ █                       ▝                    ▘
+                 █ █ ███   ███ ███  35
+   02            █ █ █ █ █   █ █ █                       CPU 0.4%
+                 ▀▀▀ ▀▀▀   ▀▀▀ ▀▀▀  SEC
+                                                         UP 10d 13h 42m
+   03            MON 02 NOV 2026  /  linux
+
+                 02 / RESOURCE TELEMETRY
+
+                 LOAD  0.05 / 0.22 / 0.19
+   ENG
+                 MEM   23.8 GiB / 93.4 GiB         FREE  69.6 GiB
+
+                 RX 5.9 KiB/s  TX 10.7 KiB/s       ROOT 65% 915.5 GiB
+ ▐
+ ▝               q / ESC EXIT    ? HELP    SPACE HOLD    p DIAG    TAB VIEW
+
+

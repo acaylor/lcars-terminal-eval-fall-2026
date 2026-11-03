@@ -1,0 +1,100 @@
+$ cargo test --all-targets
+   Compiling libc v0.2.189
+   Compiling unicode-width v0.2.2
+   Compiling lcarsmon v1.0.0 (<workspace>/evaluation/work/S02)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.12s
+     Running unittests src/lib.rs (target/debug/deps/lcarsmon-0790cf86cb6bad6d)
+
+running 60 tests
+test ansi::tests::ascii_mode_emits_only_ascii ... ok
+test ansi::tests::mono_mode_uses_no_color_codes ... ok
+test ansi::tests::color_only_changes_use_short_sgr ... ok
+test ansi::tests::identical_frames_emit_nothing ... ok
+test ansi::tests::wide_char_change_redraws_lead_cell ... ok
+test app::tests::required_controls ... ok
+test app::tests::tab_from_diagnostic_returns_to_command ... ok
+test canvas::tests::control_characters_are_neutralized ... ok
+test canvas::tests::ellipsize_respects_display_width ... ok
+test ansi::tests::single_cell_change_is_a_small_update ... ok
+test canvas::tests::out_of_bounds_drawing_is_ignored ... ok
+test canvas::tests::wide_characters_occupy_two_cells_and_clip_cleanly ... ok
+test color::tests::detection_table ... ok
+test clock::tests::formatting ... ok
+test color::tests::lerp_endpoints ... ok
+test color::tests::quantizers_hit_exact_palette_entries ... ok
+test format::tests::byte_formatting ... ok
+test format::tests::load_formatting_fits_four_columns ... ok
+test format::tests::rate_formatting_is_robust ... ok
+test format::tests::uptime_formatting ... ok
+test input::tests::escape_versus_sequences ... ok
+test input::tests::plain_keys ... ok
+test input::tests::truncated_and_non_ascii_input_is_safe ... ok
+test metrics::history::tests::ring_keeps_newest_values_in_order ... ok
+test metrics::linux::tests::os_release_parsing ... ok
+test metrics::linux::tests::meminfo_parsing_with_and_without_memavailable ... ok
+test metrics::linux::tests::net_dev_parsing_skips_loopback ... ok
+test metrics::linux::tests::proc_stat_parsing ... ok
+test metrics::linux::tests::pid_stat_with_hostile_command_names ... ok
+test metrics::sampler::tests::counter_wrap_and_reset ... ok
+test metrics::sampler::tests::backwards_clock_is_treated_like_zero_interval ... ok
+test metrics::sampler::tests::cpu_counter_reset_reports_pending_not_garbage ... ok
+test metrics::sampler::tests::failed_collectors_stay_isolated ... ok
+test metrics::sampler::tests::first_sample_has_pending_rates ... ok
+test metrics::sampler::tests::interface_reset_and_churn_do_not_spike ... ok
+test metrics::sampler::tests::process_ranking_handles_exits_and_pid_reuse ... ok
+test metrics::sampler::tests::rates_use_measured_elapsed_time ... ok
+test metrics::sampler::tests::very_long_interval_yields_average_rate ... ok
+test metrics::sampler::tests::top_list_is_capped_at_five ... ok
+test metrics::sampler::tests::zero_interval_keeps_previous_rates_and_baseline ... ok
+test raster::tests::blitting_off_canvas_is_safe ... ok
+test raster::tests::braille_dot_order ... ok
+test raster::tests::quadrant_masks_map_to_expected_glyphs ... ok
+test raster::tests::solid_cells_become_background_and_two_tone_cells_split ... ok
+test ui::layout::tests::full_tier_reveals_more_than_compact ... ok
+test ui::layout::tests::tiers_at_reference_sizes ... ok
+test ui::shapes::tests::orientations_mirror_each_other ... ok
+test ui::shapes::tests::elbow_has_rounded_outer_corner_and_filled_inner_fillet ... ok
+test ui::tests::condition_levels ... ok
+test ui::shapes::tests::pill_clips_long_labels ... ok
+test ui::tests::focus_cycles_both_ways ... ok
+test ui::widgets::tests::trace_newest_sample_is_rightmost ... ok
+test ui::widgets::tests::widgets_tolerate_tiny_and_empty_input ... ok
+test ui::font::tests::degenerate_sizes_do_not_panic ... ok
+test ui::font::tests::measure_matches_draw ... ok
+test ui::widgets::tests::gauge_fill_grows_with_value ... ok
+test ui::font::tests::every_digit_has_ink_and_they_are_distinct ... ok
+test metrics::history::tests::ring_memory_is_bounded ... ok
+test metrics::linux::tests::live_sample_does_not_panic ... ok
+test ui::layout::tests::content_fits_and_never_overlaps_at_any_supported_size ... ok
+
+test result: ok. 60 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running unittests src/main.rs (target/debug/deps/lcarsmon-353abed34fd3e1bc)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/render.rs (target/debug/deps/render-829e6bed8be961db)
+
+running 17 tests
+test reference_sizes_use_the_intended_composition ... ok
+test diagnostic_view_shows_required_fields ... ok
+test hostile_names_are_clipped_and_sanitized ... ok
+test wide_process_names_never_leave_orphan_halves ... ok
+test hold_state_is_visible ... ok
+test ascii_and_mono_modes_stay_ascii_and_colorless ... ok
+test primary_view_shows_all_core_readouts ... ok
+test unavailable_metrics_render_tasteful_placeholders ... ok
+test silhouette_survives_without_text_and_is_asymmetric ... ok
+test help_overlay_lists_every_required_control ... ok
+test clock_change_only_repaints_the_clock_region ... ok
+test focus_changes_the_trace_panel ... ok
+test steady_state_frames_are_cheap_to_emit ... ok
+test reduced_color_modes_keep_identical_layout ... ok
+test process_list_only_appears_in_the_diagnostic_view ... ok
+test primary_view_has_at_least_twenty_percent_negative_space ... ok
+test every_size_renders_without_panicking ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.49s
+

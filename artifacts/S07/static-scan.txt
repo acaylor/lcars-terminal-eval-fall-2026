@@ -1,0 +1,85 @@
+S07: 2177 LOC in 18 files, 16 test fns, deps=0 panic=n/a
+
+FILES
+      83 cmd/capture/main.go
+      78 cmd/lcars/main.go
+     223 internal/app/app.go
+      55 internal/app/app_test.go
+     227 internal/metrics/collect_darwin.go
+     220 internal/metrics/collect_linux.go
+      81 internal/metrics/collect_linux_test.go
+     147 internal/metrics/types.go
+      85 internal/metrics/types_test.go
+      78 internal/terminal/terminal.go
+       8 internal/terminal/termios_darwin.go
+       8 internal/terminal/termios_linux.go
+     121 internal/ui/ansi.go
+     199 internal/ui/canvas.go
+      38 internal/ui/digits.go
+      44 internal/ui/shapes.go
+     331 internal/ui/view.go
+     151 internal/ui/view_test.go
+
+SUBPROCESS (0)
+
+
+UNSAFE_BLOCK (0)
+
+
+CGO (9)
+  internal/metrics/collect_darwin.go:6: #cgo LDFLAGS: -lproc
+  internal/metrics/collect_darwin.go:141: import "C"
+  internal/metrics/collect_darwin.go:164: C.lc_system_read(&system)
+  internal/metrics/collect_darwin.go:181: cpus := C.lc_cpus(&count)
+  internal/metrics/collect_darwin.go:191: C.free(unsafe.Pointer(cpus))
+  internal/metrics/collect_darwin.go:196: nets := C.lc_network(&count)
+  internal/metrics/collect_darwin.go:202: C.free(unsafe.Pointer(nets))
+  internal/metrics/collect_darwin.go:209: procs := C.lc_processes(&count, &total, &ok)
+  internal/metrics/collect_darwin.go:217: C.free(unsafe.Pointer(procs))
+
+GO_UNSAFE (10)
+  internal/metrics/collect_darwin.go:150: "unsafe"
+  internal/metrics/collect_darwin.go:191: C.free(unsafe.Pointer(cpus))
+  internal/metrics/collect_darwin.go:202: C.free(unsafe.Pointer(nets))
+  internal/metrics/collect_darwin.go:217: C.free(unsafe.Pointer(procs))
+  internal/terminal/terminal.go:12: "unsafe"
+  internal/terminal/terminal.go:25: func ioctl(fd, request uintptr, value unsafe.Pointer) error {
+  internal/terminal/terminal.go:34: if err := ioctl(file.Fd(), syscall.TIOCGWINSZ, unsafe.Pointer(&size)); err != nil {
+  internal/terminal/terminal.go:44: if err := ioctl(input.Fd(), getTermios, unsafe.Pointer(&s.original)); err != nil {
+  internal/terminal/terminal.go:60: if err := ioctl(input.Fd(), setTermios, unsafe.Pointer(&raw)); err != nil {
+  internal/terminal/terminal.go:72: s.closeErr = ioctl(s.input.Fd(), setTermios, unsafe.Pointer(&s.original))
+
+PLACEHOLDER (0)
+
+
+PANIC_HOOK (0)
+
+
+SIGNAL_HANDLING (2)
+  internal/app/app.go:102: signal.Notify(signals, os.Interrupt, syscall.SIGTERM, syscall.SIGHUP, syscall.SIGQUIT, syscall.SIGWINCH)
+  internal/terminal/terminal.go:54: // Keep ISIG: Ctrl-C still raises SIGINT. Disable job-control characters so a
+
+SCOPE_MOUSE (0)
+
+
+SCOPE_PROTOCOLS (0)
+
+
+SCOPE_CONFIG (1)
+  cmd/capture/main.go:57: if err := os.WriteFile(filepath.Join(*out, "capture-metadata.json"), append(data, '\n'), 0644); err != nil {
+
+SCOPE_PROC_MGMT (0)
+
+
+FULL_CLEAR (2)
+  internal/ui/view_test.go:58: s.Snapshot.Host = strings.Repeat("超long\x1b[2J", 40)
+  internal/ui/view_test.go:111: if !strings.Contains(diff, "\x1b[5;11H") || !strings.Contains(diff, "X") || strings.Contains(diff, "[2J") || len(diff) > 90 {
+
+DT_ASSUMPTION (7)
+  internal/metrics/types.go:59: func Rate(before, after uint64, elapsed time.Duration) Value {
+  internal/metrics/types.go:60: if elapsed <= 0 || elapsed > 30*time.Second || after < before {
+  internal/metrics/types.go:63: n := float64(after-before) / elapsed.Seconds()
+  internal/metrics/types_test.go:13: elapsed       time.Duration
+  internal/metrics/types_test.go:16: {"elapsed", 100, 400, 1500 * time.Millisecond, Value{200, true}},
+  internal/metrics/types_test.go:25: if got := Rate(tc.before, tc.after, tc.elapsed); got != tc.want {
+  internal/metrics/types_test.go:53: t.Fatalf("CPU must use elapsed time, with 100%% per core: %+v", got.Top)

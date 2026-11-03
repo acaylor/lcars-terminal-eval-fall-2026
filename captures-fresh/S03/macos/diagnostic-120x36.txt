@@ -1,0 +1,36 @@
+
+     ▄▄▄               LCARS / ENGINEERING                                                  SYSTEM MONITOR  //  01
+   ▄               ▀▀▀▀
+                 ▀     DIAGNOSTIC / ENGINEERING ANALYSIS
+   01
+                       macOS / arm64                                                        PROCESSES / 918
+
+                       HOST mac-host.local                                                  CPU  7.1%
+   02
+                       SWAP  0 B / 0 B                                                      UP   6d 18h 35m
+
+   03                  04 / PROCESS ACTIVITY
+
+                       PID      COMMAND                                                     CPU %       RESIDENT
+
+                       1246     mediaanalysisd                                                 0.3      393.2 MiB
+   ENG
+                       2013     svc03                                                          0.1      123.3 MiB
+   SYSTEMS
+                       1277     svc39                                                          0.1      1.1 GiB
+
+   07-ALPHA            60850    python3.14                                                     0.0      41.5 MiB
+
+                       60913    mdworker_shared                                                0.0      20.8 MiB
+
+
+                       05 / CORE ARRAY
+
+                       00  13.0%   01  12.2%   02   7.1%   03   5.1%   04   6.0%   05   5.0%   06   3.0%
+                       07  20.0%   08   0.0%   09   0.0%
+
+
+ ▐
+ ▝                     q / ESC EXIT    ? HELP    SPACE HOLD    p DIAG    TAB VIEW
+
+                       CPU: 100% = ONE CORE   /   p RETURN TO COMMAND

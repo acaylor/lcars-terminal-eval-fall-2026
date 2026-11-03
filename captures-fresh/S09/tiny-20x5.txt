@@ -1,0 +1,5 @@
+ ◖█LCARS COMPACT██◗
+
+ 08:42:58 CPU  0.3%
+ MEM 25.5%
+

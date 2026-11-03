@@ -1,0 +1,36 @@
+
+        LCARS 47 // ENGINEERING STATUS
+
+
+        ##########  ##########          ####  ####  ##########            ####        ####        CPU / TOTAL
+ 47     ####  ####  ##########      ##  ##########  ####  ####      ##      ##          ##
+        ####  ####  ####  ####      ##        ####  ####  ####      ##      ##          ##        ##### #####        A
+          ######      ######                  ####    ######              ######      ######      ## ## ## ##
+                                                                                                  ## ## ## ##        U
+                                                                                                   ###   ###  %
+                                                                                                                     X
+ ENG
+           2026-11-02 MON           HOST LINUX
+
+            * ALL SYSTEMS NOMINAL                                                               LOAD 01/05/15
+            STARFLEET ENGINEERING
+                                                                                                0.22  0.18  0.18
+          -------------------------------------------------------------------
+                                                                                                UP 10d 13h 46m
+           MEMORY        23.8G USED  /  69.6G FREE  /  93.4G TOTAL        CPU WAVEFORM                0-100%
+                         25.5% ALLOCATED
+
+           ROOT /        646G USED  /  270G FREE  /  916G TOTAL
+                         70.5% CAPACITY
+
+           NETWORK       v 1.71K/s RX  /  ^ 1.14K/s TX
+
+                                                                          **********************************
+
+                                                                          T-180 SAMPLES             NOW ->
+
+
+
+         SYS     NOMINAL
+
+       COMMAND                                             LIVE       SPACE PAUSE   P DIAG   TAB VIEW   ? HELP   Q QUIT

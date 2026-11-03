@@ -1,0 +1,6 @@
+$ go test ./...
+?   	starfleet/cmd/lcars	[no test files]
+ok  	starfleet/internal/app	0.002s
+ok  	starfleet/internal/metrics	0.009s
+ok  	starfleet/internal/terminal	0.002s
+ok  	starfleet/internal/ui	0.012s

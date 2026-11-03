@@ -1,0 +1,23 @@
+[package]
+name = "lcars-monitor"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.95"
+description = "An LCARS-inspired terminal engineering display"
+license = "MIT"
+
+[dependencies]
+crossterm = "0.29"
+libc = "0.2"
+signal-hook = "0.3"
+sysinfo = { version = "0.39", default-features = false, features = ["disk", "network", "system"] }
+unicode-width = "0.2"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+panic = "unwind"
+
+[lints.clippy]
+all = "warn"

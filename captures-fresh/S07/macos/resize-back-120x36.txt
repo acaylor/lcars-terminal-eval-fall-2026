@@ -1,0 +1,36 @@
+
+  ▐  47 / SYS ▌   LCARS  / ENGINEERING                                                               ▐        ONLINE ▌
+
+     ▗▄
+   ▗
+  ▗ COMMAND
+               ▛▀
+              ▘
+       01-A        CHRONOMETRY                                              MON / 02 NOV 2026
+
+                  ████████  ████████        ██    ██  ██    ██        ████████      ██
+                  ██    ██  ██    ██  ████  ██    ██  ██    ██  ████        ██    ████
+                  ██    ██  ████████        ████████  ████████        ████████      ██
+        080       ██    ██  ██    ██  ████        ██        ██  ████  ██            ██
+                  ████████  ████████              ██        ██        ████████    ██████
+
+                   LOCAL TIME               HOST / MAC-HOST.LOCAL
+        214
+
+                   01 / COMPUTE                                            ▐               02 / RESOURCE TELEMETRY ▌
+
+       NET           █    ████   █              6.0%                       MEM   13.8 GiB / 24.0 GiB
+                    ██       █  ██              CPU ACTIVE                       10.2 GiB available
+                     █      █    █
+                     █     █     █              5M / 15M                   ROOT  283.0 GiB / 460.4 GiB
+                    ███ █  █    ███             2.02 / 1.95                      177.5 GiB available
+
+                   LOAD / 1 MIN                                            RX  1.1 MiB/s        TX  10.0 KiB/s
+
+                                                            ⣀⣀⣀     UP / 06d 18h 40m                              ◉
+  ▝           ▖
+   ▝           ▙▄
+     ▝▀                                                  ▐       LOCAL / 01 ▌  ▐                     COMPUTER ACCESS ▌
+
+   01    [p] diagnostics   [tab] view   [space] hold   [?] help   [q] exit
+

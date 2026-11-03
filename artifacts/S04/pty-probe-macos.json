@@ -1,0 +1,470 @@
+{
+  "sid": "S04",
+  "platform": "macos",
+  "binary": "target/release/lcars-monitor",
+  "started": "2026-11-02 08:40:29",
+  "primary_session": {
+    "alive_after_2_5s": true,
+    "primary_blank_fraction": 0.659,
+    "primary_distinct_colors": 11,
+    "primary_non_ascii_glyphs": 5,
+    "primary_has_PID_word": false,
+    "primary_ref_top_names_seen": [],
+    "primary_metric_checks": {},
+    "primary_key_hints": {
+      "help_?": true,
+      "quit_q": false,
+      "pause_space": true,
+      "proc_p": false,
+      "tab": true
+    },
+    "primary_sgr": {
+      "truecolor": 2264,
+      "c256": 0,
+      "basic16": 0,
+      "other_attrs": 0
+    },
+    "terminal_queries_answered": {},
+    "diag_changed_cells_vs_primary": 2417,
+    "diag_metric_checks": {
+      "pid_header_present": false
+    },
+    "diag_key_hints": {
+      "help_?": false,
+      "quit_q": true,
+      "pause_space": false,
+      "proc_p": true,
+      "tab": true
+    },
+    "p_toggle_back_structure_similarity_to_primary": 0.991,
+    "p_toggle_back_has_PID": false,
+    "help_changed_cells": 991,
+    "help_text_mentions": {
+      "quit": true,
+      "help": true,
+      "pause": false,
+      "space": true,
+      "tab": true,
+      "proc|diag": true
+    },
+    "help_closed_structure_similarity_to_primary": 0.991,
+    "help_closed_still_has_help_words": false,
+    "pause": {
+      "digits_equal_over_2_6s": true,
+      "text_equal_over_2_6s": true,
+      "changed_cells_over_2_6s": 0,
+      "changed_digit_tokens": [],
+      "pause_indicator_visible": true
+    },
+    "resume": {
+      "digits_changed_after_resume": true,
+      "changed_cells": 194
+    },
+    "tab_cycle": [
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 59
+      },
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 90
+      },
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 38
+      },
+      {
+        "alive": true,
+        "changed_cells_vs_prev": 85
+      }
+    ],
+    "quit": {
+      "how": "q",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.002,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 23,
+      "termios_restored": null,
+      "termios_after": null,
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?7h\u001b[?25h\u001b[?1049l"
+    },
+    "output_seq_counts": {
+      "clear_2J": 2,
+      "clear_3J": 0,
+      "RIS_esc_c": 0,
+      "erase_below_J": 0,
+      "erase_line_K": 0,
+      "cup_moves": 301,
+      "alt_enter": 1,
+      "alt_exit": 1,
+      "cursor_hide": 1,
+      "cursor_show": 1,
+      "sync_update": 0,
+      "mouse_enable": 0
+    }
+  },
+  "lifecycle": {
+    "q": {
+      "how": "q",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.005,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 23,
+      "termios_restored": null,
+      "termios_after": null,
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?7h\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "esc": {
+      "how": "esc",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.005,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 23,
+      "termios_restored": null,
+      "termios_after": null,
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?7h\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "ctrl-c-byte": {
+      "how": "ctrl-c-byte",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.005,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 23,
+      "termios_restored": null,
+      "termios_after": null,
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?7h\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "sigint": {
+      "how": "sigint",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.005,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 23,
+      "termios_restored": null,
+      "termios_after": null,
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?7h\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    },
+    "sigterm": {
+      "how": "sigterm",
+      "exited": true,
+      "exit_code": 0,
+      "exit_seconds": 0.005,
+      "restore_seq": {
+        "alt_screen_exit": true,
+        "cursor_show": true,
+        "sgr_reset": true
+      },
+      "tail_bytes": 23,
+      "termios_restored": null,
+      "termios_after": null,
+      "termios_before": {
+        "ICANON": true,
+        "ECHO": true,
+        "ISIG": true,
+        "IEXTEN": true,
+        "ICRNL": true,
+        "IXON": true,
+        "OPOST": true
+      },
+      "panic_text": false,
+      "tail_text": "\u001b[0m\u001b[?7h\u001b[?25h\u001b[?1049l",
+      "alive_before_stimulus": true
+    }
+  },
+  "non_tty": {
+    "exit_code": 2,
+    "timed_out_3s": false,
+    "seconds": 0.019,
+    "stdout_bytes": 0,
+    "stdout_has_escape": false,
+    "stderr_has_escape": false,
+    "panic_text": false,
+    "stdout_head": "",
+    "stderr_head": "lcars-monitor: stdout is not a terminal. Run lcars-monitor in an interactive terminal.\nlcars-monitor \u2014 LCARS engineering display\nRun inside a terminal. Keys: q/esc quit, ? help, space pause, p diagnostics, tab focus.\nLCARS_ASCII=1 disables Unicode. LCARS_MONO=1 or NO_COLOR selects monochrome.\n--measure  print startup time after one sample and exit\n--dump primary|secondary [--width N --height N --shape --demo]\n"
+  },
+  "sizes": {
+    "primary-80x24": {
+      "alive": true,
+      "exit_code": null,
+      "panic_text": false,
+      "non_blank_cells": 1920,
+      "blank_fraction": 0.752,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": true
+        },
+        "termios_restored": null
+      }
+    },
+    "tiny-40x10": {
+      "alive": true,
+      "exit_code": null,
+      "panic_text": false,
+      "non_blank_cells": 400,
+      "blank_fraction": 0.838,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": true
+        },
+        "termios_restored": null
+      }
+    },
+    "tiny-20x5": {
+      "alive": true,
+      "exit_code": null,
+      "panic_text": false,
+      "non_blank_cells": 100,
+      "blank_fraction": 0.6,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": true
+        },
+        "termios_restored": null
+      }
+    },
+    "live_resize": {
+      "steps": [
+        {
+          "size": "80x24",
+          "alive": true,
+          "non_blank_cells": 1920
+        },
+        {
+          "size": "30x8",
+          "alive": true,
+          "non_blank_cells": 240
+        },
+        {
+          "size": "120x36",
+          "alive": true,
+          "non_blank_cells": 4320
+        }
+      ],
+      "panic_text": false,
+      "structure_similarity_back_vs_initial": 0.978,
+      "quit": {
+        "exited": true,
+        "exit_code": 0,
+        "restore_seq": {
+          "alt_screen_exit": true,
+          "cursor_show": true,
+          "sgr_reset": true
+        },
+        "termios_restored": null
+      }
+    }
+  },
+  "color_modes": {
+    "color256": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 1878,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 302,
+      "non_ascii_glyph_kinds_on_screen": 5,
+      "non_ascii_examples": "\u2597\u2598\u2596\u259d\u2840",
+      "distinct_colors_on_screen": 7,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "color16": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 1898,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 299,
+      "non_ascii_glyph_kinds_on_screen": 5,
+      "non_ascii_examples": "\u2597\u2598\u2596\u259d\u2840",
+      "distinct_colors_on_screen": 7,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "no_color_env": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 1287
+      },
+      "non_ascii_codepoints_in_stream": 326,
+      "non_ascii_glyph_kinds_on_screen": 5,
+      "non_ascii_examples": "\u2597\u2598\u2596\u259d\u2840",
+      "distinct_colors_on_screen": 2,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "mono_documented": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 1204
+      },
+      "non_ascii_codepoints_in_stream": 332,
+      "non_ascii_glyph_kinds_on_screen": 5,
+      "non_ascii_examples": "\u2597\u2598\u2596\u259d\u2840",
+      "distinct_colors_on_screen": 2,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "ascii_documented": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 1698,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 0,
+      "non_ascii_glyph_kinds_on_screen": 0,
+      "non_ascii_examples": "",
+      "distinct_colors_on_screen": 11,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "locale_C": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 1630,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 0
+      },
+      "non_ascii_codepoints_in_stream": 0,
+      "non_ascii_glyph_kinds_on_screen": 0,
+      "non_ascii_examples": "",
+      "distinct_colors_on_screen": 11,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    },
+    "term_dumb": {
+      "alive": true,
+      "exit_code": null,
+      "sgr": {
+        "truecolor": 0,
+        "c256": 0,
+        "basic16": 0,
+        "other_attrs": 941
+      },
+      "non_ascii_codepoints_in_stream": 0,
+      "non_ascii_glyph_kinds_on_screen": 0,
+      "non_ascii_examples": "",
+      "distinct_colors_on_screen": 2,
+      "non_blank_cells": 4320,
+      "panic_text": false,
+      "stream_head": ""
+    }
+  },
+  "finished": "2026-11-02 08:41:32"
+}

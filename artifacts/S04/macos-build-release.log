@@ -1,0 +1,4 @@
+$ cargo build --release --locked
+   Compiling libc v0.2.189
+   Compiling lcars-monitor v1.0.0 (/Users/user/lcars-eval/work/S04)
+    Finished `release` profile [optimized] target(s) in 2.74s

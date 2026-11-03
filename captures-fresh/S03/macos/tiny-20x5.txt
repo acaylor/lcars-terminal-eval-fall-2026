@@ -1,0 +1,5 @@
+ LCARS / COMPACT C~
+
+ 2026-11-02 08:40:~
+ HOST mac-host.loc~
+ q EXIT  ? HELP  p~

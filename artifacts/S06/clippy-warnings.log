@@ -1,0 +1,24 @@
+$ cargo clippy --all-targets
+    Checking libc v0.2.191
+    Checking log v0.4.34
+    Checking smallvec v1.16.4
+    Checking cfg-if v1.0.5
+    Checking scopeguard v1.2.0
+    Checking bitflags v2.13.2
+    Checking linux-raw-sys v0.12.1
+    Checking memchr v2.8.3
+    Checking unicode-width v0.2.2
+    Checking derive_more v2.1.1
+    Checking lock_api v0.4.14
+    Checking rustix v1.1.6
+    Checking errno v0.3.14
+    Checking parking_lot_core v0.9.12
+    Checking mio v1.2.4
+    Checking sysinfo v0.39.6
+    Checking signal-hook-registry v1.4.8
+    Checking parking_lot v0.12.5
+    Checking signal-hook v0.3.18
+    Checking signal-hook-mio v0.2.5
+    Checking crossterm v0.29.0
+    Checking lcars-monitor v1.0.0 (<workspace>/evaluation/work/S06)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.87s
